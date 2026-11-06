@@ -6,21 +6,24 @@
 :root {
   color-scheme: light dark;
 
-  /* Farben – Kontraste geprüft (Text ≥ 4,5:1) */
-  --bg: #f5f2ec;
+  /* Farben – Grundfarbe ist das Rot aus dem Logo (#cc0000). Kontraste geprüft (Text ≥ 4,5:1) */
+  --bg: #f6f5f3;
   --surface: #ffffff;
-  --surface-2: #ece7df;
-  --text: #1c1917;
-  --muted: #57514a;
-  --line: rgb(28 25 23 / 0.1);
-  --accent: #a3401a;          /* 6,35:1 auf Weiß, 5,69:1 auf --bg */
-  --accent-hover: #85330f;
-  --on-accent: #ffffff;
-  --accent-soft: rgb(163 64 26 / 0.09);
-  --contour: #a3401a;
-  --shadow-sm: 0 1px 2px rgb(28 25 23 / 0.06), 0 1px 1px rgb(28 25 23 / 0.04);
-  --shadow-md: 0 1px 2px rgb(28 25 23 / 0.05), 0 8px 24px -6px rgb(28 25 23 / 0.1);
-  --header-bg: rgb(245 242 236 / 0.74);
+  --surface-2: #ecebe8;
+  --text: #1a1919;
+  --muted: #5a5754;
+  --line: rgb(26 25 25 / 0.1);
+  --brand: #cc0000;           /* Logo-Rot */
+  --accent: #cc0000;          /* Text/Links: 5,89:1 auf Weiß, 5,4:1 auf --bg */
+  --accent-hover: #a30000;
+  --accent-soft: rgb(204 0 0 / 0.07);
+  --fill: #cc0000;            /* Flächen (Knöpfe) mit weißer Schrift: 5,89:1 */
+  --fill-hover: #a30000;
+  --on-fill: #ffffff;
+  --contour: #cc0000;
+  --shadow-sm: 0 1px 2px rgb(26 25 25 / 0.06), 0 1px 1px rgb(26 25 25 / 0.04);
+  --shadow-md: 0 1px 2px rgb(26 25 25 / 0.05), 0 8px 24px -6px rgb(26 25 25 / 0.1);
+  --header-bg: rgb(246 245 243 / 0.76);
 
   /* Schrift */
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -42,20 +45,22 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #151311;
-    --surface: #1f1c19;
-    --surface-2: #2a2622;
-    --text: #f1ece4;
-    --muted: #b3aba0;
-    --line: rgb(241 236 228 / 0.1);
-    --accent: #f08a5d;
-    --accent-hover: #f5a37e;
-    --on-accent: #1a1310;
-    --accent-soft: rgb(240 138 93 / 0.12);
-    --contour: #f08a5d;
+    --bg: #141313;
+    --surface: #1e1d1c;
+    --surface-2: #292827;
+    --text: #f2f1ef;
+    --muted: #b5b2ae;
+    --line: rgb(242 241 239 / 0.1);
+    --accent: #ff7a6e;        /* aufgehelltes Logo-Rot für Text auf Dunkel: ≥ 5,8:1 */
+    --accent-hover: #ff9b92;
+    --accent-soft: rgb(255 122 110 / 0.12);
+    --fill: #cc0000;          /* Knöpfe bleiben im Logo-Rot */
+    --fill-hover: #e01414;
+    --on-fill: #ffffff;
+    --contour: #ff7a6e;
     --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
     --shadow-md: 0 1px 2px rgb(0 0 0 / 0.35), 0 10px 28px -8px rgb(0 0 0 / 0.55);
-    --header-bg: rgb(21 19 17 / 0.72);
+    --header-bg: rgb(20 19 19 / 0.74);
   }
 }
 
@@ -134,8 +139,8 @@ a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
   z-index: 100;
   padding: var(--s-2) var(--s-4);
   border-radius: var(--radius-sm);
-  background: var(--accent);
-  color: var(--on-accent);
+  background: var(--fill);
+  color: var(--on-fill);
   font-weight: 600;
   text-decoration: none;
 }
@@ -192,8 +197,9 @@ a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
   line-height: 1.15;
 }
 .brand:hover { color: var(--text); }
-.brand-mark { width: 30px; height: 30px; flex: none; color: var(--accent); }
-.brand-name { display: block; font-family: var(--font-serif); font-size: 1.1875rem; letter-spacing: -0.01em; }
+.brand-logo { display: block; width: auto; height: 44px; border-radius: 4px; flex: none; }
+.brand-text { display: block; padding-left: var(--s-3); box-shadow: inset 1px 0 0 var(--line); }
+.brand-name { display: block; font-size: 0.875rem; font-weight: 600; letter-spacing: -0.005em; }
 .brand-sub { display: block; font-size: 0.8125rem; color: var(--muted); }
 
 .nav-list {
@@ -220,11 +226,11 @@ a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
 
 .nav-list .nav-cta a {
   margin-left: var(--s-2);
-  background: var(--accent);
-  color: var(--on-accent);
+  background: var(--fill);
+  color: var(--on-fill);
 }
-.nav-list .nav-cta a:hover { background: var(--accent-hover); color: var(--on-accent); }
-.nav-list .nav-cta a[aria-current="page"] { background: var(--accent-hover); color: var(--on-accent); }
+.nav-list .nav-cta a:hover { background: var(--fill-hover); color: var(--on-fill); }
+.nav-list .nav-cta a[aria-current="page"] { background: var(--fill-hover); color: var(--on-fill); }
 
 .menu-toggle {
   display: none;
@@ -306,8 +312,8 @@ a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
 .btn:active { transform: scale(0.97); }
 .btn svg { width: 18px; height: 18px; flex: none; }
 
-.btn-primary { background: var(--accent); color: var(--on-accent); }
-.btn-primary:hover { background: var(--accent-hover); color: var(--on-accent); }
+.btn-primary { background: var(--fill); color: var(--on-fill); }
+.btn-primary:hover { background: var(--fill-hover); color: var(--on-fill); }
 
 .btn-secondary { background: var(--surface); color: var(--text); box-shadow: var(--shadow-sm), inset 0 0 0 1px var(--line); }
 .btn-secondary:hover { color: var(--accent); }
@@ -739,7 +745,7 @@ a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
 
 .length-cell { display: flex; align-items: center; justify-content: flex-end; gap: var(--s-3); }
 .length-bar { width: 7rem; height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
-.length-bar span { display: block; height: 100%; border-radius: 3px; background: var(--accent); }
+.length-bar span { display: block; height: 100%; border-radius: 3px; background: var(--fill); }
 @media (max-width: 36rem) { .length-bar { display: none; } }
 
 /* Referenzliste auf schmalen Bildschirmen als Liste */
@@ -821,7 +827,7 @@ a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
 .quote cite { font-style: normal; font-weight: 600; color: var(--text); }
 
 .signature { display: flex; align-items: center; gap: var(--s-4); margin-top: var(--s-6); }
-.signature img { width: 64px; height: auto; border-radius: 6px; background: #fff; padding: 4px; box-shadow: var(--shadow-sm); }
+.signature img { width: 64px; height: 64px; border-radius: 6px; }
 .signature .name { font-weight: 600; }
 .signature .role { color: var(--muted); font-size: 0.9375rem; }
 
@@ -858,7 +864,7 @@ a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
 .footer-grid a { color: var(--text); text-decoration: none; }
 .footer-grid a:hover { color: var(--accent); }
 .footer-grid address { font-style: normal; line-height: 1.6; }
-.footer-brand { font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: var(--s-2); }
+.footer-logo { width: 72px; height: 72px; border-radius: 6px; margin-bottom: var(--s-4); }
 .footer-bottom {
   display: flex;
   flex-wrap: wrap;
@@ -914,13 +920,10 @@ html:has(.subnav) { scroll-padding-top: 8.5rem; }
 .downloads { max-width: 52rem; }
 .download .meta { margin-top: var(--s-3); }
 
-/* Schmale Bildschirme: Wortmarke einzeilig halten */
+/* Schmale Bildschirme: nur das Logo zeigen */
 .brand-name, .brand-sub { white-space: nowrap; }
-@media (max-width: 30rem) {
-  .brand { gap: var(--s-2); }
-  .brand-mark { width: 26px; height: 26px; }
-  .brand-name { font-size: 1.0625rem; }
-  .brand-sub { font-size: 0.75rem; }
+@media (max-width: 36rem) {
+  .brand-text { display: none; }
   .menu-toggle { padding: 0.5rem 0.75rem; }
 }
 
@@ -933,3 +936,4 @@ html:has(.subnav) { scroll-padding-top: 8.5rem; }
 @media (min-width: 42.0625rem) and (max-width: 64rem) {
   .grid-3 > :nth-child(3):last-child { grid-column: 1 / -1; }
 }
+.signature p + p { margin-top: 0.125rem; }
