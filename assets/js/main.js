@@ -27,31 +27,34 @@
     window.matchMedia('(min-width: 54.0625rem)').addEventListener('change', (m) => { if (m.matches) setOpen(false); });
   }
 
-  // Sprungnavigation: aktuellen Abschnitt markieren
-  const tocLinks = [...document.querySelectorAll('[data-spy] a[href^="#"]')];
-  if (tocLinks.length && 'IntersectionObserver' in window) {
-    const byId = new Map(tocLinks.map((a) => [a.getAttribute('href').slice(1), a]));
-    const targets = [...byId.keys()].map((id) => document.getElementById(id)).filter(Boolean);
-    const visible = new Set();
-    const mark = () => {
-      const current = targets.find((t) => visible.has(t)) ?? null;
-      tocLinks.forEach((a) => a.removeAttribute('aria-current'));
-      if (current) {
-        byId.forEach((a, id) => { if (id === current.id) a.setAttribute('aria-current', 'true'); });
-        const active = document.querySelector('.subnav a[aria-current="true"]');
-        const strip = active?.closest('ul');
+  // Sprungnavigation: aktuellen Abschnitt je Navigation markieren
+  if ('IntersectionObserver' in window) {
+    document.querySelectorAll('[data-spy]').forEach((spy) => {
+      const links = [...spy.querySelectorAll('a[href^="#"]')];
+      const pairs = links
+        .map((a) => [document.getElementById(a.getAttribute('href').slice(1)), a])
+        .filter(([t]) => t);
+      if (!pairs.length) return;
+      const visible = new Set();
+      const mark = () => {
+        const hit = pairs.find(([t]) => visible.has(t));
+        if (!hit) return; // letzten Stand behalten, solange nichts im Band liegt
+        links.forEach((a) => a.removeAttribute('aria-current'));
+        const active = hit[1];
+        active.setAttribute('aria-current', 'true');
+        const strip = active.closest('ul');
         if (strip && strip.scrollWidth > strip.clientWidth) {
           const l = active.offsetLeft - strip.offsetLeft;
           if (l < strip.scrollLeft || l + active.offsetWidth > strip.scrollLeft + strip.clientWidth) {
             strip.scrollTo({ left: Math.max(0, l - 16) });
           }
         }
-      }
-    };
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => (e.isIntersecting ? visible.add(e.target) : visible.delete(e.target)));
-      mark();
-    }, { rootMargin: '-35% 0px -55% 0px' });
-    targets.forEach((t) => io.observe(t));
+      };
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => (e.isIntersecting ? visible.add(e.target) : visible.delete(e.target)));
+        mark();
+      }, { rootMargin: '-30% 0px -60% 0px' });
+      pairs.forEach(([t]) => io.observe(t));
+    });
   }
 })();

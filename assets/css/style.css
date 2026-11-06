@@ -905,3 +905,31 @@ a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
 @media (min-width: 42.0625rem) and (max-width: 64rem) {
   .creed li:last-child { grid-column: span 2; }
 }
+
+/* Seiten mit Sprungnavigation: Anker unter Kopf + Leiste */
+html:has(.subnav) { scroll-padding-top: 8.5rem; }
+
+.generations p + p { margin-top: 0.125rem; }
+
+.downloads { max-width: 52rem; }
+.download .meta { margin-top: var(--s-3); }
+
+/* Schmale Bildschirme: Wortmarke einzeilig halten */
+.brand-name, .brand-sub { white-space: nowrap; }
+@media (max-width: 30rem) {
+  .brand { gap: var(--s-2); }
+  .brand-mark { width: 26px; height: 26px; }
+  .brand-name { font-size: 1.0625rem; }
+  .brand-sub { font-size: 0.75rem; }
+  .menu-toggle { padding: 0.5rem 0.75rem; }
+}
+
+@media (max-width: 42rem) {
+  .card, .contact-card, .feature-body { padding: var(--s-5); }
+  .timeline-item { padding: var(--s-4); }
+}
+
+/* Drei Teaser auf Tablet-Breite: dritte Karte über beide Spalten statt Waise */
+@media (min-width: 42.0625rem) and (max-width: 64rem) {
+  .grid-3 > :nth-child(3):last-child { grid-column: 1 / -1; }
+}
