@@ -897,3 +897,11 @@ a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
   body { background: #fff; color: #000; font-size: 11pt; }
   .card, .feature, .table-card { box-shadow: none; border: 1px solid #ccc; }
 }
+
+/* Kundengedanke: 7 Aussagen – erste und letzte breiter, damit das Raster aufgeht */
+@media (min-width: 64.0625rem) {
+  .creed li:first-child, .creed li:last-child { grid-column: span 2; }
+}
+@media (min-width: 42.0625rem) and (max-width: 64rem) {
+  .creed li:last-child { grid-column: span 2; }
+}
