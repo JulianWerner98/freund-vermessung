@@ -51,13 +51,13 @@
     --text: #f2f1ef;
     --muted: #b5b2ae;
     --line: rgb(242 241 239 / 0.1);
-    --accent: #ff7a6e;        /* aufgehelltes Logo-Rot für Text auf Dunkel: ≥ 5,8:1 */
-    --accent-hover: #ff9b92;
-    --accent-soft: rgb(255 122 110 / 0.12);
+    --accent: #ff6161;        /* aufgehelltes Logo-Rot (gleicher Farbton) für Text auf Dunkel: ≥ 5:1 */
+    --accent-hover: #ff8a8a;
+    --accent-soft: rgb(255 97 97 / 0.12);
     --fill: #cc0000;          /* Knöpfe bleiben im Logo-Rot */
     --fill-hover: #e01414;
     --on-fill: #ffffff;
-    --contour: #ff7a6e;
+    --contour: #ff6161;
     --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
     --shadow-md: 0 1px 2px rgb(0 0 0 / 0.35), 0 10px 28px -8px rgb(0 0 0 / 0.55);
     --header-bg: rgb(20 19 19 / 0.74);
