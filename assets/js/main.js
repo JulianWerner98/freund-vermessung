@@ -9,6 +9,35 @@
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
+  // Darstellung: Automatisch (System) / Hell / Dunkel
+  const root = document.documentElement;
+  const themeButtons = [...document.querySelectorAll('[data-theme-set]')];
+  const themeMetas = [...document.querySelectorAll('meta[name="theme-color"]')];
+  themeMetas.forEach((m) => { m.dataset.orig = m.content; });
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  const applyTheme = (choice, animate) => {
+    if (animate && !reduceMotion.matches) {
+      root.classList.add('theme-switching');
+      window.setTimeout(() => root.classList.remove('theme-switching'), 260);
+    }
+    if (choice === 'auto') delete root.dataset.theme;
+    else root.dataset.theme = choice;
+    try {
+      if (choice === 'auto') localStorage.removeItem('theme');
+      else localStorage.setItem('theme', choice);
+    } catch (e) { /* Speicher gesperrt: Wahl gilt nur für diese Seite */ }
+    themeButtons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.themeSet === choice)));
+    themeMetas.forEach((m) => {
+      m.content = choice === 'auto' ? m.dataset.orig : (choice === 'dark' ? '#141313' : '#f6f5f3');
+    });
+  };
+
+  if (themeButtons.length) {
+    applyTheme(root.dataset.theme || 'auto', false);
+    themeButtons.forEach((b) => b.addEventListener('click', () => applyTheme(b.dataset.themeSet, true)));
+  }
+
   // Mobiles Menü
   if (toggle && nav) {
     const setOpen = (open) => {

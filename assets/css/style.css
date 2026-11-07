@@ -43,8 +43,9 @@
   --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
 }
 
+/* Dunkel: folgt dem System, außer der Schalter erzwingt Hell (data-theme="light") */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #141313;
     --surface: #1e1d1c;
     --surface-2: #292827;
@@ -63,6 +64,29 @@
     --header-bg: rgb(20 19 19 / 0.74);
   }
 }
+
+/* Dunkel per Schalter erzwungen */
+:root[data-theme="dark"] {
+  --bg: #141313;
+  --surface: #1e1d1c;
+  --surface-2: #292827;
+  --text: #f2f1ef;
+  --muted: #b5b2ae;
+  --line: rgb(242 241 239 / 0.1);
+  --accent: #ff6161;        /* aufgehelltes Logo-Rot (gleicher Farbton) für Text auf Dunkel: ≥ 5:1 */
+  --accent-hover: #ff8a8a;
+  --accent-soft: rgb(255 97 97 / 0.12);
+  --fill: #cc0000;          /* Knöpfe bleiben im Logo-Rot */
+  --fill-hover: #e01414;
+  --on-fill: #ffffff;
+  --contour: #ff6161;
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 1px 2px rgb(0 0 0 / 0.35), 0 10px 28px -8px rgb(0 0 0 / 0.55);
+  --header-bg: rgb(20 19 19 / 0.74);
+}
+
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
 
 /* --------------------------------------------------------------------------
    Grundlagen
@@ -183,7 +207,7 @@ a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: var(--s-5);
   height: 4.25rem;
 }
@@ -937,3 +961,52 @@ html:has(.subnav) { scroll-padding-top: 8.5rem; }
   .grid-3 > :nth-child(3):last-child { grid-column: 1 / -1; }
 }
 .signature p + p { margin-top: 0.125rem; }
+
+/* --------------------------------------------------------------------------
+   Darstellungs-Schalter (Automatisch / Hell / Dunkel)
+   -------------------------------------------------------------------------- */
+
+.site-nav { margin-left: auto; }
+
+.theme-switch {
+  display: inline-flex;
+  flex: none;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 999px;
+  background: var(--surface-2);
+}
+.theme-switch button {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease, box-shadow 150ms ease, transform 160ms var(--ease-out);
+}
+.theme-switch button:hover { color: var(--text); }
+.theme-switch button:active { transform: scale(0.94); }
+.theme-switch button[aria-pressed="true"] { background: var(--surface); color: var(--text); box-shadow: var(--shadow-sm); }
+.theme-switch svg { width: 16px; height: 16px; }
+@media (pointer: coarse) { .theme-switch button { width: 36px; height: 36px; } }
+
+@media (max-width: 54rem) {
+  .theme-switch { margin-left: auto; }
+}
+/* Platz für Navigation + Schalter: Zusatzzeile neben dem Logo erst ab breiten Bildschirmen */
+@media (min-width: 54.0625rem) and (max-width: 72rem) {
+  .brand-text { display: none; }
+}
+
+/* Weicher Wechsel zwischen Hell und Dunkel – nur im Moment des Umschaltens */
+html.theme-switching *, html.theme-switching *::before, html.theme-switching *::after {
+  transition: background-color 220ms ease, color 220ms ease, box-shadow 220ms ease, fill 220ms ease, stroke 220ms ease !important;
+}
+@media (max-width: 54rem) {
+  .header-inner { gap: var(--s-2); }
+}
