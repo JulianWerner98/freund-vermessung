@@ -260,9 +260,11 @@ p{margin:0;text-wrap:pretty}
 
 /* Ablauf */
 .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(18px,2.4vw,30px)}
-.step{display:grid;gap:10px;align-content:start;border-top:2px solid var(--ink);padding-top:18px}
-.step-num{font-size:3.2rem;font-weight:800;font-style:italic;font-stretch:108%;color:var(--red);line-height:1;letter-spacing:-.03em}
-.step h3{font-size:1.2rem}
+/* Zahl und Überschrift stehen nebeneinander in der ersten Zeile (gleiche Grundlinie), alles andere darunter über die volle Breite */
+.step{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 14px;align-content:start;border-top:2px solid var(--ink);padding-top:18px}
+.step > *{grid-column:1 / -1}
+.step-num{grid-column:1;grid-row:1;align-self:baseline;font-size:3.2rem;font-weight:800;font-style:italic;font-stretch:108%;color:var(--red);line-height:1;letter-spacing:-.03em}
+.step h3{grid-column:2;grid-row:1;align-self:baseline;font-size:1.35rem}
 .step-pic{margin:4px 0 6px;aspect-ratio:16/10;background:#fff;border:1px solid var(--line);display:grid;place-items:center;padding:8px;overflow:hidden}
 .step-pic img{width:100%;height:100%;object-fit:contain}
 .step-pic-full{padding:0}
@@ -472,6 +474,7 @@ html:has(.zoom-dialog[open]){overflow:hidden}
 .subpage h2{font-size:1.4rem;margin-top:10px}
 .subpage address{font-style:normal}
 .subpage .muted{color:var(--ink-2)}
+.subpage article[data-page="datenschutz"] .ticks{columns:1}
 .job-lead{font-size:1.2rem;color:var(--ink-2)}
 .job-lead strong{color:var(--ink);font-weight:700}
 .job-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0}
@@ -786,15 +789,14 @@ html:has(.zoom-dialog[open]){overflow:hidden}
         </li>
         <li class="step">
           <span class="step-num" aria-hidden="true">3</span>
-          <figure class="step-pic step-pic-full"><button class="step-zoom" type="button" aria-haspopup="dialog" aria-label="Bild vergrößern: Grobabsteckung"><img src="img/grobabsteckung.svg" alt="Zeichnung: Ein Tachymeter steckt die vier Gebäudeecken mit Holzpfählen ab, daneben ein Höhenfestpunkt" width="320" height="200" loading="lazy"><span class="zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg>Vergrößern</span></button></figure>
+          <figure class="step-pic step-pic-full"><button class="step-zoom" type="button" aria-haspopup="dialog" aria-label="Bild vergrößern: Grobabsteckung"><img src="img/grobabsteckung.png" alt="Zeichnung: Holzpfähle an den vier Gebäudeecken, eine gestrichelte Linie zeigt die Außenkanten, daneben ein Höhenfestpunkt" width="960" height="600" loading="lazy"><span class="zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg>Vergrößern</span></button></figure>
           <h3>Grobabsteckung</h3>
           <p>Vor dem Aushub markieren wir die Außenkanten des Gebäudes mit Holzpfählen und setzen einen Höhenfestpunkt für die Aushubtiefe.</p>
           <p class="result"><strong>Ergebnis:</strong> Baugrube ist abgesteckt</p>
           <!-- Erklärung für die Vergrößerung (erscheint beim Klick aufs Bild) -->
           <div class="step-detail" hidden>
-            <p>Vor dem Aushub zeigen wir, wo und wie tief die Baugrube gegraben wird. Das sehen Sie in der Zeichnung:</p>
+            <p>Vor dem Aushub zeigen wir, wo und wie tief die Baugrube gegraben wird. Die Lage der Gebäudeecken kommt aus den Plänen, mit dem Tachymeter übertragen wir sie auf das Grundstück. Das sehen Sie in der Zeichnung:</p>
             <dl>
-              <dt>Tachymeter</dt><dd>Die Lage der Gebäudeecken kommt aus den Plänen. Mit dem Tachymeter finden wir diese Punkte auf dem Grundstück.</dd>
               <dt>Pfähle</dt><dd>An jeder Ecke schlagen wir einen Holzpfahl ein. Die gestrichelte Linie zwischen den Pfählen zeigt die Außenkanten des Gebäudes.</dd>
               <dt>Höhenfestpunkt</dt><dd>Ein Punkt mit bekannter Höhe neben der Baugrube. Von hier aus misst die Baufirma, wie tief sie ausheben muss.</dd>
             </dl>
@@ -803,7 +805,7 @@ html:has(.zoom-dialog[open]){overflow:hidden}
         </li>
         <li class="step">
           <span class="step-num" aria-hidden="true">4</span>
-          <figure class="step-pic step-pic-full"><button class="step-zoom" type="button" aria-haspopup="dialog" aria-label="Bild vergrößern: Feinabsteckung"><img src="img/feinabsteckung.svg" alt="Zeichnung: Schnurgerüste an den Ecken der Baugrube, rote Schnüre markieren die Gebäudekanten, ein Lot überträgt eine Ecke auf die Sohle" width="320" height="200" loading="lazy"><span class="zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg>Vergrößern</span></button></figure>
+          <figure class="step-pic step-pic-full"><button class="step-zoom" type="button" aria-haspopup="dialog" aria-label="Bild vergrößern: Feinabsteckung"><img src="img/feinabsteckung.png" alt="Zeichnung: Schnurgerüste an den Ecken der Baugrube, rote Schnüre markieren die Gebäudekanten, ein Lot überträgt eine Ecke auf die Sohle" width="960" height="600" loading="lazy"><span class="zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg>Vergrößern</span></button></figure>
           <h3>Feinabsteckung</h3>
           <p>Wir übertragen die Gebäudekanten auf das Schnurgerüst und markieren die geforderte Höhe. So steht Ihr Haus genau dort, wo es geplant ist.</p>
           <p class="result"><strong>Ergebnis:</strong> Absteckungsplan</p>
@@ -979,10 +981,10 @@ html:has(.zoom-dialog[open]){overflow:hidden}
         <p>Hilfreiche Unterlagen zum Herunterladen.</p>
       </div>
       <ul class="docs">
-        <!-- Neue Datei: Zeile kopieren. Die Größe (KB) bei einer neuen Datei mit anpassen. -->
+        <!-- Neue Datei: Zeile kopieren. Die Größe (KB) bei einer neuen Datei mit anpassen. Nachbarrecht verlinkt direkt auf das aktuelle PDF des Justizministeriums. -->
         <li><span class="doc-meta"><span class="doc-tag">PDF</span>62 KB</span><a href="downloads/Bauantrag-Kassel.pdf" target="_blank" rel="noopener">Bauantrag in Kassel<span class="visually-hidden"> (PDF, öffnet in neuem Tab)</span></a><p>Welche Katasterunterlagen Sie für Ihr Bauvorhaben in der Stadt Kassel brauchen.</p></li>
         <li><span class="doc-meta"><span class="doc-tag">PDF</span>262 KB</span><a href="downloads/Checkliste_Bau.pdf" target="_blank" rel="noopener">Checkliste für Bauherren<span class="visually-hidden"> (PDF, öffnet in neuem Tab)</span></a><p>Die wichtigsten Schritte, wenn Sie bauen möchten.</p></li>
-        <li><span class="doc-meta"><span class="doc-tag">PDF</span>949 KB</span><a href="downloads/Nachbarrecht.pdf" target="_blank" rel="noopener">Nachbarrecht in Hessen<span class="visually-hidden"> (PDF, öffnet in neuem Tab)</span></a><p>Informationsblatt des Hessischen Ministeriums der Justiz.</p></li>
+        <li><span class="doc-meta"><span class="doc-tag">PDF</span>1,8 MB · justizministerium.hessen.de</span><a href="https://justizministerium.hessen.de/sites/justizministerium.hessen.de/files/2021-08/nachbarrecht.pdf" target="_blank" rel="noopener">Nachbarrecht in Hessen<span class="visually-hidden"> (PDF auf der Webseite des Hessischen Justizministeriums, öffnet in neuem Tab)</span></a><p>Informationsblatt des Hessischen Ministeriums der Justiz.</p></li>
       </ul>
     </div>
   </section>
@@ -1159,7 +1161,8 @@ html:has(.zoom-dialog[open]){overflow:hidden}
     <article data-page="impressum" hidden>
       <a class="back" href="#start">Zurück zur Startseite</a>
       <h1>Impressum</h1>
-      <p class="muted">Angaben gemäß § 5 DDG</p>
+      <!-- Rot markierte Stellen (class="ph") sind noch offen. Vor dem Livegang ergänzen und die Markierung entfernen. -->
+      <p class="muted">Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</p>
       <address>
         Freund Vermessung<br>
         Ingenieurbüro für Vermessungstechnik und Geoinformatik<br>
@@ -1167,33 +1170,101 @@ html:has(.zoom-dialog[open]){overflow:hidden}
         Hans-Römhild-Straße 26A<br>
         34128 Kassel
       </address>
+
       <h2>Kontakt</h2>
-      <p>Telefon: 0561 81 50 510<br>E-Mail: info@freund-vermessung.de</p>
+      <p>Telefon: <a href="tel:+495618150510">0561 81 50 510</a><br>E-Mail: <a href="mailto:info@freund-vermessung.de">info@freund-vermessung.de</a></p>
+
       <h2>Berufsbezeichnung und Kammer</h2>
-      <p>Gesetzliche Berufsbezeichnung: Beratender Ingenieur, verliehen in der Bundesrepublik Deutschland (Land Hessen).<br>Eingetragen in die Liste der Beratenden Ingenieure der Ingenieurkammer Hessen unter der Nr. B 1277.</p>
+      <p>Gesetzliche Berufsbezeichnung: Beratender Ingenieur, verliehen in der Bundesrepublik Deutschland (Land Hessen).</p>
+      <p>Eingetragen in die Liste der Beratenden Ingenieure der Ingenieurkammer Hessen unter der Nr. B 1277.</p>
       <p>Zuständige Kammer:<br>Ingenieurkammer Hessen, Körperschaft des öffentlichen Rechts<br>Abraham-Lincoln-Straße 44<br>65189 Wiesbaden<br><a href="https://www.ingkh.de">www.ingkh.de</a></p>
+
       <h2>Berufsrechtliche Regelungen</h2>
       <p>Hessisches Ingenieurgesetz (HIngG) und Grundsätze zur Berufsordnung (Berufsgrundsätze) der Ingenieurkammer Hessen, jeweils in der geltenden Fassung. Beide sind auf der Webseite der Ingenieurkammer Hessen unter <a href="https://www.ingkh.de">www.ingkh.de</a> abrufbar.</p>
+
       <h2>Umsatzsteuer-Identifikationsnummer</h2>
-      <p><span class="ph">USt-IdNr. ergänzen, falls vorhanden</span></p>
-      <h2>Berufshaftpflichtversicherung</h2>
-      <p><span class="ph">Name und Anschrift des Versicherers, räumlicher Geltungsbereich</span></p>
+      <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: <span class="ph">DE … (ergänzen)</span></p>
+
+      <h2>Verbraucherstreitbeilegung</h2>
+      <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
       <h2>Verantwortlich für den Inhalt</h2>
-      <p>Dipl.-Ing. Dirk Freund, Anschrift wie oben</p>
-      <p class="note">Entwurf. Die markierten Angaben werden vor der Veröffentlichung ergänzt und geprüft.</p>
+      <p>Verantwortlich gemäß § 18 Abs. 2 Medienstaatsvertrag (MStV):<br>Dipl.-Ing. Dirk Freund, Anschrift wie oben</p>
+
+      <h2>Bildnachweise und Kartendaten</h2>
+      <p>Fotos und Zeichnungen: Freund Vermessung</p>
+      <p>Deutschlandkarte: Grenzen nach <a href="https://www.naturalearthdata.com">Natural Earth</a> (gemeinfrei), vereinfacht und bearbeitet.</p>
+      <p>Schrift: Archivo von Omnibus-Type, lizenziert unter der SIL Open Font License 1.1.</p>
+
     </article>
 
     <article data-page="datenschutz" hidden>
       <a class="back" href="#start">Zurück zur Startseite</a>
       <h1>Datenschutzerklärung</h1>
+      <!-- Stand November 2026. Abschnitt "Hosting" ergänzen, sobald der Hosting-Anbieter feststeht. -->
+      <p class="job-lead">Wir verarbeiten auf dieser Webseite so wenige Daten wie möglich. Hier erfahren Sie, welche das sind und welche Rechte Sie haben.</p>
+
       <h2>Verantwortlicher</h2>
       <address>
         Freund Vermessung, Inhaber Dipl.-Ing. Dirk Freund<br>
         Hans-Römhild-Straße 26A, 34128 Kassel<br>
-        E-Mail: info@freund-vermessung.de
+        Telefon: <a href="tel:+495618150510">0561 81 50 510</a><br>
+        E-Mail: <a href="mailto:info@freund-vermessung.de">info@freund-vermessung.de</a>
       </address>
-      <p><span class="ph">Vollständige Datenschutzerklärung ergänzen: Hosting und Server-Logfiles, Kontakt per E-Mail und Telefon, Bewerbungen per E-Mail, Link zu Instagram, Rechte der Betroffenen nach DSGVO, Beschwerderecht bei der Aufsichtsbehörde</span></p>
-      <p class="note">Entwurf. Die Datenschutzerklärung wird vor der Veröffentlichung vollständig erstellt und geprüft.</p>
+
+      <h2>Das Wichtigste in Kürze</h2>
+      <ul class="ticks">
+        <li>Keine Cookies, kein Tracking, keine Analyse- oder Werbedienste</li>
+        <li>Keine Inhalte von fremden Servern: Schrift, Bilder und Karte liegen auf dieser Webseite selbst</li>
+        <li>Das Anfrageformular sendet nichts ab. Es erstellt nur eine E-Mail, die Sie selbst mit Ihrem E-Mail-Programm verschicken</li>
+        <li>Beim Aufruf der Seite entstehen technisch notwendige Server-Protokolle beim Hosting-Anbieter (siehe unten)</li>
+      </ul>
+
+      <h2>Hosting und Server-Protokolle</h2>
+      <!-- Wird ergänzt, sobald feststeht, wo die Seite dauerhaft gehostet wird. Eine fertige Fassung für GitHub Pages steht im Git-Verlauf (Commit d60a3dc). -->
+      <p><span class="ph">Hosting ergänzen, sobald der Anbieter feststeht: Name und Anschrift des Anbieters, welche Daten beim Aufruf anfallen (Server-Protokolle mit IP-Adresse), Zweck und Rechtsgrundlage, Speicherdauer, gegebenenfalls Übermittlung in Länder außerhalb der EU, Auftragsverarbeitungsvertrag</span></p>
+
+      <h2>Verschlüsselung</h2>
+      <p>Die Verbindung zu dieser Webseite ist per TLS verschlüsselt. Das erkennen Sie an „https://“ in der Adresszeile Ihres Browsers.</p>
+
+      <h2>Kontakt per E-Mail, Telefon oder Anfrageformular</h2>
+      <p>Wenn Sie uns per E-Mail oder Telefon kontaktieren, verarbeiten wir Ihre Angaben (zum Beispiel Name, Kontaktdaten, Adresse des Grundstücks und Ihr Anliegen), um Ihre Anfrage zu beantworten und ein Angebot zu erstellen.</p>
+      <p>Das Anfrageformular auf dieser Seite überträgt keine Daten an uns oder an Dritte. Es setzt Ihre Eingaben nur in Ihrem Browser zu einem E-Mail-Text zusammen. Erst wenn Sie diese E-Mail mit Ihrem eigenen E-Mail-Programm abschicken, erhalten wir Ihre Angaben.</p>
+      <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, wenn Ihre Anfrage auf einen Auftrag zielt, und sonst Art. 6 Abs. 1 lit. f DSGVO (unser berechtigtes Interesse, Anfragen zu beantworten). Wir löschen Ihre Angaben, wenn sie nicht mehr gebraucht werden. Gesetzliche Aufbewahrungspflichten, etwa nach Handels- und Steuerrecht für bis zu zehn Jahre, bleiben unberührt.</p>
+
+      <h2>Bewerbungen</h2>
+      <p>Wenn Sie sich per E-Mail oder Post bei uns bewerben, verarbeiten wir Ihre Unterlagen, um über Ihre Einstellung zu entscheiden. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung eines Beschäftigungsverhältnisses).</p>
+      <p>Kommt es nicht zu einer Einstellung, löschen wir Ihre Unterlagen spätestens sechs Monate nach Abschluss des Bewerbungsverfahrens, sofern Sie nicht in eine längere Aufbewahrung eingewilligt haben. Werden Sie eingestellt, nehmen wir die Unterlagen in die Personalakte auf.</p>
+
+      <h2>Links zu anderen Webseiten</h2>
+      <p>Diese Seite enthält Links, zum Beispiel zu unserem Instagram-Profil und zur Ingenieurkammer Hessen. Solange Sie einen Link nicht anklicken, werden keine Daten an diese Anbieter übertragen. Nach dem Anklicken gelten deren Datenschutzbestimmungen. Für Instagram ist das die Meta Platforms Ireland Limited, Merrion Road, Dublin 4, D04 X2K5, Irland.</p>
+
+      <h2>Ihre Rechte</h2>
+      <p>Sie haben gegenüber uns folgende Rechte hinsichtlich Ihrer personenbezogenen Daten:</p>
+      <ul class="ticks">
+        <li>Auskunft (Art. 15 DSGVO)</li>
+        <li>Berichtigung (Art. 16 DSGVO)</li>
+        <li>Löschung (Art. 17 DSGVO)</li>
+        <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+        <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+        <li>Widerruf einer Einwilligung mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO)</li>
+      </ul>
+      <p><strong>Widerspruchsrecht:</strong> Soweit wir Daten auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeiten, können Sie aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit widersprechen (Art. 21 DSGVO).</p>
+      <p>Für alle Anliegen genügt eine formlose Nachricht an <a href="mailto:info@freund-vermessung.de">info@freund-vermessung.de</a>.</p>
+
+      <h2>Beschwerderecht</h2>
+      <p>Sie können sich bei einer Datenschutz-Aufsichtsbehörde beschweren. Für uns zuständig ist:</p>
+      <address>
+        Der Hessische Beauftragte für Datenschutz und Informationsfreiheit<br>
+        Gustav-Stresemann-Ring 1, 65189 Wiesbaden<br>
+        Postfach 31 63, 65021 Wiesbaden<br>
+        <a href="https://datenschutz.hessen.de">datenschutz.hessen.de</a>
+      </address>
+
+      <h2>Keine automatisierten Entscheidungen</h2>
+      <p>Wir treffen keine Entscheidungen allein auf Grundlage automatisierter Verarbeitung und erstellen keine Profile.</p>
+
+      <p class="muted">Stand: November 2026</p>
     </article>
   </div>
 </main>
