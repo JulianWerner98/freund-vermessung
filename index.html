@@ -1,150 +1,1592 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vermessungsbüro Freund – Kassel</title>
-<meta name="description" content="Ingenieurbüro für Vermessungstechnik und Geoinformatik in Kassel – Dipl.-Ing. Dirk Freund. Beratung, Erfassung und Auswertung: Vermessungsleistungen für Ihre Bauvorhaben.">
-<meta name="robots" content="noindex">
-<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
-<meta name="theme-color" content="#f6f5f3" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#141313" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/css/style.css?v=f046ccb3">
-<script src="assets/js/main.js?v=c141761e" defer></script>
+<!-- VORSCHAU: Suchmaschinen sollen die Seite noch nicht aufnehmen. Diese Zeile löschen, sobald Impressum und Datenschutz fertig sind. -->
+<meta name="robots" content="noindex, nofollow">
+<title>Freund Vermessung</title>
+<meta name="description" content="Freund Vermessung, Ingenieurbüro für Vermessungstechnik und Geoinformatik in Kassel. Lagepläne zum Bauantrag, Absteckung von Gebäuden, Bau- und Ingenieurvermessung und Bestandsvermessung in Nordhessen, ganz Hessen und den angrenzenden Bundesländern.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<!-- Adresse der fertigen Webseite. Anpassen, falls sie anders lautet (zum Beispiel ohne www). -->
+<link rel="canonical" href="https://www.freund-vermessung.de/">
+<!-- Vorschau, wenn jemand den Link teilt (WhatsApp, Facebook, LinkedIn usw.). Bild: img/vorschau.png, 1200 x 630 px -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Freund Vermessung">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://www.freund-vermessung.de/">
+<meta property="og:title" content="Freund Vermessung, Ingenieurbüro für Vermessungstechnik und Geoinformatik in Kassel">
+<meta property="og:description" content="Lagepläne zum Bauantrag, Absteckung von Gebäuden, Bau- und Ingenieurvermessung und Bestandsvermessung. Sitz in Kassel, im Einsatz in Nordhessen und ganz Hessen.">
+<meta property="og:image" content="https://www.freund-vermessung.de/img/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo von Freund Vermessung, Ingenieurbüro für Vermessungstechnik und Geoinformatik">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Angaben für Google (Strukturierte Daten). Bei neuer Adresse, Telefonnummer usw. hier mit ändern. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Freund Vermessung",
+  "description": "Ingenieurbüro für Vermessungstechnik und Geoinformatik in Kassel",
+  "url": "https://www.freund-vermessung.de/",
+  "logo": "https://www.freund-vermessung.de/img/logo-freund-vermessung.png",
+  "image": "https://www.freund-vermessung.de/img/vorschau.png",
+  "telephone": "+49 561 8150510",
+  "email": "info@freund-vermessung.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Hans-Römhild-Straße 26A",
+    "postalCode": "34128",
+    "addressLocality": "Kassel",
+    "addressRegion": "Hessen",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.34497,
+    "longitude": 9.44338
+  },
+  "areaServed": [
+    {
+      "@type": "AdministrativeArea",
+      "name": "Nordhessen"
+    },
+    {
+      "@type": "State",
+      "name": "Hessen"
+    }
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Dirk Freund",
+    "jobTitle": "Beratender Ingenieur"
+  },
+  "foundingDate": "1998-11-01",
+  "sameAs": [
+    "https://www.instagram.com/freund_vermessung/"
+  ],
+  "knowsAbout": [
+    "Lageplan zum Bauantrag",
+    "Absteckung",
+    "Bauvermessung",
+    "Ingenieurvermessung",
+    "Bestandsvermessung",
+    "Gebäudeaufmaß",
+    "Flächenberechnung",
+    "Geoinformatik"
+  ]
+}
+</script>
+<!-- Schrift Archivo liegt im Ordner fonts/ auf dem eigenen Server (keine Verbindung zu Google). Lizenz: fonts/OFL.txt -->
+<link rel="preload" href="fonts/archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Schrift Archivo (SIL Open Font License), auf die genutzten Stärken und Breiten verkleinert */
+@font-face{font-family:"Archivo";font-style:normal;font-weight:400 800;font-stretch:100% 125%;font-display:swap;src:url("fonts/archivo-normal.woff2") format("woff2")}
+@font-face{font-family:"Archivo";font-style:italic;font-weight:600 800;font-stretch:100% 125%;font-display:swap;src:url("fonts/archivo-italic.woff2") format("woff2")}
+:root{
+  /* Layout: viel Weiß, das Logo groß im Startbereich, das Logo-Rot als Fläche am Ende,
+     kursive Headlines wie im Schriftzug, ein schräger roter Balken als wiederkehrendes Zeichen. */
+  --red:#CB0000;
+  --red-deep:#A50000;
+  --ink:#1D1F21;
+  --ink-2:#5A5F63;
+  --line:#E3E3E0;
+  --bg:#FFFFFF;
+  --bg-2:#F4F4F2;
+  --font:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --wrap:1200px;
+  --gutter:clamp(18px,4vw,44px);
+  /* Bewegung: kräftige Kurven statt der schwachen Standardkurven.
+     ease-out für alles, was erscheint oder auf einen Klick reagiert,
+     ease-drawer (wie bei iOS) für Dinge, die zurückfedern. */
+  --ease-out:cubic-bezier(.23,1,.32,1);
+  --ease-in-out:cubic-bezier(.77,0,.175,1);
+  --ease-drawer:cubic-bezier(.32,.72,0,1);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:92px;-webkit-text-size-adjust:100%;scrollbar-gutter:stable}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+/* Schriftgröße in rem: Wer im Browser eine größere Schrift eingestellt hat, bekommt sie auch hier */
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:1.0625rem;line-height:1.6;font-stretch:100%}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+/* Auf dem Handy: kein grauer Kasten beim Antippen, dafür eigenes Feedback (siehe .btn:active). Kein Warten auf Doppeltipp. */
+a,button,summary,select,label{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2px}
+/* Auf roten und dunklen Flächen ist der Fokusrahmen weiß, sonst wäre er nicht zu sehen */
+.contact :focus-visible,.site-footer :focus-visible{outline-color:#fff}
+.contact .form-card :focus-visible{outline-color:var(--red)}
+/* Elemente, die nur per Skript den Fokus bekommen (Überschriften, Hauptbereich), ohne Rahmen */
+[tabindex="-1"]:focus{outline:none}
+/* Link "Zum Inhalt springen": unsichtbar, erscheint beim ersten Tab */
+.skip-link{position:absolute;left:12px;top:-80px;z-index:100;background:var(--ink);color:#fff;padding:12px 16px;font-weight:650;text-decoration:none;border-radius:2px}
+.skip-link:focus{top:12px;color:#fff}
+h1,h2,h3,p,li,dt,dd,address{overflow-wrap:break-word}
+h1,h2,h3{margin:0;line-height:1.05;text-wrap:balance}
+h2{font-size:clamp(2rem,3.4vw,2.85rem);font-weight:780;font-stretch:106%;letter-spacing:-.018em}
+h3{font-size:1.3rem;font-weight:700;letter-spacing:-.005em;line-height:1.2}
+p{margin:0;text-wrap:pretty}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.section{padding-block:clamp(72px,10vw,128px)}
+/* Abschnitte wechseln grau/weiß, beginnend mit Grau bei Leistungen.
+   Was selbst grau ist, wird auf grauem Grund weiß, damit es sichtbar bleibt. */
+.alt{background:var(--bg-2)}
+.alt .glossar{background:#fff}
+.slash{display:block;width:30px;height:6px;background:var(--red);transform:skewX(-18deg);margin-bottom:20px}
+/* Abschnittskopf: große Überschrift, darunter linksbündig der Einleitungstext */
+.section-head{display:grid;gap:18px;margin-bottom:clamp(40px,6vw,64px)}
+.section-head p{color:var(--ink-2);font-size:1.12rem;max-width:60ch}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--font);font-weight:650;font-size:1rem;padding:13px 22px;border-radius:2px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;line-height:1.1;background:transparent;
+  transition:background-color .15s ease,color .15s ease,border-color .15s ease,transform .16s var(--ease-out)}
+/* Beim Drücken gibt der Knopf sofort ein kleines Stück nach: die Seite "hört" den Klick */
+.btn:active:not(:disabled),.chip:active,.menu-toggle:active{transform:scale(.97)}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:active{background:var(--red-deep)}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+
+/* Kopfzeile: durchscheinende Fläche, unter der die Seite hindurchläuft.
+   Die Trennlinie erscheint erst, wenn Inhalt darunter liegt (Klasse .scrolled per Skript). */
+/* Kopfzeile als Glasleiste ("Liquid Glass"): oben bündig, eckig,
+   stark unscharf und leicht farbverstärkt, heller Lichtrand, weicher Schatten.
+   Die Ränder links und rechts sind durchklickbar, nur die Leiste selbst fängt Klicks.
+   Innenabstand so, dass Logo und Telefonknopf ungefähr mit dem Seiteninhalt fluchten. */
+.site-header{position:sticky;top:0;z-index:30;pointer-events:none}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.site-header .header-row{pointer-events:auto;position:relative;isolation:isolate;
+  width:calc(100% - var(--gutter));max-width:calc(var(--wrap) + 2 * var(--gutter));margin-inline:auto;
+  min-height:68px;padding-inline:calc(var(--gutter) * .75);border-radius:0;border-top:0;
+  background:linear-gradient(180deg,rgba(255,255,255,.80),rgba(255,255,255,.58));
+  backdrop-filter:blur(22px) saturate(180%);-webkit-backdrop-filter:blur(22px) saturate(180%);
+  border:1px solid rgba(255,255,255,.65);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(255,255,255,.35),0 1px 2px rgba(29,31,33,.06),0 8px 28px rgba(29,31,33,.08);
+  transition:box-shadow .3s ease}
+/* Lichtreflex oben links, wie auf gewölbtem Glas */
+.site-header .header-row::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;
+  background:radial-gradient(120% 160% at 12% -50%,rgba(255,255,255,.7),rgba(255,255,255,0) 55%)}
+/* Sobald Inhalt darunter liegt, schwebt die Leiste etwas höher (kräftigerer Schatten) */
+.site-header.scrolled .header-row{box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(255,255,255,.35),0 1px 2px rgba(29,31,33,.08),0 14px 40px rgba(29,31,33,.14)}
+.logo img{height:50px;width:auto}
+/* Das kleine Logo oben erscheint erst, wenn das große Logo im Startbereich weggescrollt ist */
+.site-header .logo{display:block;transition:opacity .2s ease,visibility .2s}
+.hero-logo-visible .site-header .logo{opacity:0;visibility:hidden}
+@media (prefers-reduced-motion:no-preference){
+  .site-header .logo{transition:opacity .2s ease,visibility .2s,transform .3s var(--ease-out)}
+  .hero-logo-visible .site-header .logo{transform:scale(.92)}
+}
+.site-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:clamp(12px,calc(3.6vw - 16px),34px)}
+.site-nav a{font-weight:550;font-size:.98rem;text-decoration:none;padding-block:8px;border-bottom:2px solid transparent;transition:border-color .15s ease}
+.site-nav > ul{align-items:center}
+.site-nav a,.header-phone span{white-space:nowrap}
+.header-actions{display:flex;align-items:center;gap:10px}
+.header-phone{padding:11px 16px;font-size:.95rem}
+.header-phone svg{width:16px;height:16px;flex:none}
+.menu-toggle{display:none;background:rgba(255,255,255,.5);border:1px solid rgba(29,31,33,.18);color:var(--ink);border-radius:2px;font:inherit;font-weight:650;font-size:.95rem;padding:9px 13px;cursor:pointer;transition:transform .16s var(--ease-out)}
+
+/* Start: Logo, Art des Büros, Leistungen als Stichpunkte, Einsatzgebiet */
+/* Startbereich füllt den ganzen Bildschirm unter der Kopfzeile (svh: ohne die ein- und ausfahrende Adressleiste auf dem Handy) */
+.hero{border-bottom:1px solid var(--line);display:grid;align-items:center;min-height:calc(100vh - 68px);min-height:calc(100svh - 68px)}
+.hero-inner{width:100%;display:grid;grid-template-columns:minmax(0,1fr);padding-block:clamp(28px,5vh,72px)}
+/* Logo links neben der Überschrift, gleiche Höhe wie die drei Zeilen */
+.hero-head{display:flex;align-items:center;gap:clamp(24px,3.5vw,44px)}
+.hero-logo{width:clamp(120px,13vw,170px);height:auto;flex:none}
+.hero-text{display:grid;gap:clamp(28px,4vh,52px);max-width:940px}
+.hero h1{font-size:clamp(2rem,3.6vw,3.1rem);font-weight:780;font-stretch:106%;letter-spacing:-.018em;line-height:1.08}
+.hero-ticks{font-size:clamp(1.2rem,1.6vw,1.4rem);color:var(--ink);columns:2 240px}
+.hero-ticks li{padding-block:7px}
+.hero-ticks li::before{top:1.05em;width:12px;height:3.5px}
+/* Büro links, Deutschlandkarte "Einsatzgebiete" rechts */
+.hero-place{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(24px,4vw,56px);align-items:center}
+/* Linke Spalte: Leistungen und Anfrage-Knopf, mittig neben der Karte */
+.hero-place-main{display:grid;gap:clamp(40px,4vw,52px);align-content:center;justify-items:start}
+.hero-place-main .hero-ticks{columns:1}
+.hero-office{display:flex;gap:10px;align-items:flex-start;color:var(--ink-2);font-size:1.05rem}
+.hero-office svg{width:20px;height:20px;flex:none;color:var(--red);margin-top:3px}
+.hero-office strong{color:var(--ink);font-weight:650}
+/* Breite richtet sich auch nach der Bildschirmhöhe, damit der Startbereich auf Laptops in einen Bildschirm passt (Karte: Höhe = Breite / 0,74) */
+.area-map{margin:0;width:clamp(220px,min(28vw,calc((100svh - 400px) * .74)),370px);display:grid;gap:10px}
+.area-title{font-weight:700;font-size:1rem;color:var(--ink);text-align:center}
+.area-canvas{position:relative}
+.area-canvas svg{display:block;width:100%;height:auto;overflow:visible}
+.area-land{fill:#ECEDEA}
+/* Drei Rottöne: je näher an Kassel, desto dunkler */
+.area-ring.is-50{fill:#CB0000}
+.area-ring.is-150{fill:#E3706A}
+.area-ring.is-250{fill:#F7C9C4}
+.area-ring{transform-box:fill-box;transform-origin:center}
+/* Landesgrenzen fein, Hessen kräftiger, Bundesgrenze dazwischen */
+.area-states path{fill:none;stroke:rgba(29,31,33,.28);stroke-width:.75;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.area-border{fill:none;stroke:#7A7F83;stroke-width:1;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.area-hessen{fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.area-cities circle{fill:var(--ink);stroke:#fff;stroke-width:1.5;vector-effect:non-scaling-stroke}
+/* Stecknadel fürs Büro: dunkel mit weißem Rand, damit sie auf dem roten Kreis klar steht */
+.area-pin{position:absolute;width:26px;height:26px;transform:translate(-50%,-96%);filter:drop-shadow(0 1px 1.5px rgba(0,0,0,.3))}
+.area-pin svg{display:block;width:100%;height:100%;overflow:visible}
+.area-pin path{fill:var(--ink);stroke:#fff;stroke-width:1.6;stroke-linejoin:round}
+.area-pin circle{fill:#fff}
+/* Beschriftungen: klein, mit weißem Rand, damit sie auf Rot und auf Linien lesbar bleiben */
+.area-label{position:absolute;font-size:.78rem;font-weight:600;line-height:1;white-space:nowrap;color:var(--ink);pointer-events:none;
+  text-shadow:0 0 2px #fff,0 0 2px #fff,0 0 3px #fff,0 0 4px #fff,0 0 6px #fff}
+.area-label.is-r{transform:translate(8px,-50%)}
+.area-label.is-l{transform:translate(calc(-100% - 8px),-50%)}
+/* "Büro in Kassel" als dunkles Schild links neben der Stecknadel: das Wichtigste auf der Karte */
+.area-kassel-label{font-size:.88rem;font-weight:750;color:#fff;background:var(--ink);padding:6px 10px;border-radius:4px;
+  text-shadow:none;box-shadow:0 6px 16px rgba(29,31,33,.22);transform:translate(calc(-100% - 16px),calc(-50% - 17px))}
+/* Die Kreise breiten sich beim ersten Laden einmal von Kassel aus (nur ohne "Bewegung reduzieren") */
+@media (prefers-reduced-motion:no-preference){
+  .area-ring{animation:area-auf .8s var(--ease-out) backwards}
+  .area-ring.is-150{animation-delay:.12s}
+  .area-ring.is-50{animation-delay:.24s}
+  @keyframes area-auf{from{opacity:0;transform:scale(.7)}}
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-actions .btn{font-size:1.12rem;padding:17px 30px}
+
+/* Leistungen */
+.srows{border-top:2px solid var(--ink)}
+.srow{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:18px clamp(28px,5vw,80px);padding-block:clamp(28px,4vw,44px);border-bottom:1px solid var(--line)}
+.srow h3{font-size:clamp(1.5rem,2.4vw,1.9rem);font-weight:760;font-stretch:104%;letter-spacing:-.015em}
+.srow .for{color:var(--red);font-weight:600;font-size:.95rem;margin-top:8px}
+.srow-body{display:grid;gap:16px}
+.srow-body > p{color:var(--ink-2);font-size:1.06rem;max-width:60ch}
+.ticks{list-style:none;margin:0;padding:0;columns:2 250px;column-gap:36px}
+.ticks li{position:relative;padding:5px 0 5px 22px;break-inside:avoid}
+.ticks li::before{content:"";position:absolute;left:0;top:.95em;width:10px;height:3px;background:var(--red);transform:skewX(-18deg)}
+
+
+/* Ablauf */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(18px,2.4vw,30px)}
+.step{display:grid;gap:10px;align-content:start;border-top:2px solid var(--ink);padding-top:18px}
+.step-num{font-size:3.2rem;font-weight:800;font-style:italic;font-stretch:108%;color:var(--red);line-height:1;letter-spacing:-.03em}
+.step h3{font-size:1.2rem}
+.step-pic{margin:4px 0 6px;aspect-ratio:16/10;background:#fff;border:1px solid var(--line);display:grid;place-items:center;padding:8px;overflow:hidden}
+.step-pic img{width:100%;height:100%;object-fit:contain}
+.step-pic-full{padding:0}
+.step-pic-full img{object-fit:cover}
+.step p{font-size:.97rem;color:var(--ink-2)}
+.step .result{font-size:.92rem;color:var(--ink);padding-top:10px;border-top:1px solid var(--line);margin-top:auto}
+.step .result strong{font-weight:650}
+.step .tag{font-size:.84rem;font-weight:600;color:var(--ink);background:#fff;border:1px dashed var(--ink-2);padding:4px 8px;justify-self:start}
+
+/* Ablauf: Bild anklicken = groß mit Erklärung */
+.step-pic:has(.step-zoom){position:relative}
+.step-pic{transition:border-color .2s ease}
+.step-zoom{position:absolute;inset:0;display:block;width:100%;height:100%;padding:inherit;margin:0;border:0;background:none;font:inherit;color:inherit;cursor:zoom-in}
+.step-zoom:focus-visible{outline-offset:-3px}
+.zoom-hint{position:absolute;left:8px;top:8px;display:inline-flex;align-items:center;gap:6px;background:rgba(29,31,33,.86);color:#fff;font-size:.8rem;font-weight:600;letter-spacing:.01em;line-height:1;padding:6px 9px;border-radius:2px}
+.zoom-hint svg{width:14px;height:14px;flex:none}
+@media (prefers-reduced-motion:no-preference){
+  .step-zoom img{transition:transform .35s var(--ease-out)}
+  .step-zoom:active img{transform:scale(.985);transition-duration:.12s}
+}
+/* Vergrößerung: erscheint aus der Mitte mit leichtem Wachsen, verschwindet schneller als sie kommt.
+   Der Hintergrund dunkelt ab und wird leicht unscharf, damit der Blick beim Bild bleibt. */
+.zoom-dialog{width:min(1120px,calc(100% - 32px));max-width:none;max-height:calc(100dvh - 32px);margin:auto;padding:0;border:0;border-radius:2px;background:#fff;color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:hidden;
+  opacity:0;transition:opacity .16s ease,transform .16s ease,overlay .16s allow-discrete,display .16s allow-discrete}
+.zoom-dialog[open]{display:flex;flex-direction:column;opacity:1;transition-duration:.24s;transition-timing-function:var(--ease-out)}
+@starting-style{.zoom-dialog[open]{opacity:0}}
+.zoom-dialog::backdrop{background:rgba(29,31,33,0);backdrop-filter:blur(0);-webkit-backdrop-filter:blur(0);
+  transition:background-color .2s ease,backdrop-filter .2s ease,overlay .2s allow-discrete,display .2s allow-discrete}
+.zoom-dialog[open]::backdrop{background:rgba(29,31,33,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+@starting-style{.zoom-dialog[open]::backdrop{background:rgba(29,31,33,0);backdrop-filter:blur(0)}}
+@media (prefers-reduced-motion:no-preference){
+  .zoom-dialog{transform:scale(.96)}
+  .zoom-dialog[open]{transform:none}
+  @starting-style{.zoom-dialog[open]{transform:scale(.96)}}
+}
+html:has(.zoom-dialog[open]){overflow:hidden}
+/* Auf dem Handy kann man im Bild nach links und rechts wischen; senkrecht scrollt die Seite weiter */
+/* overflow-x:clip statt hidden: hidden würde den Bildbereich auf dem Handy auf Höhe 0 schrumpfen lassen */
+.zoom-pic{touch-action:pan-y;overflow-x:clip}
+.zoom-pic img{will-change:transform}
+.zoom-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 12px 10px clamp(18px,3vw,32px);border-bottom:1px solid var(--line);flex:none}
+.zoom-step{color:var(--red);font-weight:700;font-style:italic}
+.zoom-close{padding:9px 14px;font-size:.95rem}
+.zoom-close svg{width:16px;height:16px;flex:none}
+.zoom-inner{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);overflow:auto;overscroll-behavior:contain;flex:1 1 auto;min-height:0}
+.zoom-pic{margin:0;background:var(--bg-2);padding:clamp(14px,2.4vw,32px);display:grid;place-items:center}
+.zoom-pic img{width:100%;height:auto;max-height:calc(100dvh - 140px);object-fit:contain;background:#fff;border:1px solid var(--line)}
+.zoom-text{padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:16px}
+.zoom-text .zoom-result{margin-top:auto}
+.zoom-dialog h2{font-size:clamp(1.6rem,2.6vw,2.1rem)}
+.zoom-body{display:grid;gap:14px}
+.zoom-text p{color:var(--ink-2)}
+.zoom-text dl{margin:0}
+.zoom-text dt{font-weight:700;display:flex;align-items:center;gap:10px}
+.zoom-text dt::before{content:"";width:12px;height:4px;background:var(--red);transform:skewX(-18deg);flex:none}
+.zoom-text dd{margin:2px 0 12px 22px;color:var(--ink-2);font-size:.97rem}
+.zoom-text .zoom-result{color:var(--ink);padding-top:12px;border-top:1px solid var(--line)}
+.zoom-result strong{font-weight:650}
+.zoom-nav{display:flex;flex-wrap:wrap;gap:10px}
+.zoom-nav .btn{padding:10px 16px;font-size:.95rem}
+.zoom-nav .btn:disabled{opacity:.35;cursor:default;background:transparent;color:var(--ink)}
+@media (min-width:821px){
+  .zoom-dialog{height:min(840px,calc(100dvh - 32px))}
+}
+@media (max-width:820px){
+  .zoom-dialog{width:calc(100% - 16px);max-height:calc(100dvh - 16px)}
+  .zoom-inner{grid-template-columns:1fr}
+  .zoom-pic img{max-height:55vh}
+}
+
+/* Referenzen */
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:24px}
+.chip{font:inherit;font-weight:600;font-size:.95rem;padding:10px 16px;border-radius:999px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;line-height:1.2;
+  transition:background-color .15s ease,border-color .15s ease,color .15s ease,transform .16s var(--ease-out)}
+.chip[aria-pressed="true"]{background:var(--red);border-color:var(--red);color:#fff}
+.ref-count{margin-left:auto;color:var(--ink-2);font-size:.93rem;font-variant-numeric:tabular-nums}
+.ref-list{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.ref-list li{display:grid;grid-template-columns:minmax(0,1fr) 200px 180px;gap:4px 20px;align-items:baseline;padding:15px 8px;border-bottom:1px solid var(--line)}
+.ref-list li[hidden]{display:none}
+.ref-more{margin-top:24px}
+.ref-more .btn svg{width:16px;height:16px;flex:none;transition:transform .2s var(--ease-out)}
+.ref-more .btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.ref-more .btn-label{font-variant-numeric:tabular-nums}
+.ref-title{font-weight:600;font-size:1.04rem}
+.ref-place,.ref-cat{color:var(--ink-2);font-size:.95rem}
+.kataster{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,80px);margin-top:clamp(64px,8vw,96px);align-items:start}
+.kataster-text{display:grid;gap:14px}
+.kataster-text p{color:var(--ink-2)}
+.legend{display:grid;gap:8px;font-size:.92rem;color:var(--ink-2);margin-top:6px}
+.legend span{display:flex;align-items:center;gap:10px}
+.swatch{width:26px;height:12px;flex:none;border-radius:0 3px 3px 0;background:var(--red)}
+.swatch.is-hatch,.chart .bar.is-hatch{background:repeating-linear-gradient(45deg,rgba(255,255,255,.9) 0 1.5px,transparent 1.5px 5px),var(--red)}
+/* Balken: ein Ort pro Zeile, größte zuerst, alle an derselben Grundlinie.
+   Länge = Kilometer im Verhältnis zum größten Ort (rechnet das Skript aus data-km, ohne Skript steht die Breite im style). */
+.chart{display:grid;gap:4px;margin:0;padding:0;list-style:none}
+.chart li{display:grid;grid-template-columns:120px minmax(0,1fr) 64px;gap:14px;align-items:center;padding:5px 0;transition:opacity .15s ease}
+.chart .town{font-size:.97rem}
+.chart .track{height:14px;position:relative}
+.chart .bar{position:absolute;inset:0 auto 0 0;min-width:4px;background:var(--red);border-radius:0 4px 4px 0}
+.chart .bar.is-rest{background:#B9BBBC}
+.chart .km{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+/* Maus über einer Zeile: die anderen treten zurück */
+.chart.has-active li:not(.is-active){opacity:.35}
+/* Die Balken wachsen einmal von links ins Bild (nur mit Skript und ohne "Bewegung reduzieren").
+   clip-path statt Breite: läuft flüssig über die Grafikkarte. */
+.chart.will-reveal .bar{clip-path:inset(0 100% 0 0)}
+.chart.will-reveal.revealed .bar{clip-path:inset(0);transition:clip-path .9s var(--ease-out) calc(var(--i,0) * 60ms)}
+
+/* Über uns */
+.about{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(40px,6vw,96px);align-items:start}
+.about-text{display:grid;gap:18px;max-width:62ch}
+.about-text > p{font-size:1.06rem}
+.values{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 32px;margin:16px 0 0}
+.values div{display:grid;gap:4px}
+.values dt{font-weight:700;font-size:1.12rem;display:flex;align-items:center;gap:10px}
+.values dt::before{content:"";width:12px;height:4px;background:var(--red);transform:skewX(-18deg);flex:none}
+.values dd{margin:0;color:var(--ink-2);font-size:.97rem}
+.chronik{display:grid;gap:22px;background:#fff;padding:clamp(24px,3.4vw,40px);border:1px solid var(--line)}
+.chronik ol{list-style:none;margin:0;padding:0;position:relative}
+.chronik ol::before{content:"";position:absolute;left:6px;top:10px;bottom:10px;width:2px;background:var(--line)}
+.chronik li{position:relative;padding:0 0 22px 34px;display:grid;gap:2px}
+.chronik li:last-child{padding-bottom:0}
+.chronik li::before{content:"";position:absolute;left:0;top:7px;width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid var(--red)}
+.chronik li.now::before{background:var(--red)}
+.chronik .year{font-weight:800;font-style:italic;font-size:1.25rem;line-height:1.2}
+.chronik li p{color:var(--ink-2);font-size:.97rem}
+.portrait{width:min(100%,240px);height:auto;margin-top:10px;border:1px solid var(--line)}
+
+/* Fragen */
+.faq-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(40px,6vw,96px);align-items:start}
+.faq{margin:0;border-top:2px solid var(--ink)}
+.faq div{padding:22px 0;border-bottom:1px solid var(--line);display:grid;gap:8px}
+.faq dt{font-weight:700;font-size:1.18rem;line-height:1.3}
+.faq dd{margin:0;color:var(--ink-2);max-width:62ch}
+.glossar{background:var(--bg-2);padding:clamp(24px,3.4vw,40px);display:grid;gap:18px}
+.glossar dl{margin:0;display:grid;gap:16px}
+.glossar dt{font-weight:700}
+.glossar dd{margin:0;color:var(--ink-2);font-size:.95rem}
+
+/* Infomaterial */
+.docs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+/* Die ganze Karte ist klickbar (der Link spannt sich über die Karte), nicht nur die Überschrift */
+.docs li{position:relative;display:grid;gap:10px;align-content:start;padding:26px;background:#fff;border:1px solid var(--line);
+  transition:border-color .2s ease,box-shadow .25s ease,transform .16s var(--ease-out)}
+.docs li:has(a:active){transform:scale(.99)}
+.docs li:has(a:focus-visible){outline:2px solid var(--red);outline-offset:3px}
+.docs a:focus-visible{outline:none}
+.doc-meta{display:flex;align-items:center;gap:10px;color:var(--ink-2);font-size:.85rem;font-variant-numeric:tabular-nums}
+.doc-tag{font-weight:700;font-size:.8rem;letter-spacing:.02em;color:#fff;background:var(--red);padding:3px 8px;justify-self:start;transform:skewX(-10deg)}
+.docs a{font-weight:700;font-size:1.1rem;text-decoration:none;text-underline-offset:4px}
+.docs a::after{content:"";position:absolute;inset:0}
+.docs p{color:var(--ink-2);font-size:.95rem}
+
+/* Kontakt */
+.contact{background:var(--red);color:#fff;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);align-items:start}
+.contact-main{display:grid;gap:28px}
+.contact h2{font-size:clamp(2.4rem,4.6vw,3.8rem);font-weight:800;font-style:italic;font-stretch:108%;letter-spacing:-.025em;line-height:1}
+.contact-intro{font-size:1.12rem;max-width:42ch;opacity:.92}
+.phone-big{font-size:clamp(2rem,4vw,3rem);font-weight:800;font-stretch:106%;text-decoration:none;line-height:1;letter-spacing:-.015em;font-variant-numeric:tabular-nums;justify-self:start;text-underline-offset:6px;text-decoration-thickness:2px}
+/* Hörer-Symbol vor der Nummer, wächst mit der Schriftgröße mit; unterstrichen wird beim Hover nur die Nummer */
+.phone-big{display:inline-flex;align-items:center;gap:.32em}
+.phone-big svg{width:.78em;height:.78em;flex:none;stroke-width:2.2}
+.contact-list{display:grid;grid-template-columns:auto 1fr;gap:10px 24px;margin:0}
+.contact-list dt{opacity:.9;font-size:.93rem;padding-top:2px}
+.contact-list dd{margin:0}
+.form-card{background:#fff;color:var(--ink);padding:clamp(24px,3.4vw,40px);display:grid;gap:16px;box-shadow:0 24px 60px rgba(60,10,6,.25)}
+.form-card > p{color:var(--ink-2);font-size:.95rem}
+#anfrage{display:grid;gap:14px}
+#anfrage[hidden],.mail-result[hidden]{display:none}
+.field{display:grid;gap:5px}
+.field label{font-size:.9rem;font-weight:600}
+.field input,.field select,.field textarea{font:inherit;font-size:1rem;color:var(--ink);background:#fff;border:1px solid #C9CBCC;border-radius:2px;padding:10px 12px;width:100%;transition:border-color .15s ease}
+.field input::placeholder,.field textarea::placeholder{color:#8A8F93}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:2px solid var(--red);outline-offset:0;border-color:var(--red)}
+#anfrage .btn{justify-self:start}
+.req{font-weight:400;color:var(--ink-2)}
+.field [aria-invalid="true"]{border-color:var(--red);border-width:2px}
+.form-error{color:var(--red);font-size:.93rem;font-weight:600}
+.mail-result{display:grid;gap:14px}
+/* Wechsel Formular <-> fertige E-Mail: kurzes Einblenden statt hartem Sprung */
+#anfrage,.mail-result,.form-error{transition:opacity .22s var(--ease-out),transform .22s var(--ease-out)}
+@starting-style{#anfrage,.mail-result,.form-error{opacity:0}}
+@media (prefers-reduced-motion:no-preference){@starting-style{#anfrage,.mail-result,.form-error{transform:translateY(6px)}}}
+.btn-label{display:inline-block}
+.mail-result pre{margin:0;white-space:pre-wrap;font-family:var(--font);font-size:.92rem;background:var(--bg-2);padding:14px 16px;max-height:260px;overflow:auto}
+.mail-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn-text{background:none;border:0;color:var(--ink);text-decoration:underline;text-underline-offset:3px;font:inherit;cursor:pointer;padding:6px 2px}
+.copy-status{color:var(--ink-2);font-size:.93rem;min-height:1.2em}
+
+/* Fußzeile */
+.site-footer{background:var(--ink);color:#C9CCCE;padding-block:44px 52px;font-size:.93rem;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.footer-row{display:flex;flex-wrap:wrap;gap:24px 48px;justify-content:space-between;align-items:center}
+.footer-row img{height:72px;width:auto}
+.footer-row nav{display:flex;gap:24px}
+.footer-row nav a{display:inline-block;padding-block:10px}
+.footer-row a{transition:color .15s ease}
+.footer-ig{display:inline-block;padding:16px;margin:-16px}
+.footer-row .footer-ig img{width:32px;height:32px}
+
+/* Impressum und Datenschutz */
+/* Unterseiten: Karriere, Impressum, Datenschutz */
+.subpage{padding-block:clamp(48px,7vw,96px)}
+.subpage article{max-width:760px;display:grid;gap:22px}
+.subpage article[hidden]{display:none}
+.subpage h1{font-size:clamp(2.4rem,4.6vw,3.4rem);font-weight:800;font-style:italic;font-stretch:106%;letter-spacing:-.02em}
+.subpage h2{font-size:1.4rem;margin-top:10px}
+.subpage address{font-style:normal}
+.subpage .muted{color:var(--ink-2)}
+.job-lead{font-size:1.2rem;color:var(--ink-2)}
+.job-lead strong{color:var(--ink);font-weight:700}
+.job-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0}
+.job-facts div{background:var(--bg-2);border-top:3px solid var(--red);padding:16px 18px;display:grid;gap:4px}
+.job-facts dt{font-size:.88rem;font-weight:650;color:var(--ink-2)}
+.job-facts dd{margin:0;font-weight:600}
+.apply-box{background:var(--bg-2);border-left:4px solid var(--red);padding:clamp(22px,3vw,32px);display:grid;gap:14px;margin-top:10px}
+.apply-box h2{margin-top:0}
+.apply-buttons{display:flex;flex-wrap:wrap;gap:12px}
+.job{display:grid;gap:18px;padding-top:28px;border-top:2px solid var(--ink)}
+.job h2{font-size:clamp(1.5rem,2.6vw,1.9rem);margin-top:0}
+.job h3{margin-top:6px}
+.job > p{color:var(--ink-2)}
+.apply-box .ticks,.job-overview{columns:1}
+.job-overview{font-size:1.1rem;font-weight:600}
+.back{font-weight:650}
+.ph{background:#FBEAE8;border:1px dashed var(--red);border-radius:2px;padding:0 6px}
+.note{border-left:4px solid var(--red);padding:12px 16px;background:var(--bg-2);color:var(--ink-2)}
+
+/* Bildschirmgrößen */
+@media (max-width:1080px){
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .docs{grid-template-columns:1fr}
+}
+@media (max-width:920px){
+  /* Handy-Menü: feste weiße Fläche (gut lesbar) unter der durchscheinenden Kopfzeile.
+     Es gleitet ein kleines Stück von oben herein, also aus der Richtung des Menü-Knopfs, und geht schneller wieder. */
+  /* Handy-Menü: eigene, deckend weiße Karte unter der Leiste (gut lesbar) */
+  .site-nav{display:none;position:absolute;left:0;right:0;top:calc(100% + 8px);background:#fff;border:1px solid rgba(29,31,33,.08);padding:6px 18px 12px;box-shadow:inset 0 1px 0 #fff,0 18px 44px rgba(29,31,33,.16);
+    opacity:0;transition:opacity .14s ease,transform .14s ease,display .14s allow-discrete}
+  .site-nav.open{display:block;opacity:1;transition-duration:.22s;transition-timing-function:var(--ease-out)}
+  @starting-style{.site-nav.open{opacity:0}}
+  .site-nav ul{flex-direction:column;gap:0}
+  .site-nav a{display:block;padding:12px 0;font-size:1.15rem;border-bottom:1px solid var(--line)}
+  .site-nav > ul > li:last-child > a{border-bottom:0}
+  .menu-toggle{display:inline-block}
+  .site-nav > ul{align-items:stretch}
+  .hero-inner,.section-head,.srow,.kataster,.about,.faq-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-logo{width:120px}
+  .ref-list li{grid-template-columns:1fr auto;gap:2px 14px}
+  .ref-title{grid-column:1 / -1}
+  .ref-cat{text-align:right}
+}
+@media (max-width:560px){
+  body{font-size:1rem}
+  .logo img{height:42px}
+  .site-header .header-row{min-height:60px;gap:10px}
+  .hero{min-height:calc(100vh - 60px);min-height:calc(100svh - 60px)}
+  .header-phone span{display:none}
+  .header-phone{padding:10px 12px}
+  .hero-head{flex-direction:column;align-items:flex-start;gap:20px}
+  .hero-logo{width:96px}
+  h1,h2,h3{-webkit-hyphens:auto;hyphens:auto}
+  .hero-ticks{columns:1}
+  .hero-ticks{font-size:1.15rem}
+  .hero-place{grid-template-columns:1fr;gap:20px}
+  .area-map{width:min(340px,100%);justify-self:center}
+  .steps{grid-template-columns:1fr}
+  .job-facts{grid-template-columns:1fr}
+  .values{grid-template-columns:1fr}
+  .chart li{grid-template-columns:100px minmax(0,1fr) 56px;gap:10px}
+  .ref-count{margin-left:0;width:100%}
+}
+@media (max-width:920px) and (prefers-reduced-motion:no-preference){
+  .site-nav{transform:translateY(-8px)}
+  .site-nav.open{transform:none}
+  @starting-style{.site-nav.open{transform:translateY(-8px)}}
+}
+
+/* Hover-Effekte nur für Geräte mit Maus. Auf dem Handy bleiben sie sonst nach dem Antippen "kleben". */
+@media (hover:hover) and (pointer:fine){
+  a:hover{color:var(--red)}
+  .btn-red:hover{background:var(--red-deep);color:#fff}
+  .btn-line:hover{background:var(--ink);color:#fff}
+  .contact a:hover{color:#fff}
+  .site-nav a:hover{color:var(--ink);border-bottom-color:var(--red)}
+  .step-pic:has(.step-zoom:hover){border-color:var(--ink-2)}
+  .chip:hover:not([aria-pressed="true"]){border-color:var(--red);color:var(--red)}
+  .ref-list li:hover{background:var(--bg-2)}
+  .alt .ref-list li:hover{background:#fff}
+  .docs li:hover{border-color:#C9CBCC;box-shadow:0 10px 28px rgba(29,31,33,.08)}
+  .docs li:hover a{color:var(--red);text-decoration:underline}
+  .phone-big:hover span{text-decoration-line:underline}
+  .footer-row a:hover{color:#fff}
+  .field input:hover,.field select:hover,.field textarea:hover{border-color:var(--ink-2)}
+}
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .step-zoom:hover img{transform:scale(1.03)}
+}
+
+/* Wer im System "Transparenz reduzieren" eingestellt hat, bekommt feste Flächen */
+@media (prefers-reduced-transparency:reduce){
+  .site-header .header-row{background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .zoom-dialog[open]::backdrop{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(29,31,33,.86)}
+}
+/* Wer "Kontrast erhöhen" eingestellt hat, bekommt feste Flächen und klare Linien */
+@media (prefers-contrast:more){
+  .site-header .header-row{background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none;border-color:var(--ink)}
+  :root{--ink-2:#3F4347;--line:#B9BBBC}
+}
+</style>
 </head>
 <body>
-<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
 <header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-current="page" aria-label="Vermessungsbüro Freund – Startseite">
-      <img class="brand-logo" src="assets/img/logo-freund-vermessung.png" alt="Freund Vermessung" width="91" height="44">
-      <span class="brand-text"><span class="brand-name">Ingenieurbüro für Vermessungstechnik</span><span class="brand-sub">Dipl.-Ing. Dirk Freund · Kassel</span></span>
-    </a>
+  <div class="wrap header-row">
+    <a class="logo" href="#start"><img src="img/logo-freund-vermessung.png" alt="Freund Vermessung, zur Startseite" width="62" height="61"></a>
     <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
-      <ul class="nav-list">
-        <li><a href="buero.html">Büro</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="referenzen.html">Referenzen</a></li><li><a href="service.html">Service</a></li><li class="nav-cta"><a href="kontakt.html">Kontakt</a></li>
+      <ul>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#referenzen">Referenzen</a></li>
+        <li><a href="#ueber-uns">Über uns</a></li>
+        <li><a href="#fragen">Fragen</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#karriere">Karriere</a></li>
       </ul>
     </nav>
-    <div class="theme-switch" role="group" aria-label="Darstellung">
-      <button type="button" data-theme-set="auto" aria-pressed="true" aria-label="Darstellung automatisch wie im System" title="Automatisch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor" stroke="none"/></svg></button>
-      <button type="button" data-theme-set="light" aria-pressed="false" aria-label="Helle Darstellung" title="Hell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></button>
-      <button type="button" data-theme-set="dark" aria-pressed="false" aria-label="Dunkle Darstellung" title="Dunkel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+    <div class="header-actions">
+      <a class="btn btn-red header-phone" href="tel:+495618150510" aria-label="Anrufen: 0561 81 50 510">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span>0561 81 50 510</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
     </div>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg><svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="label">Menü</span></button>
   </div>
 </header>
-<main id="inhalt">
-<section class="hero">
-  <div class="contours"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><g stroke-width="1"><path d="M30 0 26 20 23 40 20 60 19 70 17 90 13 110 10 121 1 140 0 142"/><path d="M135 0 130 10 126 30 127 50 130 65 135 80 140 94 147 110 151 120 157 140 160 150 163 170 163 190 160 205 155 220 150 232 140 248 130 260 120 270 110 279 100 287 90 295 80 303 70 311 60 320 50 330 40 341 30 356 22 370 18 380 10 400 7 410 1 430 0 432"/><path d="M370 0 353 10 340 17 330 22 316 30 300 39 290 46 280 54 270 65 261 80 256 90 250 110 248 120 244 140 241 160 240 170 236 190 232 210 229 220 223 240 218 250 210 267 202 280 194 290 185 300 176 310 165 320 153 330 141 340 130 349 120 357 110 367 100 377 90 389 83 400 77 410 70 424 64 440 60 452 56 470 53 490 51 510 50 530 50 550 52 570 54 590 58 610 60 627 61 640 62 660 61 680 60 690 57 710 54 730 52 750 51 770 52 790 53 800"/><path class="major" d="M483 0 473 10 463 20 452 30 440 40 430 47 420 54 410 61 396 70 382 80 370 88 360 96 350 104 340 114 330 125 320 139 314 150 309 160 301 180 297 190 291 210 289 220 283 240 280 252 275 270 270 284 264 300 259 310 250 325 240 339 230 350 220 360 210 369 200 378 190 386 180 395 170 404 160 415 150 428 143 440 138 450 133 470 131 490 133 510 138 530 142 540 149 560 154 570 160 585 166 600 170 612 175 630 179 650 180 664 181 680 180 697 179 710 176 730 172 750 169 760 166 780 165 800"/><path d="M557 0 547 10 538 20 529 30 520 40 510 50 499 60 487 70 475 80 462 90 450 99 440 106 430 113 420 121 408 130 397 140 387 150 378 160 370 171 360 187 354 200 350 211 344 230 340 250 339 260 337 280 336 300 336 320 336 340 336 360 335 380 332 400 329 410 320 428 311 440 302 450 292 460 283 470 274 480 268 490 260 507 256 520 254 540 254 560 255 580 257 600 259 620 260 630 263 650 267 670 270 680 277 700 282 710 290 722 300 733 310 740 329 750 340 754 360 760 370 762 390 766 410 770 420 772 440 776 458 780 470 783 490 789 500 792 520 800 520 800M1440 796 1435 800"/><path d="M626 0 615 10 605 20 596 30 587 40 578 50 570 60 560 71 550 82 540 92 530 102 520 111 509 120 497 130 484 140 471 150 460 159 450 169 440 179 431 190 424 200 418 210 410 230 408 240 405 260 406 280 409 300 411 310 417 330 420 341 425 360 430 380 432 390 434 410 433 430 430 450 428 460 420 480 415 490 409 500 400 514 390 528 381 540 373 550 367 560 360 572 352 590 349 600 347 620 348 640 350 650 360 670 367 680 377 690 390 699 400 705 410 710 430 718 440 721 460 728 470 731 490 737 500 740 520 747 530 751 550 760 560 765 571 770 588 780 600 787 610 793 621 800M1440 762 1430 770 1417 780 1404 790 1390 800"/><path d="M706 0 690 9 680 16 670 24 660 33 650 44 640 55 630 68 621 80 614 90 607 100 599 110 590 122 580 134 570 146 560 156 550 166 540 176 530 186 520 196 510 208 501 220 495 230 490 242 485 260 483 280 483 300 485 320 488 340 490 360 491 370 492 390 493 410 492 430 491 450 489 460 486 480 482 500 479 510 473 530 470 540 463 560 460 570 454 590 452 610 456 630 461 640 470 651 480 660 494 670 510 679 520 684 533 690 550 698 560 703 573 710 590 719 600 725 610 731 623 740 638 750 650 758 660 765 670 771 684 780 700 789 710 794 726 800M1440 727 1430 736 1420 744 1410 752 1400 760 1386 770 1372 780 1360 787 1350 793 1337 800"/><path class="major" d="M836 0 820 3 800 8 790 11 770 18 760 23 745 30 730 39 720 46 710 55 700 65 690 77 681 90 674 100 668 110 660 124 651 140 645 150 639 160 630 174 620 189 612 200 605 210 597 220 590 230 580 243 570 259 564 270 560 280 553 300 550 310 546 330 543 350 541 370 540 386 539 400 538 420 537 440 536 460 535 480 534 500 533 520 533 540 535 560 539 580 542 590 550 606 560 620 569 630 579 640 590 649 600 657 610 664 620 672 631 680 645 690 658 700 670 709 680 716 690 724 700 731 713 740 730 750 740 755 750 760 770 768 780 771 800 776 820 779 830 781 850 782 870 783 890 784 910 784 930 785 950 785 970 785 990 786 1010 786 1030 787 1050 789 1068 790 1080 791 1100 793 1120 795 1140 797 1160 799 1177 800M1440 688 1430 699 1420 709 1410 718 1400 727 1390 734 1380 742 1368 750 1352 760 1340 767 1330 772 1313 780 1300 785 1286 790 1270 794 1250 798 1231 800"/><path d="M1001 0 990 2 970 7 954 10 940 13 920 17 904 20 890 23 870 27 859 30 840 35 826 40 810 46 800 50 782 60 770 68 760 76 750 85 740 96 730 109 723 120 717 130 710 142 700 160 695 170 689 180 680 196 672 210 665 220 658 230 650 242 640 257 631 270 624 280 618 290 610 304 602 320 598 330 591 350 588 360 583 380 580 400 579 410 577 430 576 450 576 470 577 490 579 510 581 520 586 540 590 553 598 570 604 580 611 590 620 602 630 613 640 623 650 632 660 641 670 650 682 660 694 670 707 680 720 690 730 698 740 705 750 712 764 720 780 729 790 733 807 740 820 744 840 749 850 751 870 755 890 757 910 759 927 760 940 761 960 762 980 763 1000 764 1020 765 1040 766 1060 767 1080 768 1100 770 1110 771 1130 772 1150 773 1170 774 1190 774 1210 774 1230 772 1244 770 1260 767 1280 762 1290 758 1310 751 1320 746 1332 740 1349 730 1360 723 1370 716 1380 708 1390 700 1401 690 1411 680 1420 670 1430 656 1440 640 1440 639M1428 0 1439 10 1440 11"/><path d="M1103 0 1090 4 1070 9 1060 12 1040 17 1030 20 1010 25 990 30 980 32 960 36 944 40 930 43 910 48 900 51 880 57 870 60 850 68 840 72 825 80 810 90 800 97 790 106 780 117 770 129 762 140 755 150 749 160 740 176 732 190 727 200 720 212 710 228 703 240 696 250 689 260 680 274 670 288 662 300 656 310 650 320 640 338 634 350 630 360 623 380 620 393 617 410 614 430 613 450 614 470 616 490 620 506 624 520 630 535 638 550 644 560 651 570 660 581 670 593 680 603 690 613 700 622 710 631 720 640 732 650 744 660 757 670 770 679 780 686 790 692 803 700 820 708 830 713 850 720 860 723 880 728 892 730 910 733 930 736 950 738 970 739 980 740 1000 742 1020 743 1040 744 1060 745 1080 746 1100 747 1120 748 1140 749 1160 749 1180 749 1200 748 1220 746 1240 743 1252 740 1270 735 1286 730 1300 724 1310 720 1329 710 1340 703 1350 697 1360 690 1372 680 1383 670 1392 660 1401 650 1410 637 1419 620 1424 610 1430 592 1433 580 1436 560 1438 540 1439 520 1439 500 1439 480 1438 460 1438 440 1438 420 1438 400 1439 380 1440 368M1391 0 1404 10 1416 20 1425 30 1434 40 1440 48"/><path d="M1198 0 1180 4 1160 9 1150 12 1130 18 1120 21 1100 27 1088 30 1070 35 1051 40 1040 43 1020 48 1010 50 990 55 970 60 960 63 940 68 930 71 910 77 900 81 880 89 870 94 858 100 842 110 830 119 820 128 810 139 801 150 793 160 786 170 780 180 770 197 762 210 756 220 750 231 740 248 732 260 726 270 720 280 710 294 700 310 693 320 687 330 680 342 671 360 666 370 660 387 656 400 652 420 650 440 651 460 653 480 659 500 662 510 670 527 678 540 684 550 692 560 700 570 710 580 720 591 730 600 741 610 752 620 764 630 776 640 789 650 800 658 810 665 820 671 836 680 850 687 860 691 880 698 890 701 910 706 929 710 940 712 960 715 980 717 1000 719 1015 720 1030 721 1050 722 1070 723 1090 724 1110 724 1130 725 1150 724 1170 724 1190 722 1210 720 1220 719 1240 715 1258 710 1270 706 1286 700 1300 694 1310 689 1325 680 1340 670 1350 662 1360 654 1370 644 1380 632 1388 620 1394 610 1400 598 1407 580 1410 569 1414 550 1416 530 1418 510 1418 490 1418 470 1418 450 1417 430 1417 410 1417 390 1418 370 1419 350 1420 340 1423 320 1427 300 1430 286 1434 270 1440 250 1440 248M1333 0 1350 6 1360 11 1376 20 1389 30 1400 40 1410 50 1418 60 1424 70 1430 80 1440 100"/><path class="major" d="M1240 19 1230 20 1210 24 1190 28 1180 31 1160 36 1146 40 1130 44 1110 50 1090 55 1072 60 1060 63 1040 68 1030 70 1010 75 990 80 980 83 960 88 950 91 930 98 920 102 902 110 890 116 880 122 868 130 855 140 845 150 835 160 827 170 819 180 810 193 800 209 794 220 788 230 780 244 771 260 765 270 759 280 750 295 740 310 734 320 728 330 720 344 711 360 706 370 700 385 695 400 690 420 689 430 689 450 690 464 693 480 700 500 705 510 710 520 720 535 730 548 740 559 750 570 760 580 770 589 780 598 790 607 800 615 810 623 820 631 833 640 849 650 860 656 870 661 890 670 900 674 919 680 930 683 950 687 964 690 980 692 1000 695 1020 697 1040 698 1060 699 1076 700 1090 700 1110 701 1130 700 1142 700 1160 699 1180 697 1200 695 1220 691 1230 689 1250 684 1262 680 1280 673 1290 668 1305 660 1320 651 1330 643 1340 635 1350 625 1360 613 1369 600 1375 590 1380 579 1387 560 1390 547 1393 530 1396 510 1397 490 1397 470 1397 450 1397 430 1396 410 1396 390 1395 370 1396 350 1397 330 1399 310 1400 299 1403 280 1407 260 1410 248 1414 230 1418 210 1420 200 1422 180 1423 160 1421 140 1419 130 1413 110 1408 100 1400 85 1390 70 1381 60 1370 50 1360 43 1350 36 1337 30 1320 24 1303 20 1290 18 1270 17 1250 18 1240 19M1110 50 1110 50"/><path d="M1240 49 1230 50 1210 54 1190 58 1180 60 1160 65 1140 70 1130 72 1110 77 1097 80 1080 84 1060 88 1050 91 1030 95 1010 100 1000 102 980 108 970 111 950 118 940 122 923 130 910 137 900 143 890 150 878 160 867 170 858 180 843 200 836 210 830 220 820 236 812 250 807 260 800 273 791 290 785 300 780 310 770 327 763 340 758 350 750 366 744 380 740 390 734 410 731 430 731 450 734 470 740 488 746 500 751 510 760 523 770 536 780 547 790 557 800 567 810 577 820 585 830 594 840 602 851 610 865 620 880 629 890 635 901 640 920 648 930 652 950 658 960 661 980 665 1000 669 1010 670 1030 672 1050 674 1070 675 1090 675 1110 676 1130 675 1150 674 1170 672 1188 670 1200 668 1220 664 1234 660 1250 655 1263 650 1280 642 1290 637 1301 630 1314 620 1325 610 1335 600 1343 590 1350 579 1360 560 1363 550 1369 530 1371 520 1374 500 1375 480 1376 460 1376 440 1375 420 1374 400 1373 380 1372 360 1371 340 1371 320 1371 300 1372 280 1375 260 1378 240 1380 227 1383 210 1386 190 1387 170 1386 150 1382 130 1379 120 1370 102 1362 90 1352 80 1341 70 1330 63 1320 58 1300 52 1290 50 1270 48 1250 48 1240 49M850 190 850 190"/><path d="M1210 90 1200 91 1180 94 1160 98 1145 100 1130 103 1110 106 1090 109 1080 111 1060 115 1040 119 1030 121 1010 126 995 130 980 135 966 140 950 147 940 152 926 160 912 170 900 180 890 190 881 200 873 210 866 220 859 230 850 246 843 260 838 270 830 286 823 300 819 310 810 329 805 340 800 352 792 370 789 380 783 400 780 414 778 430 780 450 782 460 789 480 794 490 800 501 810 515 820 527 830 538 840 548 850 558 860 567 870 575 880 583 890 590 904 600 920 609 930 614 942 620 960 627 970 630 990 636 1009 640 1020 642 1040 645 1060 647 1080 648 1100 649 1120 648 1140 648 1160 646 1180 644 1200 640 1210 638 1230 632 1240 629 1260 620 1270 615 1280 609 1293 600 1305 590 1315 580 1323 570 1330 558 1339 540 1343 530 1348 510 1350 499 1352 480 1353 460 1353 440 1352 420 1350 400 1349 390 1347 370 1345 350 1342 330 1340 310 1339 300 1338 280 1338 260 1338 240 1339 220 1340 205 1341 190 1340 170 1339 160 1334 140 1330 130 1320 116 1310 106 1300 100 1280 92 1270 89 1250 88 1230 88 1210 90"/></g></svg></div>
-  <div class="container hero-grid">
-    <div>
-      <p class="hero-kicker">Ingenieurbüro für Vermessungstechnik und Geoinformatik</p>
-      <h1>Vermessungs&shy;leistungen für Ihre Bauvorhaben</h1>
-      <p class="hero-lead">Beratung – Erfassung – Auswertung. Hier und auf den folgenden Seiten finden Sie einen Überblick über unser Büro und unser Betätigungsfeld.</p>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="leistungen.html">Unsere Leistungen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-secondary" href="tel:+495618150510"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg> +49 561 81 50 510</a>
+
+<main id="main" tabindex="-1">
+
+  <!-- ============ START ============ -->
+  <section class="hero" id="start">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <div class="hero-head">
+          <img class="hero-logo" src="img/logo-freund-vermessung.png" alt="" width="256" height="250">
+          <h1><span class="visually-hidden">Freund Vermessung, </span>Ingenieurbüro für Vermessungstechnik und Geoinformatik</h1>
+        </div>
+        <div class="hero-place">
+          <div class="hero-place-main">
+            <ul class="ticks hero-ticks" aria-label="Unsere Leistungen">
+              <li>Lagepläne zum Bauantrag</li>
+              <li>Absteckung von Gebäuden</li>
+              <li>Bau- und Ingenieurvermessung</li>
+              <li>Bestandsvermessung</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn btn-red" href="#kontakt">Angebot anfragen</a>
+            </div>
+          </div>
+          <!-- Deutschlandkarte "Einsatzgebiete": Umrisse aus Natural Earth (gemeinfrei), abstandstreu um Kassel projiziert,
+               1 Einheit = 1 km, Kassel bei 0/0. Kreisradien (r="50" usw.) sind deshalb echte Kilometer.
+               Städte: Punkt im SVG (cx/cy in km von Kassel) und Beschriftung darunter (left/top in Prozent der Karte). -->
+          <figure class="area-map">
+            <div class="area-canvas">
+            <svg viewBox="-262 -425 654 882" role="img" aria-label="Deutschlandkarte mit Bundesländern. Kassel in der Mitte, Kreise von 50, 150 und 250 Kilometern Radius. Zur Orientierung Hamburg, Berlin, Hannover, Köln, Frankfurt, Leipzig, Stuttgart und München.">
+              <defs><clipPath id="de-clip"><path d="M2.0 421.6L-23.6 405.3L-46.2 406.7L-49.9 401.5L-52.8 400.0L-55.7 402.0L-57.6 401.8L-65.8 394.3L-69.2 393.2L-73.9 394.2L-79.5 398.0L-82.0 402.8L-81.3 405.6L-78.4 406.9L-70.9 406.2L-69.5 408.6L-70.4 410.1L-76.5 411.3L-81.3 413.8L-87.8 411.7L-97.5 411.6L-105.4 414.9L-117.9 416.0L-135.1 414.9L-145.0 410.6L-147.5 403.0L-146.5 392.0L-142.0 377.4L-140.6 366.7L-142.3 359.7L-139.6 349.5L-132.7 336.0L-127.9 321.6L-125.4 306.5L-122.0 296.6L-99.3 269.2L-99.5 259.6L-109.2 255.2L-137.5 248.9L-143.7 246.0L-148.9 238.5L-152.3 238.4L-167.3 242.3L-173.2 240.6L-179.2 242.0L-181.5 234.5L-189.4 231.1L-192.4 231.6L-197.9 236.8L-200.9 235.9L-211.9 217.8L-214.5 209.3L-219.8 203.8L-225.2 201.8L-227.9 202.3L-224.8 186.1L-222.5 181.2L-216.6 174.4L-216.1 164.3L-227.5 159.5L-232.3 155.5L-240.2 143.7L-241.9 137.0L-241.7 130.3L-236.3 115.1L-222.4 106.4L-223.5 91.3L-226.6 87.4L-233.0 85.6L-234.6 82.9L-235.2 80.4L-230.2 74.9L-235.7 70.1L-238.0 65.3L-245.7 59.1L-246.4 57.0L-241.8 40.0L-244.5 34.9L-252.1 30.7L-254.5 25.5L-253.6 23.8L-248.7 24.6L-234.9 13.4L-234.3 11.4L-238.0 9.6L-238.2 4.7L-231.3 -9.6L-228.5 -20.0L-228.7 -24.4L-235.2 -36.9L-235.2 -41.3L-244.2 -55.6L-244.0 -60.0L-239.7 -63.3L-228.6 -68.0L-219.8 -64.3L-215.9 -61.2L-211.0 -64.7L-204.6 -64.0L-189.0 -69.7L-184.6 -77.3L-190.3 -83.7L-189.5 -88.6L-180.3 -94.4L-171.7 -101.9L-168.6 -108.5L-167.1 -121.2L-169.3 -125.5L-171.4 -128.4L-180.6 -128.5L-186.2 -131.2L-189.2 -135.2L-189.8 -138.7L-187.8 -143.4L-188.1 -148.4L-185.5 -150.1L-167.7 -149.4L-166.3 -151.3L-164.7 -161.6L-159.7 -177.3L-155.3 -186.0L-153.0 -221.1L-155.8 -226.1L-162.2 -231.8L-157.9 -251.8L-151.0 -262.4L-145.7 -265.2L-123.1 -266.4L-98.0 -265.1L-88.0 -248.5L-92.0 -240.1L-86.0 -236.1L-83.0 -237.5L-79.0 -252.9L-76.8 -255.3L-69.2 -249.1L-66.5 -244.9L-66.5 -231.5L-63.4 -249.6L-65.3 -262.3L-63.7 -274.5L-57.6 -284.9L-39.4 -280.3L-19.2 -282.5L-11.6 -277.7L5.8 -254.0L11.6 -250.2L18.9 -249.0L8.8 -254.0L-12.2 -282.8L-18.5 -286.4L-28.1 -287.5L-34.1 -290.4L-37.8 -294.7L-38.9 -298.6L-38.4 -327.6L-42.0 -331.9L-46.6 -333.5L-49.5 -331.5L-55.4 -331.6L-56.5 -338.1L-55.0 -343.0L-43.2 -346.2L-35.3 -350.6L-34.9 -358.4L-39.8 -364.7L-52.3 -386.8L-52.9 -399.2L-38.1 -398.3L-20.0 -392.4L-15.6 -388.3L-10.0 -388.1L7.5 -393.6L10.5 -391.2L15.5 -390.3L15.9 -388.2L25.3 -385.3L33.7 -373.5L34.2 -363.2L24.0 -351.0L41.7 -352.9L46.3 -344.1L55.8 -347.5L80.0 -334.3L94.5 -341.2L98.2 -341.6L101.7 -330.7L98.3 -319.6L85.7 -307.6L88.7 -300.4L92.8 -298.8L105.0 -300.6L124.5 -293.9L128.4 -296.3L143.6 -313.3L149.7 -317.0L170.1 -320.2L173.6 -326.8L181.7 -333.5L198.9 -354.6L228.5 -349.7L236.9 -335.9L257.3 -321.1L275.2 -323.5L282.4 -309.0L286.4 -290.8L297.4 -281.9L313.0 -278.7L317.0 -259.6L326.7 -229.8L327.1 -220.4L324.9 -209.9L320.5 -200.8L314.2 -195.4L310.9 -189.7L310.6 -183.6L319.7 -173.5L338.2 -159.5L346.2 -147.0L343.6 -135.9L343.1 -127.9L344.8 -123.0L347.9 -119.1L352.5 -116.4L354.5 -111.8L354.1 -105.3L355.3 -101.0L358.8 -98.1L354.9 -78.0L350.4 -69.6L352.4 -62.9L360.2 -51.3L361.4 -47.5L360.2 -38.3L361.3 -36.0L374.3 -30.2L376.6 -27.2L383.7 -7.4L378.8 20.2L369.8 42.1L366.8 42.7L358.8 38.7L359.1 32.1L357.0 31.8L353.0 23.7L350.2 22.1L336.9 19.9L334.4 21.0L332.7 24.2L336.1 29.4L341.8 33.3L341.4 35.1L329.9 40.0L309.3 52.4L295.8 58.2L285.7 60.1L283.6 61.5L280.3 70.2L277.8 72.1L273.4 70.0L268.7 74.2L264.0 75.5L260.3 83.1L248.8 85.9L245.7 94.3L244.0 95.4L231.4 93.3L227.3 95.9L216.2 98.1L209.6 103.2L203.3 112.0L197.9 122.4L194.3 115.5L190.1 110.8L187.2 108.4L184.1 109.5L184.2 113.2L190.6 123.3L193.3 131.9L198.4 137.9L211.7 147.0L215.9 153.5L215.0 158.3L207.8 171.2L216.2 182.0L230.2 206.5L240.2 215.5L247.7 215.1L255.8 222.5L264.8 233.4L271.4 238.3L275.9 239.6L279.8 243.5L284.8 252.5L287.8 254.8L295.6 253.9L312.7 269.0L316.3 274.2L315.3 294.3L311.1 299.6L307.6 301.9L293.4 296.2L291.5 298.2L288.8 317.3L286.4 321.1L282.8 324.6L265.3 331.7L252.0 340.3L246.0 345.4L242.3 351.5L242.4 355.0L257.7 374.9L258.2 384.1L254.4 393.9L264.7 396.0L266.4 400.7L266.4 409.2L264.4 420.5L260.9 421.0L248.7 414.1L246.6 411.8L247.4 407.0L245.3 403.4L238.8 400.4L227.0 404.6L223.7 404.6L220.1 401.5L214.6 399.3L202.9 396.4L202.0 397.4L202.8 404.3L201.5 407.4L166.5 412.6L155.9 416.6L142.5 423.9L141.1 427.0L135.5 431.0L129.1 432.4L127.5 431.2L116.3 435.0L111.7 434.5L105.0 426.6L103.3 421.1L93.4 420.9L87.2 418.4L74.0 419.2L70.7 418.1L68.2 433.1L65.7 438.8L61.5 444.7L56.1 448.0L51.7 448.7L52.9 439.3L42.8 436.0L43.4 432.1L42.3 429.8L35.6 423.6L18.8 415.9L11.5 421.4L3.8 420.5ZM272.7 -348.9L274.7 -341.6L273.2 -337.7L265.6 -343.6L258.3 -343.1L254.4 -333.1L251.2 -332.5L239.4 -340.8L236.8 -348.6L237.3 -365.0L240.6 -369.5L240.8 -375.7L246.7 -382.5L252.2 -383.1L257.1 -374.0L266.7 -370.2L268.2 -368.4L269.2 -365.8L263.8 -357.5L265.5 -353.3ZM308.3 -303.0L307.7 -299.4L309.0 -294.1L298.3 -292.6L290.1 -293.9L288.2 -300.4L289.1 -306.9L282.5 -313.5L282.1 -321.0ZM115.5 -346.3L105.6 -345.9L101.7 -350.3L97.9 -351.3L99.8 -356.8L102.4 -358.9L112.1 -355.5ZM-76.4 -386.6L-77.9 -384.4L-76.9 -400.1L-69.6 -416.7L-66.7 -416.3L-70.7 -408.7L-71.5 -399.1L-55.6 -397.9L-57.5 -395.0L-73.7 -393.3ZM-58.5 -378.1L-61.0 -375.4L-67.1 -375.8L-70.5 -378.4L-69.4 -381.1L-63.4 -383.4L-59.4 -382.1Z"/></clipPath></defs>
+              <path class="area-land" d="M2.0 421.6L-23.6 405.3L-46.2 406.7L-49.9 401.5L-52.8 400.0L-55.7 402.0L-57.6 401.8L-65.8 394.3L-69.2 393.2L-73.9 394.2L-79.5 398.0L-82.0 402.8L-81.3 405.6L-78.4 406.9L-70.9 406.2L-69.5 408.6L-70.4 410.1L-76.5 411.3L-81.3 413.8L-87.8 411.7L-97.5 411.6L-105.4 414.9L-117.9 416.0L-135.1 414.9L-145.0 410.6L-147.5 403.0L-146.5 392.0L-142.0 377.4L-140.6 366.7L-142.3 359.7L-139.6 349.5L-132.7 336.0L-127.9 321.6L-125.4 306.5L-122.0 296.6L-99.3 269.2L-99.5 259.6L-109.2 255.2L-137.5 248.9L-143.7 246.0L-148.9 238.5L-152.3 238.4L-167.3 242.3L-173.2 240.6L-179.2 242.0L-181.5 234.5L-189.4 231.1L-192.4 231.6L-197.9 236.8L-200.9 235.9L-211.9 217.8L-214.5 209.3L-219.8 203.8L-225.2 201.8L-227.9 202.3L-224.8 186.1L-222.5 181.2L-216.6 174.4L-216.1 164.3L-227.5 159.5L-232.3 155.5L-240.2 143.7L-241.9 137.0L-241.7 130.3L-236.3 115.1L-222.4 106.4L-223.5 91.3L-226.6 87.4L-233.0 85.6L-234.6 82.9L-235.2 80.4L-230.2 74.9L-235.7 70.1L-238.0 65.3L-245.7 59.1L-246.4 57.0L-241.8 40.0L-244.5 34.9L-252.1 30.7L-254.5 25.5L-253.6 23.8L-248.7 24.6L-234.9 13.4L-234.3 11.4L-238.0 9.6L-238.2 4.7L-231.3 -9.6L-228.5 -20.0L-228.7 -24.4L-235.2 -36.9L-235.2 -41.3L-244.2 -55.6L-244.0 -60.0L-239.7 -63.3L-228.6 -68.0L-219.8 -64.3L-215.9 -61.2L-211.0 -64.7L-204.6 -64.0L-189.0 -69.7L-184.6 -77.3L-190.3 -83.7L-189.5 -88.6L-180.3 -94.4L-171.7 -101.9L-168.6 -108.5L-167.1 -121.2L-169.3 -125.5L-171.4 -128.4L-180.6 -128.5L-186.2 -131.2L-189.2 -135.2L-189.8 -138.7L-187.8 -143.4L-188.1 -148.4L-185.5 -150.1L-167.7 -149.4L-166.3 -151.3L-164.7 -161.6L-159.7 -177.3L-155.3 -186.0L-153.0 -221.1L-155.8 -226.1L-162.2 -231.8L-157.9 -251.8L-151.0 -262.4L-145.7 -265.2L-123.1 -266.4L-98.0 -265.1L-88.0 -248.5L-92.0 -240.1L-86.0 -236.1L-83.0 -237.5L-79.0 -252.9L-76.8 -255.3L-69.2 -249.1L-66.5 -244.9L-66.5 -231.5L-63.4 -249.6L-65.3 -262.3L-63.7 -274.5L-57.6 -284.9L-39.4 -280.3L-19.2 -282.5L-11.6 -277.7L5.8 -254.0L11.6 -250.2L18.9 -249.0L8.8 -254.0L-12.2 -282.8L-18.5 -286.4L-28.1 -287.5L-34.1 -290.4L-37.8 -294.7L-38.9 -298.6L-38.4 -327.6L-42.0 -331.9L-46.6 -333.5L-49.5 -331.5L-55.4 -331.6L-56.5 -338.1L-55.0 -343.0L-43.2 -346.2L-35.3 -350.6L-34.9 -358.4L-39.8 -364.7L-52.3 -386.8L-52.9 -399.2L-38.1 -398.3L-20.0 -392.4L-15.6 -388.3L-10.0 -388.1L7.5 -393.6L10.5 -391.2L15.5 -390.3L15.9 -388.2L25.3 -385.3L33.7 -373.5L34.2 -363.2L24.0 -351.0L41.7 -352.9L46.3 -344.1L55.8 -347.5L80.0 -334.3L94.5 -341.2L98.2 -341.6L101.7 -330.7L98.3 -319.6L85.7 -307.6L88.7 -300.4L92.8 -298.8L105.0 -300.6L124.5 -293.9L128.4 -296.3L143.6 -313.3L149.7 -317.0L170.1 -320.2L173.6 -326.8L181.7 -333.5L198.9 -354.6L228.5 -349.7L236.9 -335.9L257.3 -321.1L275.2 -323.5L282.4 -309.0L286.4 -290.8L297.4 -281.9L313.0 -278.7L317.0 -259.6L326.7 -229.8L327.1 -220.4L324.9 -209.9L320.5 -200.8L314.2 -195.4L310.9 -189.7L310.6 -183.6L319.7 -173.5L338.2 -159.5L346.2 -147.0L343.6 -135.9L343.1 -127.9L344.8 -123.0L347.9 -119.1L352.5 -116.4L354.5 -111.8L354.1 -105.3L355.3 -101.0L358.8 -98.1L354.9 -78.0L350.4 -69.6L352.4 -62.9L360.2 -51.3L361.4 -47.5L360.2 -38.3L361.3 -36.0L374.3 -30.2L376.6 -27.2L383.7 -7.4L378.8 20.2L369.8 42.1L366.8 42.7L358.8 38.7L359.1 32.1L357.0 31.8L353.0 23.7L350.2 22.1L336.9 19.9L334.4 21.0L332.7 24.2L336.1 29.4L341.8 33.3L341.4 35.1L329.9 40.0L309.3 52.4L295.8 58.2L285.7 60.1L283.6 61.5L280.3 70.2L277.8 72.1L273.4 70.0L268.7 74.2L264.0 75.5L260.3 83.1L248.8 85.9L245.7 94.3L244.0 95.4L231.4 93.3L227.3 95.9L216.2 98.1L209.6 103.2L203.3 112.0L197.9 122.4L194.3 115.5L190.1 110.8L187.2 108.4L184.1 109.5L184.2 113.2L190.6 123.3L193.3 131.9L198.4 137.9L211.7 147.0L215.9 153.5L215.0 158.3L207.8 171.2L216.2 182.0L230.2 206.5L240.2 215.5L247.7 215.1L255.8 222.5L264.8 233.4L271.4 238.3L275.9 239.6L279.8 243.5L284.8 252.5L287.8 254.8L295.6 253.9L312.7 269.0L316.3 274.2L315.3 294.3L311.1 299.6L307.6 301.9L293.4 296.2L291.5 298.2L288.8 317.3L286.4 321.1L282.8 324.6L265.3 331.7L252.0 340.3L246.0 345.4L242.3 351.5L242.4 355.0L257.7 374.9L258.2 384.1L254.4 393.9L264.7 396.0L266.4 400.7L266.4 409.2L264.4 420.5L260.9 421.0L248.7 414.1L246.6 411.8L247.4 407.0L245.3 403.4L238.8 400.4L227.0 404.6L223.7 404.6L220.1 401.5L214.6 399.3L202.9 396.4L202.0 397.4L202.8 404.3L201.5 407.4L166.5 412.6L155.9 416.6L142.5 423.9L141.1 427.0L135.5 431.0L129.1 432.4L127.5 431.2L116.3 435.0L111.7 434.5L105.0 426.6L103.3 421.1L93.4 420.9L87.2 418.4L74.0 419.2L70.7 418.1L68.2 433.1L65.7 438.8L61.5 444.7L56.1 448.0L51.7 448.7L52.9 439.3L42.8 436.0L43.4 432.1L42.3 429.8L35.6 423.6L18.8 415.9L11.5 421.4L3.8 420.5ZM272.7 -348.9L274.7 -341.6L273.2 -337.7L265.6 -343.6L258.3 -343.1L254.4 -333.1L251.2 -332.5L239.4 -340.8L236.8 -348.6L237.3 -365.0L240.6 -369.5L240.8 -375.7L246.7 -382.5L252.2 -383.1L257.1 -374.0L266.7 -370.2L268.2 -368.4L269.2 -365.8L263.8 -357.5L265.5 -353.3ZM308.3 -303.0L307.7 -299.4L309.0 -294.1L298.3 -292.6L290.1 -293.9L288.2 -300.4L289.1 -306.9L282.5 -313.5L282.1 -321.0ZM115.5 -346.3L105.6 -345.9L101.7 -350.3L97.9 -351.3L99.8 -356.8L102.4 -358.9L112.1 -355.5ZM-76.4 -386.6L-77.9 -384.4L-76.9 -400.1L-69.6 -416.7L-66.7 -416.3L-70.7 -408.7L-71.5 -399.1L-55.6 -397.9L-57.5 -395.0L-73.7 -393.3ZM-58.5 -378.1L-61.0 -375.4L-67.1 -375.8L-70.5 -378.4L-69.4 -381.1L-63.4 -383.4L-59.4 -382.1Z"/>
+              <g clip-path="url(#de-clip)">
+                <circle class="area-ring is-250" r="250"/>
+                <circle class="area-ring is-150" r="150"/>
+                <circle class="area-ring is-50" r="50"/>
+              </g>
+              <g class="area-states">
+                <path d="M343 22L335 20L332 26L342 33L340 37L332 38L319 47L313 48L309 50L308 55L305 57L286 60L279 72L273 69L269 75L264 75L259 85L248 86L248 92L245 96L235 92L229 93L226 98L214 99L202 114L200 125L195 114L190 113L188 108L177 105L176 101L170 96L173 92L172 87L176 83L180 84L182 81L187 80L190 73L198 70L199 68L196 67L193 62L196 58L194 55L206 51L211 44L218 45L221 42L217 36L212 33L209 24L190 22L185 13L183 -1L187 -6L184 -18L189 -31L203 -33L204 -36L218 -36L222 -41L227 -40L234 -45L254 -35L257 -27L256 -14L271 -19L280 -13L296 -12L310 -14L316 -27L322 -34L330 -35L335 -33L351 -40L360 -38L378 -27L379 -16L384 -6L381 14L369 43L359 40L359 31L354 33L355 26L348 19Z"/>
+                <path d="M185 108L183 108L186 112L184 116L191 123L191 130L196 138L211 144L212 150L217 152L212 167L207 171L216 179L216 184L226 196L227 205L234 209L238 215L243 216L245 214L254 219L268 238L277 240L287 254L291 257L293 253L300 255L303 261L309 263L316 274L314 280L317 282L315 296L312 298L311 302L304 297L291 297L289 319L279 327L262 333L249 341L241 351L261 380L254 394L264 394L268 400L266 419L263 422L258 421L246 413L249 406L244 402L245 400L236 400L225 405L219 399L205 401L205 395L201 398L203 404L201 409L183 409L174 413L159 412L154 421L144 422L140 426L142 429L136 430L131 435L128 431L119 435L112 435L110 431L102 425L105 422L102 420L95 422L82 417L78 420L74 420L72 415L70 415L69 425L72 431L70 435L61 446L50 450L54 438L44 440L42 435L43 431L39 426L36 426L34 420L25 420L21 414L13 422L4 421L9 414L16 413L27 405L34 406L42 404L43 408L44 404L47 404L46 395L43 392L47 389L44 383L46 376L44 372L48 358L41 335L36 326L42 316L47 314L48 317L61 309L61 299L57 294L58 290L64 294L68 290L69 294L73 290L68 284L71 266L63 254L57 252L53 246L56 241L47 235L46 228L48 227L48 222L45 216L49 215L44 208L45 200L42 197L38 204L32 204L30 193L25 197L28 189L21 177L17 181L15 177L11 181L11 170L-11 170L-13 176L-9 177L-9 180L-5 178L-5 185L-15 187L-17 193L-28 194L-31 190L-28 186L-29 181L-26 180L-26 170L-29 168L-29 164L-31 164L-34 156L-33 145L-34 141L-37 140L-34 135L-28 132L-25 135L-19 130L-12 131L-7 136L1 134L1 120L12 120L12 116L18 112L20 100L26 102L34 98L44 84L59 92L64 102L67 102L71 107L75 106L78 110L79 120L87 123L88 118L96 118L95 115L86 110L87 106L92 103L102 102L106 106L115 104L118 108L117 112L120 115L125 114L126 105L124 92L131 87L136 87L136 95L144 102L162 98L165 100L172 97L177 105Z"/>
+                <path d="M-242 134L-240 123L-237 121L-238 117L-229 112L-228 108L-218 105L-220 99L-216 104L-206 100L-204 103L-192 103L-194 90L-189 89L-186 92L-185 85L-181 82L-165 77L-162 73L-160 75L-152 74L-149 66L-134 63L-127 58L-128 55L-121 52L-122 44L-119 41L-115 42L-116 47L-107 52L-107 59L-102 69L-96 69L-97 73L-94 80L-98 87L-102 85L-106 87L-105 95L-108 101L-103 104L-98 116L-103 116L-105 121L-107 120L-112 123L-114 127L-112 133L-117 132L-123 139L-116 148L-92 141L-83 150L-83 158L-77 172L-73 172L-80 178L-82 183L-75 204L-76 207L-72 209L-75 222L-74 223L-81 231L-83 245L-90 258L-95 261L-114 252L-136 252L-144 246L-147 239L-158 235L-161 229L-153 215L-160 212L-162 207L-158 201L-161 191L-165 192L-170 188L-184 185L-209 194L-227 194L-223 180L-216 174L-215 165L-229 160L-235 154L-241 141Z"/>
+                <path d="M-228 202L-227 194L-209 194L-184 185L-170 188L-165 192L-161 191L-158 201L-162 207L-160 212L-153 215L-161 229L-155 237L-162 243L-176 239L-179 243L-181 234L-188 231L-194 231L-195 238L-202 236L-203 230L-205 231L-213 217L-211 214L-216 206L-224 201Z"/>
+                <path d="M-43 -399L-19 -393L-16 -388L-3 -389L5 -395L5 -391L15 -388L21 -383L26 -384L25 -386L29 -385L33 -377L28 -373L35 -373L34 -361L30 -355L22 -351L25 -350L42 -353L46 -350L42 -335L47 -345L53 -348L80 -334L93 -342L99 -342L96 -342L100 -340L106 -343L102 -339L104 -325L102 -320L91 -311L85 -310L82 -305L85 -299L90 -299L93 -291L96 -290L91 -290L82 -281L83 -271L95 -263L96 -251L95 -249L93 -252L88 -251L88 -245L76 -238L73 -229L68 -229L55 -236L46 -246L45 -251L47 -252L48 -258L44 -264L46 -268L39 -267L37 -263L21 -253L18 -257L16 -251L13 -251L3 -258L2 -266L-4 -271L-7 -280L-16 -286L-34 -287L-38 -292L-43 -303L-33 -302L-31 -309L-36 -315L-42 -313L-45 -319L-43 -327L-37 -329L-35 -334L-53 -329L-57 -331L-58 -336L-52 -339L-56 -339L-55 -344L-40 -345L-31 -352L-39 -366L-43 -365L-42 -367L-44 -374L-52 -380L-54 -390L-54 -398ZM-35 -357L-39 -351L-44 -352L-42 -356ZM114 -353L118 -346L105 -346L104 -350L98 -350L99 -356L105 -359ZM-64 -383L-58 -380L-60 -375L-71 -378ZM-73 -404L-71 -398L-54 -398L-76 -395L-78 -382L-77 -401L-72 -414L-69 -417L-66 -416L-70 -415L-68 -413L-73 -409Z"/>
+                <path d="M-163 -172L-155 -186L-153 -217L-149 -225L-142 -223L-146 -226L-163 -229L-162 -247L-156 -250L-159 -254L-158 -256L-144 -266L-134 -266L-131 -265L-102 -269L-97 -267L-95 -259L-88 -250L-89 -247L-95 -244L-93 -239L-89 -238L-86 -234L-82 -234L-78 -241L-80 -247L-84 -246L-81 -256L-77 -257L-73 -252L-63 -248L-67 -242L-66 -228L-65 -243L-62 -245L-59 -242L-57 -247L-57 -255L-65 -256L-67 -266L-61 -283L-55 -287L-42 -280L-15 -283L5 -254L18 -248L18 -244L24 -235L26 -237L28 -234L32 -233L39 -238L46 -232L56 -236L71 -228L80 -229L82 -222L106 -204L111 -208L123 -196L130 -198L139 -194L138 -190L134 -189L134 -183L128 -178L118 -175L115 -177L102 -179L97 -173L85 -170L88 -157L97 -145L100 -146L98 -140L102 -132L98 -132L98 -128L107 -119L102 -115L108 -103L104 -99L106 -93L99 -88L100 -84L80 -82L77 -78L73 -77L79 -72L76 -68L78 -64L74 -60L74 -55L83 -36L78 -33L80 -28L70 -27L64 -31L61 -30L59 -25L51 -18L48 -18L45 -13L38 -13L31 -7L28 -12L25 -10L25 -6L21 -10L15 -5L18 -2L20 -3L16 3L3 -6L5 -5L6 -9L10 -10L10 -17L7 -22L10 -28L13 -28L11 -32L8 -35L0 -35L-1 -38L-9 -37L-3 -61L-12 -60L-12 -67L-17 -67L-15 -73L-22 -75L-21 -85L-24 -90L-34 -91L-35 -97L-31 -98L-29 -103L-35 -105L-34 -112L-29 -115L-25 -122L-25 -129L-28 -131L-34 -128L-36 -122L-46 -119L-53 -121L-54 -130L-58 -135L-68 -133L-73 -126L-81 -127L-79 -121L-72 -116L-69 -96L-75 -89L-84 -92L-90 -86L-100 -85L-105 -81L-110 -87L-103 -91L-101 -96L-109 -100L-106 -108L-107 -111L-104 -112L-108 -119L-114 -118L-121 -123L-123 -129L-128 -130L-130 -120L-142 -113L-150 -109L-162 -108L-166 -105L-169 -109L-166 -119L-171 -129L-176 -127L-190 -133L-191 -140L-186 -142L-189 -149L-184 -151L-167 -149Z"/>
+                <path d="M-186 -92L-182 -92L-168 -105L-150 -109L-131 -119L-128 -131L-123 -129L-122 -123L-114 -118L-108 -119L-104 -112L-107 -111L-106 -108L-109 -100L-101 -96L-103 -91L-110 -87L-108 -83L-104 -81L-100 -85L-90 -86L-84 -92L-75 -89L-69 -96L-72 -116L-79 -121L-81 -127L-73 -126L-68 -133L-58 -135L-54 -130L-53 -121L-46 -119L-36 -122L-34 -128L-28 -131L-25 -129L-25 -122L-29 -115L-34 -112L-35 -105L-29 -103L-31 -98L-35 -97L-34 -91L-24 -90L-21 -85L-22 -75L-15 -73L-17 -67L-12 -67L-12 -60L-3 -61L-9 -38L-8 -36L-4 -37L-11 -32L-11 -26L-20 -16L-27 -14L-29 -19L-33 -22L-41 -18L-39 -9L-53 -7L-59 -3L-64 5L-61 8L-54 5L-52 15L-56 20L-55 23L-58 25L-68 24L-67 32L-72 44L-80 50L-85 48L-91 54L-96 59L-93 63L-96 69L-102 69L-107 59L-107 52L-116 47L-115 42L-120 41L-122 45L-122 52L-128 55L-127 58L-134 63L-149 66L-152 74L-160 75L-162 73L-165 77L-181 82L-185 85L-186 92L-189 89L-194 90L-192 103L-204 103L-206 100L-216 104L-220 99L-218 105L-222 106L-224 101L-224 88L-233 87L-235 83L-236 81L-229 73L-235 72L-241 61L-245 62L-248 52L-241 46L-241 40L-245 37L-245 32L-254 33L-255 24L-249 26L-234 13L-234 9L-240 11L-240 6L-228 -13L-229 -27L-236 -37L-234 -42L-240 -46L-240 -50L-245 -52L-243 -57L-245 -61L-234 -65L-230 -64L-234 -69L-231 -70L-222 -66L-217 -61L-214 -61L-214 -65L-208 -64L-189 -69L-184 -77L-193 -85Z"/>
+                <path d="M4 421L-24 405L-36 404L-44 407L-52 400L-54 399L-55 402L-58 402L-59 395L-64 392L-66 395L-68 391L-77 394L-83 402L-83 405L-78 408L-67 407L-70 414L-73 410L-79 414L-86 415L-95 410L-109 417L-119 416L-120 413L-126 412L-130 417L-138 417L-142 415L-138 412L-143 413L-149 399L-145 380L-140 370L-143 354L-133 333L-129 329L-130 322L-124 310L-124 299L-113 287L-112 283L-103 278L-96 263L-90 258L-83 245L-81 231L-74 224L-75 222L-72 209L-76 207L-75 204L-78 193L-74 192L-67 198L-64 197L-65 189L-59 188L-56 197L-48 201L-44 201L-50 210L-47 213L-43 208L-40 208L-39 201L-27 201L-31 194L-17 193L-15 187L-5 185L-5 179L-9 180L-9 177L-13 176L-13 172L-2 169L11 171L11 181L15 177L17 181L22 177L28 189L25 197L30 193L32 204L38 204L42 197L45 200L44 208L49 215L45 216L48 222L48 227L46 228L47 235L56 241L53 246L57 252L62 253L70 264L68 284L73 290L69 294L68 290L64 294L58 290L57 294L61 299L61 309L48 317L47 314L42 316L36 326L41 335L48 358L44 372L46 376L44 383L47 389L43 392L46 395L47 404L44 404L43 408L42 404L34 406L27 405L16 413L9 414Z"/>
+                <path d="M345 -154L348 -152L346 -146L347 -144L342 -135L342 -130L346 -120L355 -115L354 -102L359 -98L356 -88L356 -79L349 -69L355 -57L361 -51L360 -38L351 -40L335 -33L330 -35L322 -34L316 -27L310 -14L280 -13L271 -19L256 -14L256 -30L253 -35L246 -39L254 -49L252 -58L257 -67L245 -66L217 -80L213 -77L203 -83L200 -81L185 -99L187 -108L184 -114L189 -137L183 -140L180 -137L180 -140L177 -141L180 -150L184 -154L181 -161L184 -170L182 -175L175 -176L174 -178L161 -179L152 -189L147 -188L146 -191L142 -192L142 -195L139 -194L130 -198L123 -196L119 -202L127 -201L128 -204L135 -203L137 -205L135 -211L140 -216L146 -217L150 -214L156 -215L154 -218L167 -223L170 -230L179 -232L195 -221L208 -220L216 -217L217 -214L230 -214L230 -212L233 -212L243 -222L248 -220L251 -226L259 -224L264 -228L269 -240L279 -248L285 -250L284 -256L289 -252L293 -244L314 -245L313 -238L306 -227L316 -226L325 -235L329 -226L325 -219L324 -205L311 -193L313 -186L310 -181L329 -169L332 -164Z"/>
+                <path d="M314 -275L317 -257L325 -235L316 -226L306 -227L313 -238L314 -245L293 -244L289 -252L283 -256L285 -250L279 -248L269 -240L264 -228L259 -224L251 -226L248 -220L243 -222L232 -211L230 -214L217 -214L216 -217L208 -220L195 -221L179 -232L170 -230L167 -223L154 -218L156 -215L150 -214L146 -217L140 -216L135 -211L137 -205L135 -203L128 -204L127 -201L119 -202L111 -208L106 -204L82 -222L80 -229L73 -229L76 -238L88 -245L88 -251L93 -252L95 -249L96 -251L95 -264L83 -271L83 -284L91 -290L96 -290L93 -291L92 -295L102 -300L110 -302L114 -297L114 -294L120 -296L128 -290L132 -304L136 -305L143 -318L151 -318L169 -323L171 -312L169 -318L172 -322L170 -322L175 -329L185 -336L196 -357L200 -353L221 -352L218 -350L202 -350L200 -348L201 -346L196 -344L190 -345L186 -337L186 -332L192 -331L189 -332L193 -339L198 -343L197 -344L206 -347L206 -349L208 -349L206 -344L208 -347L218 -343L222 -350L229 -352L229 -349L233 -346L235 -335L246 -331L251 -325L249 -324L254 -325L253 -322L255 -322L260 -316L259 -319L274 -326L273 -323L281 -318L277 -311L285 -302L288 -301L283 -291L298 -281L308 -279L312 -282L314 -279L310 -276ZM308 -302L306 -298L308 -295L285 -290L283 -292L290 -296L288 -307L292 -306L292 -301L294 -303L298 -301L297 -308L290 -315L287 -308L285 -307L285 -313L279 -309L281 -318L278 -325L281 -326L286 -318L295 -314ZM272 -350L277 -345L274 -337L272 -338L273 -340L269 -339L273 -343L267 -341L272 -345L270 -346L258 -343L251 -336L251 -333L255 -335L254 -331L248 -333L249 -337L245 -333L241 -338L237 -337L239 -339L235 -342L236 -346L244 -348L240 -353L237 -352L244 -358L235 -365L243 -366L245 -363L245 -366L249 -370L249 -363L251 -364L250 -368L254 -360L259 -360L260 -363L259 -369L254 -367L249 -373L242 -368L244 -376L240 -375L241 -378L252 -382L254 -380L250 -376L253 -370L267 -371L270 -366L264 -360L264 -356L266 -352Z"/>
+                <path d="M-62 -245L-65 -256L-57 -255L-57 -245L-59 -242ZM-65 -213L-50 -209L-40 -203L-37 -205L-34 -198L-35 -193L-39 -190L-42 -193L-44 -191L-53 -193L-59 -207L-66 -210Z"/>
+                <path d="M18 -248L22 -248L16 -251L18 -257L21 -253L37 -263L39 -267L45 -268L44 -264L48 -258L47 -252L45 -251L45 -246L55 -236L46 -232L39 -238L32 -234L28 -234L26 -237L24 -235L21 -238Z"/>
+                <path d="M31 1L30 -6L38 -13L45 -13L48 -18L55 -20L60 -26L61 -30L64 -31L70 -27L79 -28L79 -34L90 -36L100 -32L98 -29L102 -12L124 -10L130 -6L136 3L128 9L134 16L135 23L151 22L157 31L165 30L175 38L186 37L189 40L194 30L192 28L193 22L198 22L209 24L212 33L217 36L221 42L218 45L211 44L206 51L194 55L196 58L193 62L196 67L199 68L198 70L190 73L187 80L182 81L180 84L176 83L172 88L173 94L168 99L165 100L162 98L144 102L136 95L136 87L131 87L124 92L126 105L125 114L120 115L117 112L118 108L115 104L106 106L102 102L92 103L87 106L86 110L95 115L96 118L88 118L87 123L80 121L75 106L71 107L67 102L64 102L59 92L52 89L50 85L44 84L39 89L39 72L32 73L32 76L27 75L32 56L37 54L39 48L36 44L33 45L32 42L38 42L37 37L39 34L49 35L49 31L45 28L47 22L44 20L47 19L49 22L51 15L40 10L38 4Z"/>
+                <path d="M84 -36L75 -52L74 -59L78 -64L76 -68L79 -72L73 -77L77 -78L80 -82L100 -84L99 -88L106 -93L104 -99L108 -103L102 -115L107 -119L98 -128L98 -132L102 -132L98 -140L100 -146L97 -145L88 -157L85 -170L97 -173L102 -179L115 -177L118 -175L128 -178L134 -183L135 -190L142 -195L142 -192L146 -191L147 -188L152 -189L161 -179L174 -178L175 -176L182 -174L184 -170L181 -161L184 -154L180 -150L177 -141L180 -140L180 -137L183 -140L189 -137L184 -113L187 -108L184 -101L196 -84L200 -81L203 -82L210 -77L213 -77L217 -80L245 -66L257 -67L252 -58L254 -49L246 -39L232 -45L227 -40L222 -41L218 -36L204 -36L203 -33L189 -31L187 -27L184 -18L187 -5L183 -0L185 13L187 13L190 21L193 22L192 28L194 30L189 40L186 37L175 38L165 30L157 31L151 22L135 23L134 16L128 9L136 3L130 -6L124 -10L102 -12L98 -29L100 -30L100 -32Z"/>
+                <path d="M268 -157L270 -151L281 -144L279 -138L288 -135L285 -125L282 -122L280 -127L268 -130L266 -126L257 -129L248 -126L244 -128L248 -138L247 -149L251 -148L251 -152L256 -156L257 -153L261 -152Z"/>
+              </g>
+              <path class="area-border" d="M2.0 421.6L-23.6 405.3L-46.2 406.7L-49.9 401.5L-52.8 400.0L-55.7 402.0L-57.6 401.8L-65.8 394.3L-69.2 393.2L-73.9 394.2L-79.5 398.0L-82.0 402.8L-81.3 405.6L-78.4 406.9L-70.9 406.2L-69.5 408.6L-70.4 410.1L-76.5 411.3L-81.3 413.8L-87.8 411.7L-97.5 411.6L-105.4 414.9L-117.9 416.0L-135.1 414.9L-145.0 410.6L-147.5 403.0L-146.5 392.0L-142.0 377.4L-140.6 366.7L-142.3 359.7L-139.6 349.5L-132.7 336.0L-127.9 321.6L-125.4 306.5L-122.0 296.6L-99.3 269.2L-99.5 259.6L-109.2 255.2L-137.5 248.9L-143.7 246.0L-148.9 238.5L-152.3 238.4L-167.3 242.3L-173.2 240.6L-179.2 242.0L-181.5 234.5L-189.4 231.1L-192.4 231.6L-197.9 236.8L-200.9 235.9L-211.9 217.8L-214.5 209.3L-219.8 203.8L-225.2 201.8L-227.9 202.3L-224.8 186.1L-222.5 181.2L-216.6 174.4L-216.1 164.3L-227.5 159.5L-232.3 155.5L-240.2 143.7L-241.9 137.0L-241.7 130.3L-236.3 115.1L-222.4 106.4L-223.5 91.3L-226.6 87.4L-233.0 85.6L-234.6 82.9L-235.2 80.4L-230.2 74.9L-235.7 70.1L-238.0 65.3L-245.7 59.1L-246.4 57.0L-241.8 40.0L-244.5 34.9L-252.1 30.7L-254.5 25.5L-253.6 23.8L-248.7 24.6L-234.9 13.4L-234.3 11.4L-238.0 9.6L-238.2 4.7L-231.3 -9.6L-228.5 -20.0L-228.7 -24.4L-235.2 -36.9L-235.2 -41.3L-244.2 -55.6L-244.0 -60.0L-239.7 -63.3L-228.6 -68.0L-219.8 -64.3L-215.9 -61.2L-211.0 -64.7L-204.6 -64.0L-189.0 -69.7L-184.6 -77.3L-190.3 -83.7L-189.5 -88.6L-180.3 -94.4L-171.7 -101.9L-168.6 -108.5L-167.1 -121.2L-169.3 -125.5L-171.4 -128.4L-180.6 -128.5L-186.2 -131.2L-189.2 -135.2L-189.8 -138.7L-187.8 -143.4L-188.1 -148.4L-185.5 -150.1L-167.7 -149.4L-166.3 -151.3L-164.7 -161.6L-159.7 -177.3L-155.3 -186.0L-153.0 -221.1L-155.8 -226.1L-162.2 -231.8L-157.9 -251.8L-151.0 -262.4L-145.7 -265.2L-123.1 -266.4L-98.0 -265.1L-88.0 -248.5L-92.0 -240.1L-86.0 -236.1L-83.0 -237.5L-79.0 -252.9L-76.8 -255.3L-69.2 -249.1L-66.5 -244.9L-66.5 -231.5L-63.4 -249.6L-65.3 -262.3L-63.7 -274.5L-57.6 -284.9L-39.4 -280.3L-19.2 -282.5L-11.6 -277.7L5.8 -254.0L11.6 -250.2L18.9 -249.0L8.8 -254.0L-12.2 -282.8L-18.5 -286.4L-28.1 -287.5L-34.1 -290.4L-37.8 -294.7L-38.9 -298.6L-38.4 -327.6L-42.0 -331.9L-46.6 -333.5L-49.5 -331.5L-55.4 -331.6L-56.5 -338.1L-55.0 -343.0L-43.2 -346.2L-35.3 -350.6L-34.9 -358.4L-39.8 -364.7L-52.3 -386.8L-52.9 -399.2L-38.1 -398.3L-20.0 -392.4L-15.6 -388.3L-10.0 -388.1L7.5 -393.6L10.5 -391.2L15.5 -390.3L15.9 -388.2L25.3 -385.3L33.7 -373.5L34.2 -363.2L24.0 -351.0L41.7 -352.9L46.3 -344.1L55.8 -347.5L80.0 -334.3L94.5 -341.2L98.2 -341.6L101.7 -330.7L98.3 -319.6L85.7 -307.6L88.7 -300.4L92.8 -298.8L105.0 -300.6L124.5 -293.9L128.4 -296.3L143.6 -313.3L149.7 -317.0L170.1 -320.2L173.6 -326.8L181.7 -333.5L198.9 -354.6L228.5 -349.7L236.9 -335.9L257.3 -321.1L275.2 -323.5L282.4 -309.0L286.4 -290.8L297.4 -281.9L313.0 -278.7L317.0 -259.6L326.7 -229.8L327.1 -220.4L324.9 -209.9L320.5 -200.8L314.2 -195.4L310.9 -189.7L310.6 -183.6L319.7 -173.5L338.2 -159.5L346.2 -147.0L343.6 -135.9L343.1 -127.9L344.8 -123.0L347.9 -119.1L352.5 -116.4L354.5 -111.8L354.1 -105.3L355.3 -101.0L358.8 -98.1L354.9 -78.0L350.4 -69.6L352.4 -62.9L360.2 -51.3L361.4 -47.5L360.2 -38.3L361.3 -36.0L374.3 -30.2L376.6 -27.2L383.7 -7.4L378.8 20.2L369.8 42.1L366.8 42.7L358.8 38.7L359.1 32.1L357.0 31.8L353.0 23.7L350.2 22.1L336.9 19.9L334.4 21.0L332.7 24.2L336.1 29.4L341.8 33.3L341.4 35.1L329.9 40.0L309.3 52.4L295.8 58.2L285.7 60.1L283.6 61.5L280.3 70.2L277.8 72.1L273.4 70.0L268.7 74.2L264.0 75.5L260.3 83.1L248.8 85.9L245.7 94.3L244.0 95.4L231.4 93.3L227.3 95.9L216.2 98.1L209.6 103.2L203.3 112.0L197.9 122.4L194.3 115.5L190.1 110.8L187.2 108.4L184.1 109.5L184.2 113.2L190.6 123.3L193.3 131.9L198.4 137.9L211.7 147.0L215.9 153.5L215.0 158.3L207.8 171.2L216.2 182.0L230.2 206.5L240.2 215.5L247.7 215.1L255.8 222.5L264.8 233.4L271.4 238.3L275.9 239.6L279.8 243.5L284.8 252.5L287.8 254.8L295.6 253.9L312.7 269.0L316.3 274.2L315.3 294.3L311.1 299.6L307.6 301.9L293.4 296.2L291.5 298.2L288.8 317.3L286.4 321.1L282.8 324.6L265.3 331.7L252.0 340.3L246.0 345.4L242.3 351.5L242.4 355.0L257.7 374.9L258.2 384.1L254.4 393.9L264.7 396.0L266.4 400.7L266.4 409.2L264.4 420.5L260.9 421.0L248.7 414.1L246.6 411.8L247.4 407.0L245.3 403.4L238.8 400.4L227.0 404.6L223.7 404.6L220.1 401.5L214.6 399.3L202.9 396.4L202.0 397.4L202.8 404.3L201.5 407.4L166.5 412.6L155.9 416.6L142.5 423.9L141.1 427.0L135.5 431.0L129.1 432.4L127.5 431.2L116.3 435.0L111.7 434.5L105.0 426.6L103.3 421.1L93.4 420.9L87.2 418.4L74.0 419.2L70.7 418.1L68.2 433.1L65.7 438.8L61.5 444.7L56.1 448.0L51.7 448.7L52.9 439.3L42.8 436.0L43.4 432.1L42.3 429.8L35.6 423.6L18.8 415.9L11.5 421.4L3.8 420.5ZM272.7 -348.9L274.7 -341.6L273.2 -337.7L265.6 -343.6L258.3 -343.1L254.4 -333.1L251.2 -332.5L239.4 -340.8L236.8 -348.6L237.3 -365.0L240.6 -369.5L240.8 -375.7L246.7 -382.5L252.2 -383.1L257.1 -374.0L266.7 -370.2L268.2 -368.4L269.2 -365.8L263.8 -357.5L265.5 -353.3ZM308.3 -303.0L307.7 -299.4L309.0 -294.1L298.3 -292.6L290.1 -293.9L288.2 -300.4L289.1 -306.9L282.5 -313.5L282.1 -321.0ZM115.5 -346.3L105.6 -345.9L101.7 -350.3L97.9 -351.3L99.8 -356.8L102.4 -358.9L112.1 -355.5ZM-76.4 -386.6L-77.9 -384.4L-76.9 -400.1L-69.6 -416.7L-66.7 -416.3L-70.7 -408.7L-71.5 -399.1L-55.6 -397.9L-57.5 -395.0L-73.7 -393.3ZM-58.5 -378.1L-61.0 -375.4L-67.1 -375.8L-70.5 -378.4L-69.4 -381.1L-63.4 -383.4L-59.4 -382.1Z"/>
+              <path class="area-hessen" d="M31 -7L30 -5L31 1L38 4L40 10L51 15L49 22L47 19L44 20L47 22L45 28L49 31L49 35L39 34L37 37L38 42L32 42L39 48L37 54L32 56L27 75L32 76L32 73L40 72L39 91L30 100L25 102L20 100L18 112L12 116L12 120L1 120L1 134L-7 136L-12 131L-19 130L-25 135L-28 132L-35 135L-37 140L-34 141L-32 148L-34 148L-34 157L-31 165L-29 164L-29 168L-26 170L-26 180L-29 181L-28 186L-31 190L-27 201L-39 201L-40 208L-43 208L-47 213L-49 213L-48 205L-45 204L-44 201L-48 201L-56 197L-59 188L-65 189L-64 197L-67 198L-74 192L-78 193L-82 180L-73 172L-77 172L-83 158L-83 150L-91 141L-95 140L-116 148L-123 139L-117 132L-112 133L-114 127L-112 123L-107 120L-105 121L-104 116L-98 115L-103 104L-108 101L-105 95L-106 87L-102 85L-98 87L-94 80L-97 73L-93 63L-96 59L-85 48L-80 50L-73 44L-67 32L-68 24L-58 25L-55 23L-56 20L-52 15L-54 5L-61 8L-64 4L-56 -6L-39 -9L-41 -19L-33 -22L-29 -19L-27 -14L-24 -14L-12 -26L-11 -32L-1 -38L1 -35L8 -35L13 -28L10 -28L7 -22L10 -17L10 -10L6 -9L3 -5L16 3L20 -3L18 -2L15 -5L21 -10L25 -6L25 -10L28 -12Z"/>
+              <g class="area-cities">
+                <circle cx="32.8" cy="-248.6" r="9"/>
+                <circle cx="264.2" cy="-141.0" r="9"/>
+                <circle cx="15.9" cy="-117.8" r="9"/>
+                <circle cx="-177.8" cy="39.0" r="9"/>
+                <circle cx="-58.2" cy="133.8" r="9"/>
+                <circle cx="199.8" cy="-6.6" r="9"/>
+                <circle cx="-23.1" cy="282.4" r="9"/>
+                <circle cx="154.3" cy="351.3" r="9"/>
+              </g>
+            </svg>
+            <span class="area-label area-city is-r" style="left:45.08%;top:20.00%">Hamburg</span>
+            <span class="area-label area-city is-r" style="left:80.46%;top:32.20%">Berlin</span>
+            <span class="area-label area-city is-r" style="left:42.49%;top:34.83%">Hannover</span>
+            <span class="area-label area-city is-r" style="left:12.87%;top:52.61%">Köln</span>
+            <span class="area-label area-city is-l" style="left:31.16%;top:63.36%">Frankfurt</span>
+            <span class="area-label area-city is-r" style="left:70.61%;top:47.44%">Leipzig</span>
+            <span class="area-label area-city is-r" style="left:36.53%;top:80.20%">Stuttgart</span>
+            <span class="area-label area-city is-r" style="left:63.65%;top:88.02%">München</span>
+            <!-- Büro Kassel: Stecknadel, deren Spitze genau auf Kassel zeigt -->
+            <span class="area-pin" style="left:40.06%;top:48.19%" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 23s8-6.9 8-13.5a8 8 0 0 0-16 0C4 16.1 12 23 12 23z"/><circle cx="12" cy="9.5" r="3"/></svg></span>
+            <span class="area-label area-kassel-label" style="left:40.06%;top:48.19%">Büro in Kassel</span>
+            </div>
+          </figure>
+        </div>
       </div>
     </div>
-    <aside class="contact-card" aria-labelledby="kontakt-titel">
-      <h2 id="kontakt-titel">Dipl.-Ing. Dirk Freund</h2>
-      <p class="role">Beratender Ingenieur INGKH<br>Vermessungsingenieur</p>
-      <ul class="contact-list">
-  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Hans-Römhild-Str. 26A<br>34128 Kassel</span></li>
-  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span><span class="label">Telefon</span><a href="tel:+495618150510">+49 561 81 50 510</a></span></li>
-  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg><span><span class="label">Telefax</span>+49 561 81 50 511</span></li>
-  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span><span class="label">E-Mail</span><a href="mailto:info@freund-vermessung.de">info@freund-vermessung.de</a></span></li>
-</ul>
-    </aside>
-  </div>
-</section>
+  </section>
 
-<section class="section section-alt" aria-labelledby="willkommen">
-  <div class="container">
-    <div class="section-head">
-      <h2 id="willkommen">Herzlich Willkommen auf unserer Internet-Präsentation</h2>
-      <p>Unser Büro arbeitet auf den Gebieten der Ingenieurvermessungen sowie in dem Bereich Baubetreuung und Beratung.</p>
+  <!-- ============ LEISTUNGEN ============ -->
+  <section class="section alt" id="leistungen">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="slash" aria-hidden="true"></span><h2>Leistungen</h2></div>
+        <p>Von der ersten Planung bis zur Fertigstellung. <br>Wir stimmen uns eng mit Ihrem Architekten und Ihrer Bauleitung ab.</p>
+      </div>
+      <div class="srows">
+        <article class="srow">
+          <div class="srow-head"><h3>Bauvermessung</h3><p class="for">Für Bauherren und Architekten</p></div>
+          <div class="srow-body">
+            <p>Von den Planungsgrundlagen bis zur abgesteckten Baugrube.</p>
+            <ul class="ticks">
+              <li>Liegenschaftsplan zum Bauantrag</li>
+              <li>Höhenaufnahme und Digitales Geländemodell</li>
+              <li>First- und Traufhöhen von Nachbargebäuden</li>
+              <li>Grob- und Feinabsteckung</li>
+              <li>Grenzanzeige für Zaun oder Mauer markieren (ohne Rechtswirkung)</li>
+              <li>Erdmassenberechnung</li>
+            </ul>
+          </div>
+        </article>
+        <article class="srow">
+          <div><h3>Ingenieurvermessung</h3><p class="for">Für Baufirmen und Ingenieurbüros</p></div>
+          <div class="srow-body">
+            <p>Messungen, die den Bau begleiten und absichern.</p>
+            <ul class="ticks">
+              <li>Grundlagen- und Sondernetze</li>
+              <li>Geometrischer Entwurf</li>
+              <li>Vermessungstechnische Beratung und Bauüberwachung</li>
+              <li>Kontrollmessungen und Fortschreibung der Entwurfsdaten</li>
+              <li>Deformationsmessungen</li>
+              <li>Bauleistungsaufmaße und Bauleistungsabrechnung</li>
+              <li>Brücken- und Gleisabsteckungen</li>
+              <li>Vermessung im Tagebau</li>
+            </ul>
+          </div>
+        </article>
+        <article class="srow">
+          <div><h3>Bestandsvermessung und Geoinformatik</h3><p class="for">Für Eigentümer, Planer, Kommunen und Netzbetreiber</p></div>
+          <div class="srow-body">
+            <p>Bestehendes genau erfassen und digital nutzbar machen.</p>
+            <ul class="ticks">
+              <li>Bestandspläne, Lage- und Höhenpläne, Profile</li>
+              <li>Gebäudeaufmaß</li>
+              <li>Flächenberechnung</li>
+              <li>Städtebauliche Bestandsaufnahme</li>
+              <li>Leitungs- und Kanalkataster</li>
+              <li>Bestandsvermessung für GIS-Projekte</li>
+              <li>Bauwerkskataster</li>
+              <li>Friedhofskataster</li>
+            </ul>
+          </div>
+        </article>
+      </div>
     </div>
-    <div class="grid grid-3">
-      <a class="card link-card" href="buero.html">
-        <h3>Das Büro</h3>
-        <p>Vertrauen und partnerschaftliche Zusammenarbeit, auch bei kleinen Dingen sind Voraussetzung für den gesamtwirtschaftlichen Erfolg eines Projektes im Bau- und Vermessungswesen.</p>
-        <span class="more">Allgemeines, Philosophie, Chronik <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a class="card link-card" href="leistungen.html">
-        <h3>Leistungen</h3>
-        <p>Von der Bauvorbereitung über die Bauausführung bis zur Bauabwicklung und -unterhaltung – vom Liegenschaftsplan bis zur Erdmassenberechnung.</p>
-        <span class="more">Übersicht &amp; Bauvermessung <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a class="card link-card" href="referenzen.html">
-        <h3>Referenzen</h3>
-        <p>Ein Auszug der von uns betreuten Bauprojekte – vom Neubau Klinikum Kassel bis zu rund 427 km Leitungs- und Kanalkataster für GIS-Projekte.</p>
-        <span class="more">Projekte ansehen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" aria-labelledby="generationen">
-  <div class="container">
-    <div class="section-head">
-      <h2 id="generationen">Vermessung in der dritten Generation</h2>
-      <p>Die Familie Freund kann auf eine fast siebzigjährige Geschichte im Vermessungswesen zurückblicken.</p>
+  <!-- ============ ABLAUF ============ -->
+  <section class="section" id="ablauf">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="slash" aria-hidden="true"></span><h2>So begleiten wir Ihren Neubau</h2></div>
+        <p>Viele Bauherren wissen nicht, wann sie einen Vermesser brauchen. <br>Diese vier Schritte übernehmen wir für Sie.</p>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num" aria-hidden="true">1</span>
+          <figure class="step-pic step-pic-full"><button class="step-zoom" type="button" aria-haspopup="dialog" aria-label="Bild vergrößern: Planung"><img src="img/planung.svg" alt="Zeichnung: Ein Tachymeter misst Punkte im geneigten Gelände sowie First- und Traufhöhe des Nachbarhauses" width="320" height="200" loading="lazy"><span class="zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg>Vergrößern</span></button></figure>
+          <h3>Planung</h3>
+          <p>Ist das Grundstück geneigt oder eng bebaut, braucht Ihr Architekt genaue Daten. Wir nehmen Gelände und Höhen auf und zeichnen Pläne im Maßstab 1:50 oder 1:100.</p>
+          <p class="result"><strong>Ergebnis:</strong> Lage- und Höhenplan</p>
+          <!-- Erklärung für die Vergrößerung (erscheint beim Klick aufs Bild) -->
+          <div class="step-detail" hidden>
+            <p>Bevor Ihr Architekt plant, braucht er ein genaues Bild vom Grundstück. Das sehen Sie in der Zeichnung:</p>
+            <dl>
+              <dt>Tachymeter</dt><dd>Das Messgerät auf dem Stativ. Es misst Richtung und Entfernung zu jedem Punkt. Daraus berechnen wir Lage und Höhe.</dd>
+              <dt>Reflektorstab</dt><dd>Wir stellen ihn auf jeden Punkt, den wir messen. Das Tachymeter zielt auf den Reflektor oben am Stab.</dd>
+              <dt>Geländepunkte (Kreuze)</dt><dd>Viele gemessene Punkte zeigen, wie das Gelände verläuft und wie stark es geneigt ist.</dd>
+              <dt>First und Traufe</dt><dd>Der First ist die höchste Kante des Daches, die Traufe die untere Dachkante. Mit den Höhen des Nachbarhauses plant der Architekt Ihr Haus passend zur Umgebung.</dd>
+            </dl>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">2</span>
+          <figure class="step-pic"><button class="step-zoom" type="button" aria-haspopup="dialog" aria-label="Bild vergrößern: Bauantrag"><img src="img/liegenschaftsplan.webp" alt="Beispiel eines Liegenschaftsplans mit eingetragenem Bauvorhaben, Maßketten und Schriftfeld" width="461" height="320" loading="lazy"><span class="zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg>Vergrößern</span></button></figure>
+          <h3>Bauantrag</h3>
+          <p>Der Liegenschaftsplan gehört zu den Bauvorlagen. Wir tragen Ihr Gebäude maßstabsgerecht ein, vermaßen es und gleichen die Karte mit der Örtlichkeit ab.</p>
+          <p class="result"><strong>Ergebnis:</strong> Liegenschaftsplan</p>
+          <!-- Erklärung für die Vergrößerung (erscheint beim Klick aufs Bild) -->
+          <div class="step-detail" hidden>
+            <p>Der Liegenschaftsplan ist eine Karte Ihres Grundstücks, in die wir Ihr geplantes Gebäude eintragen. Das Bauamt braucht ihn für den Bauantrag. Das zeigt das Beispiel:</p>
+            <dl>
+              <dt>Grundstück und Nachbarschaft</dt><dd>Grenzen, Flurstücke und vorhandene Gebäude aus der amtlichen Liegenschaftskarte.</dd>
+              <dt>Ihr Bauvorhaben</dt><dd>Das geplante Gebäude, farbig und maßstabsgerecht eingezeichnet.</dd>
+              <dt>Maße</dt><dd>Die Abstände des Gebäudes zu den Grenzen. Damit prüft das Bauamt, ob die Abstandsflächen eingehalten sind.</dd>
+              <dt>Schriftfeld</dt><dd>Angaben zum Grundstück, zum Maßstab und dazu, wer den Plan erstellt hat.</dd>
+            </dl>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">3</span>
+          <figure class="step-pic step-pic-full"><button class="step-zoom" type="button" aria-haspopup="dialog" aria-label="Bild vergrößern: Grobabsteckung"><img src="img/grobabsteckung.svg" alt="Zeichnung: Ein Tachymeter steckt die vier Gebäudeecken mit Holzpfählen ab, daneben ein Höhenfestpunkt" width="320" height="200" loading="lazy"><span class="zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg>Vergrößern</span></button></figure>
+          <h3>Grobabsteckung</h3>
+          <p>Vor dem Aushub markieren wir die Außenkanten des Gebäudes mit Holzpfählen und setzen einen Höhenfestpunkt für die Aushubtiefe.</p>
+          <p class="result"><strong>Ergebnis:</strong> Baugrube ist abgesteckt</p>
+          <!-- Erklärung für die Vergrößerung (erscheint beim Klick aufs Bild) -->
+          <div class="step-detail" hidden>
+            <p>Vor dem Aushub zeigen wir, wo und wie tief die Baugrube gegraben wird. Das sehen Sie in der Zeichnung:</p>
+            <dl>
+              <dt>Tachymeter</dt><dd>Die Lage der Gebäudeecken kommt aus den Plänen. Mit dem Tachymeter finden wir diese Punkte auf dem Grundstück.</dd>
+              <dt>Pfähle</dt><dd>An jeder Ecke schlagen wir einen Holzpfahl ein. Die gestrichelte Linie zwischen den Pfählen zeigt die Außenkanten des Gebäudes.</dd>
+              <dt>Höhenfestpunkt</dt><dd>Ein Punkt mit bekannter Höhe neben der Baugrube. Von hier aus misst die Baufirma, wie tief sie ausheben muss.</dd>
+            </dl>
+            <p>Die Baugrube wird etwas größer als das Haus, damit rundherum Platz zum Arbeiten bleibt.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">4</span>
+          <figure class="step-pic step-pic-full"><button class="step-zoom" type="button" aria-haspopup="dialog" aria-label="Bild vergrößern: Feinabsteckung"><img src="img/feinabsteckung.svg" alt="Zeichnung: Schnurgerüste an den Ecken der Baugrube, rote Schnüre markieren die Gebäudekanten, ein Lot überträgt eine Ecke auf die Sohle" width="320" height="200" loading="lazy"><span class="zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg>Vergrößern</span></button></figure>
+          <h3>Feinabsteckung</h3>
+          <p>Wir übertragen die Gebäudekanten auf das Schnurgerüst und markieren die geforderte Höhe. So steht Ihr Haus genau dort, wo es geplant ist.</p>
+          <p class="result"><strong>Ergebnis:</strong> Absteckungsplan</p>
+          <!-- Erklärung für die Vergrößerung (erscheint beim Klick aufs Bild) -->
+          <div class="step-detail" hidden>
+            <p>Nach dem Aushub kommt es auf Zentimeter an. Jetzt legen wir die genauen Gebäudekanten fest. Das sehen Sie in der Zeichnung:</p>
+            <dl>
+              <dt>Schnurgerüst</dt><dd>Holzbretter an Pfählen rund um die Baugrube. Darauf markieren wir mit Nägeln, wo die Gebäudekanten verlaufen, und die geforderte Höhe.</dd>
+              <dt>Rote Schnüre</dt><dd>Sie werden zwischen den Nägeln gespannt und zeigen genau die Außenkanten des Gebäudes.</dd>
+              <dt>Lot</dt><dd>Wo sich zwei Schnüre kreuzen, liegt eine Gebäudeecke. Mit dem Lot wird dieser Punkt nach unten auf den Boden der Baugrube übertragen.</dd>
+            </dl>
+            <p>Alle Maße halten wir im Absteckungsplan fest.</p>
+          </div>
+        </li>
+      </ol>
     </div>
-    <ul class="generations">
-      <li><img src="assets/img/karl-freund.jpg" alt="Karl Freund am Zeichentisch eines Markscheidebüros, historische Aufnahme" width="300" height="180" loading="lazy" decoding="async"><p class="name">Karl Freund</p><p class="role">Ingenieur für Vermessungswesen</p></li>
-      <li><img src="assets/img/guenter-freund.jpg" alt="Dipl.-Ing. Günter Freund mit Vermessungsinstrument im Gelände" width="300" height="180" loading="lazy" decoding="async"><p class="name">Dipl.-Ing. Günter Freund</p><p class="role">Vermessungsingenieur</p></li>
-      <li><img src="assets/img/dirk-freund.jpg" alt="Dipl.-Ing. Dirk Freund am Schreibtisch mit einem Plan" width="300" height="180" loading="lazy" decoding="async"><p class="name">Dipl.-Ing. Dirk Freund</p><p class="role">Vermessungsingenieur, Büroinhaber seit 1998</p></li>
-    </ul>
-    <p style="margin-top:var(--s-6)"><a href="buero.html#chronik">Zur Chronik</a></p>
-  </div>
-</section>
+  </section>
 
-<section class="section-tight">
-  <div class="container">
-    <div class="cta-band">
+  <!-- ============ REFERENZEN ============ -->
+  <section class="section alt" id="referenzen">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="slash" aria-hidden="true"></span><h2>Referenzen</h2></div>
+        <p>Eine Auswahl aus über 25 Jahren: Kliniken und Pflegeheime, Geschäftshäuser, Brücken, Kanäle und ganze Leitungsnetze.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Referenzen filtern">
+        <button class="chip" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+        <button class="chip" type="button" data-filter="hochbau" aria-pressed="false">Hochbau</button>
+        <button class="chip" type="button" data-filter="tiefbau" aria-pressed="false">Tief- und Ingenieurbau</button>
+        <button class="chip" type="button" data-filter="planung" aria-pressed="false">Planung und Bestand</button>
+        <p class="ref-count" id="ref-count" aria-live="polite">20 Projekte</p>
+      </div>
+
+      <!--
+        NEUE REFERENZ ERGÄNZEN:
+        Eine <li>-Zeile kopieren und Titel, Ort und Bereich anpassen.
+        data-cat ist der Filter: hochbau | tiefbau | planung
+        Die ersten 6 Einträge (je Filter) sind immer zu sehen, der Rest erscheint über "Mehr anzeigen".
+        Wichtige Referenzen also nach oben stellen. Die Zahl 6 steht im Skript bei REF_LIMIT.
+      -->
+      <ul class="ref-list" id="ref-list">
+        <li data-cat="hochbau"><span class="ref-title">Neubau Klinikum Kassel</span><span class="ref-place">Kassel</span><span class="ref-cat">Hochbau</span></li>
+        <li data-cat="hochbau"><span class="ref-title">Neubau Diakonissenkrankenhaus</span><span class="ref-place">Kassel</span><span class="ref-cat">Hochbau</span></li>
+        <li data-cat="hochbau"><span class="ref-title">Erweiterung Rotes Kreuz Krankenhaus</span><span class="ref-place">Kassel</span><span class="ref-cat">Hochbau</span></li>
+        <li data-cat="hochbau"><span class="ref-title">Büro- und Geschäftshaus am Friedrichsplatz</span><span class="ref-place">Kassel</span><span class="ref-cat">Hochbau</span></li>
+        <li data-cat="hochbau"><span class="ref-title">Bebauung Unterneustädter Kirchplatz</span><span class="ref-place">Kassel</span><span class="ref-cat">Hochbau</span></li>
+        <li data-cat="hochbau"><span class="ref-title">Neubau ASB-Pflegeheim</span><span class="ref-place">Lohfelden</span><span class="ref-cat">Hochbau</span></li>
+        <li data-cat="hochbau"><span class="ref-title">Neubau eines Einkaufsmarktes, baubegleitende Vermessung</span><span class="ref-place">Lohfelden</span><span class="ref-cat">Hochbau</span></li>
+        <li data-cat="hochbau"><span class="ref-title">Neubau Senioren-Wohn- und Pflegeheim</span><span class="ref-place">Spangenberg</span><span class="ref-cat">Hochbau</span></li>
+        <li data-cat="hochbau"><span class="ref-title">Weiterentwicklung der DRK-Klinik</span><span class="ref-place">Kaufungen</span><span class="ref-cat">Hochbau</span></li>
+        <li data-cat="hochbau"><span class="ref-title">Berufsbildungszentrum</span><span class="ref-place">Erfurt-Bindersleben</span><span class="ref-cat">Hochbau</span></li>
+        <li data-cat="tiefbau"><span class="ref-title">Umbau Königsplatz</span><span class="ref-place">Kassel</span><span class="ref-cat">Tief- und Ingenieurbau</span></li>
+        <li data-cat="tiefbau"><span class="ref-title">Brückenbestandsaufnahme für die Sanierung</span><span class="ref-place">Malsfeld</span><span class="ref-cat">Tief- und Ingenieurbau</span></li>
+        <li data-cat="tiefbau"><span class="ref-title">Absteckung Kanalneubau im Neubaugebiet „Lindenberg“</span><span class="ref-place">Lohfelden</span><span class="ref-cat">Tief- und Ingenieurbau</span></li>
+        <li data-cat="tiefbau"><span class="ref-title">Sanierung Sportplatz Brückenstraße</span><span class="ref-place">Vellmar</span><span class="ref-cat">Tief- und Ingenieurbau</span></li>
+        <li data-cat="tiefbau"><span class="ref-title">Baubegleitende Kanalvermessungen</span><span class="ref-place">verschiedene Orte</span><span class="ref-cat">Tief- und Ingenieurbau</span></li>
+        <li data-cat="tiefbau"><span class="ref-title">Absteckung von Mobilfunkmasten</span><span class="ref-place">verschiedene Standorte</span><span class="ref-cat">Tief- und Ingenieurbau</span></li>
+        <li data-cat="planung"><span class="ref-title">Bebauungsplan Nr. 26 „Im Schocketal“</span><span class="ref-place">Fuldatal</span><span class="ref-cat">Planung und Bestand</span></li>
+        <li data-cat="planung"><span class="ref-title">Urgeländeaufnahme und Massenberechnung für einen Parkplatz</span><span class="ref-place">Edersee</span><span class="ref-cat">Planung und Bestand</span></li>
+        <li data-cat="planung"><span class="ref-title">Bestandsvermessung der Ochsenwiese</span><span class="ref-place">Immenhausen</span><span class="ref-cat">Planung und Bestand</span></li>
+        <li data-cat="planung"><span class="ref-title">Bestandsvermessung Baumgarten- und Wurmbergstraße</span><span class="ref-place">Kassel</span><span class="ref-cat">Planung und Bestand</span></li>
+      </ul>
+      <div class="ref-more" id="ref-more-wrap" hidden>
+        <button class="btn btn-line" type="button" id="ref-more" aria-expanded="false" aria-controls="ref-list">
+          <span class="btn-label">Mehr anzeigen</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+
+      <div class="kataster">
+        <div class="kataster-text">
+          <h3>Leitungs- und Kanalkataster für GIS-Projekte</h3>
+          <p>Für Städte und Gemeinden in Nordhessen haben wir Kanäle und Leitungen vermessen und für ihre Geoinformationssysteme aufbereitet.</p>
+          <div class="legend" aria-hidden="true">
+            <span><i class="swatch"></i>Leitungs- und Kanalkataster</span>
+            <span><i class="swatch is-hatch"></i>nur Kanalkataster</span>
+          </div>
+        </div>
+        <!--
+          Neuer Ort: eine <li>-Zeile kopieren, data-km und Text anpassen. Die Balkenlänge rechnet das Skript selbst aus.
+          Nur Kanalkataster: beim Balken class="bar is-hatch" und den versteckten Zusatz ", nur Kanalkataster" mitkopieren.
+          Reihenfolge: größte zuerst, "weitere Orte" immer zuletzt (grau).
+        -->
+        <ul class="chart" aria-label="Vermessene Netzlänge je Ort in Kilometern">
+          <li data-km="130"><span class="town">Eschwege</span><span class="track"><span class="bar is-hatch" style="width:100.0%"></span></span><span class="km">130 km</span><span class="visually-hidden">, nur Kanalkataster</span></li>
+          <li data-km="120"><span class="town">Waldeck</span><span class="track"><span class="bar" style="width:92.3%"></span></span><span class="km">120 km</span></li>
+          <li data-km="50"><span class="town">Wanfried</span><span class="track"><span class="bar" style="width:38.5%"></span></span><span class="km">50 km</span></li>
+          <li data-km="45"><span class="town">Bad Karlshafen</span><span class="track"><span class="bar" style="width:34.6%"></span></span><span class="km">45 km</span></li>
+          <li data-km="30"><span class="town">Schwalmstadt</span><span class="track"><span class="bar" style="width:23.1%"></span></span><span class="km">30 km</span></li>
+          <li data-km="25"><span class="town">Söhrewald</span><span class="track"><span class="bar" style="width:19.2%"></span></span><span class="km">25 km</span></li>
+          <li data-km="7"><span class="town">Schauenburg</span><span class="track"><span class="bar" style="width:5.4%"></span></span><span class="km">7 km</span></li>
+          <li data-km="5"><span class="town">Volkmarsen</span><span class="track"><span class="bar is-hatch" style="width:3.8%"></span></span><span class="km">5 km</span><span class="visually-hidden">, nur Kanalkataster</span></li>
+          <li data-km="15"><span class="town">weitere Orte</span><span class="track"><span class="bar is-rest" style="width:11.5%"></span></span><span class="km">15 km</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ÜBER UNS ============ -->
+  <section class="section" id="ueber-uns">
+    <div class="wrap about">
+      <div class="about-text">
+        <span class="slash" aria-hidden="true"></span>
+        <h2>Über uns</h2>
+        <p>Freund Vermessung ist ein Ingenieurbüro für Vermessungstechnik und Geoinformatik in Kassel. Wir begleiten Bauvorhaben im Hoch-, Tief- und Ingenieurbau von der Planung bis zur Abnahme.</p>
+        <p>Zu unseren Auftraggebern gehören Bauherren, Architekten, Bauingenieure, Baufirmen, Bauträger, Kommunen, Landschaftsplaner und Geologen. Viele dieser Kontakte bestehen seit Jahren und haben mit einem einfachen Gespräch begonnen.</p>
+        <dl class="values">
+          <div><dt>Sorgfalt</dt><dd>Gewissenhafte Messung und Auswertung, auch bei kleinen Aufträgen.</dd></div>
+          <div><dt>Kurze Wege</dt><dd>Von Kassel aus sind wir schnell auf Ihrer Baustelle in Nordhessen.</dd></div>
+          <div><dt>Moderne Messtechnik</dt><dd>Millimeter genaue Messungen durch qualifiziertes Personal.</dd></div>
+          <div><dt>Klare Absprachen</dt><dd>Ein fester Ansprechpartner und eine reibungslose Abwicklung.</dd></div>
+        </dl>
+      </div>
+      <div class="chronik">
+        <h3>Seit drei Generationen Vermessung in der Familie </h3>
+        <ol>
+          <li><span class="year">bis 1943</span><p>Karl Freund arbeitet als Ingenieur für Vermessungswesen im Markscheidewesen.</p><img class="portrait" src="img/chronik-karl-freund.webp" alt="Historisches Foto: Karl Freund mit Kollegen im Markscheidebüro" width="300" height="180" loading="lazy"></li>
+          <li><span class="year">1968</span><p>Dipl.-Ing. Günter Freund beginnt als Vermessungsassessor im Vermessungsbüro Simon.</p></li>
+          <li><span class="year">1970</span><p>Günter Freund wird als Öffentlich bestellter Vermessungsingenieur zugelassen und führt mit Herrn Simon das Büro Simon und Freund bis 1986.</p><img class="portrait" src="img/chronik-guenter-freund.webp" alt="Günter Freund mit einem Tachymeter auf einer Wiese" width="300" height="180" loading="lazy"></li>
+          <li><span class="year">1986</span><p>Eigenes ÖbVI-Büro von Günter Freund in Vellmar, bis 2001.</p></li>
+          <li><span class="year">1998</span><p>Dipl.-Ing. Dirk Freund gründet in dritter Generation ein eigenes Ingenieurbüro für Vermessungstechnik und Geoinformatik.</p><img class="portrait" src="img/chronik-dirk-freund.webp" alt="Dirk Freund mit einem Plan an seinem Schreibtisch" width="300" height="180" loading="lazy"></li>
+          <li class="now"><span class="year">Heute</span><p>Freund Vermessung in Kassel-Harleshausen.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FRAGEN UND BEGRIFFE ============ -->
+  <section class="section alt" id="fragen">
+    <div class="wrap faq-grid">
       <div>
-        <h2>Vielleicht schon bald Ihr Partner?</h2>
-        <p>Viele unserer langjährigen Kundenbeziehungen haben mit einem unverbindlichen und vertraulichen Gespräch begonnen.</p>
+        <span class="slash" aria-hidden="true"></span>
+        <h2 style="margin-bottom:clamp(28px,4vw,40px)">Häufige Fragen</h2>
+        <dl class="faq">
+          <div>
+            <dt>Wann brauche ich beim Hausbau einen Vermesser?</dt>
+            <dd>Meist schon vor dem Bauantrag für den Liegenschaftsplan und die Höhenaufnahme. Danach beim Baubeginn für die Absteckung. Den genauen Ablauf finden Sie oben unter <a href="#ablauf">Ablauf</a>.</dd>
+          </div>
+          <div>
+            <dt>Was ist der Unterschied zwischen Grob- und Feinabsteckung?</dt>
+            <dd>Die Grobabsteckung zeigt mit Holzpfählen, wo die Baugrube ausgehoben wird. Die Feinabsteckung überträgt nach dem Aushub die genauen Gebäudekanten und die Höhe auf das Schnurgerüst.</dd>
+          </div>
+          <div>
+            <dt>Was kostet eine Vermessung?</dt>
+            <dd>Das hängt von Grundstück, Aufwand und Leistung ab. Schicken Sie uns die Eckdaten Ihres Vorhabens, dann erhalten Sie ein Angebot.</dd>
+          </div>
+          <div>
+            <dt>Wo sind Sie tätig?</dt>
+            <dd>Unser Vermessungsbüro hat seinen Sitz in Kassel. Unser Schwerpunkt liegt in Nordhessen, darüber hinaus sind wir in ganz Hessen sowie in den angrenzenden Bundesländern für Sie im Einsatz. Ob direkt in Kassel, in der Region oder darüber hinaus: Wenn Sie unsicher sind, ob Ihr Projekt in unserem Einsatzgebiet liegt, sprechen Sie uns gerne an.</dd>
+          </div>
+        </dl>
       </div>
-      <a class="btn btn-primary" href="mailto:info@freund-vermessung.de"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> info@freund-vermessung.de</a>
+      <aside class="glossar" aria-labelledby="glossar-title">
+        <h3 id="glossar-title">Begriffe kurz erklärt</h3>
+        <!-- Neuen Begriff ergänzen: <div><dt>Begriff</dt><dd>Erklärung</dd></div> kopieren -->
+        <dl>
+          <div><dt>Liegenschaftsplan</dt><dd>Plan für den Bauantrag in Hessen. Er zeigt das Grundstück, die Nachbarn und Ihr geplantes Gebäude mit Maßen und Höhen.</dd></div>
+          <div><dt>Absteckung</dt><dd>Die geplante Lage eines Gebäudes wird vor Ort markiert, damit richtig gebaut wird.</dd></div>
+          <div><dt>Schnurgerüst</dt><dd>Holzgerüst um die Baugrube. Daran werden Schnüre gespannt, die die Gebäudekanten zeigen.</dd></div>
+          <div><dt>Digitales Geländemodell</dt><dd>Die Oberfläche eines Geländes als Computermodell. Grundlage für Planung und Erdmassenberechnung.</dd></div>
+          <div><dt>Leitungskataster</dt><dd>Digitale Dokumentation von Kanälen und Leitungen mit Lage und Höhe, meist in einem GIS.</dd></div>
+        </dl>
+      </aside>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- ============ INFOMATERIAL ============ -->
+  <section class="section" id="infomaterial">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="slash" aria-hidden="true"></span><h2>Infomaterial für Bauherren</h2></div>
+        <p>Hilfreiche Unterlagen zum Herunterladen.</p>
+      </div>
+      <ul class="docs">
+        <!-- Neue Datei: Zeile kopieren. Die Größe (KB) bei einer neuen Datei mit anpassen. -->
+        <li><span class="doc-meta"><span class="doc-tag">PDF</span>62 KB</span><a href="downloads/Bauantrag-Kassel.pdf" target="_blank" rel="noopener">Bauantrag in Kassel<span class="visually-hidden"> (PDF, öffnet in neuem Tab)</span></a><p>Welche Katasterunterlagen Sie für Ihr Bauvorhaben in der Stadt Kassel brauchen.</p></li>
+        <li><span class="doc-meta"><span class="doc-tag">PDF</span>262 KB</span><a href="downloads/Checkliste_Bau.pdf" target="_blank" rel="noopener">Checkliste für Bauherren<span class="visually-hidden"> (PDF, öffnet in neuem Tab)</span></a><p>Die wichtigsten Schritte, wenn Sie bauen möchten.</p></li>
+        <li><span class="doc-meta"><span class="doc-tag">PDF</span>949 KB</span><a href="downloads/Nachbarrecht.pdf" target="_blank" rel="noopener">Nachbarrecht in Hessen<span class="visually-hidden"> (PDF, öffnet in neuem Tab)</span></a><p>Informationsblatt des Hessischen Ministeriums der Justiz.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ KONTAKT ============ -->
+  <section class="section contact" id="kontakt">
+    <div class="wrap contact-grid">
+      <div class="contact-main">
+        <h2>Sprechen Sie mit uns über Ihr Projekt.</h2>
+        <p class="contact-intro">Rufen Sie an oder schreiben Sie uns. Wir melden uns schnell und sagen Ihnen, welche Vermessung Sie brauchen.</p>
+        <a class="phone-big" href="tel:+495618150510"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>0561 81 50 510</span></a>
+        <dl class="contact-list">
+          <dt>E-Mail</dt><dd><a href="mailto:info@freund-vermessung.de">info@freund-vermessung.de</a></dd>
+          <dt>Adresse</dt><dd>Hans-Römhild-Straße 26A<br>34128 Kassel</dd>
+          <dt>Ansprechpartner</dt><dd>Dipl.-Ing. Dirk Freund, Beratender Ingenieur</dd>
+        </dl>
+      </div>
+      <div class="form-card">
+        <h3 id="anfrage-title">Angebot anfragen</h3>
+        <p>Füllen Sie die Felder aus. Daraus entsteht eine fertige E-Mail an uns, die Sie selbst abschicken. Es werden keine Daten auf dieser Seite gespeichert.</p>
+        <form id="anfrage" aria-labelledby="anfrage-title" novalidate>
+          <div class="field">
+            <label for="f-name">Name <span class="req">(Pflichtfeld)</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="form-error">
+          </div>
+          <div class="field">
+            <label for="f-erreichbar">Telefon oder E-Mail für Rückfragen <span class="req">(Pflichtfeld)</span></label>
+            <input id="f-erreichbar" name="erreichbar" type="text" autocomplete="tel" required aria-describedby="form-error">
+          </div>
+          <div class="field">
+            <label for="f-art">Was brauchen Sie?</label>
+            <select id="f-art" name="art">
+              <option>Liegenschaftsplan zum Bauantrag</option>
+              <option>Absteckung eines Neubaus</option>
+              <option>Höhenaufnahme oder Bestandsplan</option>
+              <option>Ingenieurvermessung auf der Baustelle</option>
+              <option>Leitungs- oder Kanalkataster</option>
+              <option>Weiß ich noch nicht, bitte beraten</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-ort">Adresse oder Flurstück</label>
+            <input id="f-ort" name="ort" type="text" autocomplete="street-address">
+          </div>
+          <div class="field">
+            <label for="f-termin">Gewünschter Termin</label>
+            <input id="f-termin" name="termin" type="text" placeholder="zum Beispiel Anfang März">
+          </div>
+          <div class="field">
+            <label for="f-text">Ihre Nachricht</label>
+            <textarea id="f-text" name="text" rows="3" placeholder="Was ist geplant? Gibt es schon Pläne vom Architekten?"></textarea>
+          </div>
+          <p class="form-error" id="form-error" role="alert" hidden>Bitte geben Sie Ihren Namen und eine Telefonnummer oder E-Mail-Adresse an.</p>
+          <button class="btn btn-red" type="submit">E-Mail erstellen</button>
+        </form>
+        <div class="mail-result" id="mail-result" hidden>
+          <p>Ihre Anfrage ist fertig. Öffnen Sie sie in Ihrem E-Mail-Programm oder kopieren Sie den Text an <strong>info@freund-vermessung.de</strong>.</p>
+          <pre id="mail-preview"></pre>
+          <div class="mail-actions">
+            <a class="btn btn-red" id="mail-open" href="mailto:info@freund-vermessung.de">Im E-Mail-Programm öffnen</a>
+            <button class="btn btn-line" type="button" id="mail-copy"><span class="btn-label">Text kopieren</span></button>
+            <button class="btn-text" type="button" id="mail-edit">Angaben ändern</button>
+          </div>
+          <p class="copy-status" id="copy-status" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
+
+<!-- ============ UNTERSEITEN: KARRIERE, IMPRESSUM, DATENSCHUTZ ============ -->
+<!-- Jede Unterseite ist ein <article> mit data-page (= Adresse nach dem #). Neue Unterseite: article kopieren, data-page ändern und im Skript bei pageIds ergänzen. -->
+<main class="subpage" id="unterseiten" tabindex="-1" hidden>
+  <div class="wrap">
+    <article data-page="karriere" hidden>
+      <a class="back" href="#start">Zurück zur Startseite</a>
+      <h1>Karriere</h1>
+      <p class="job-lead">Wir bilden aus und stellen ein:</p>
+      <ul class="ticks job-overview">
+        <li>Ausbildung zum Vermessungstechniker (m/w/d)</li>
+        <li>Vermessungstechniker (m/w/d) mit abgeschlossener Ausbildung</li>
+        <li>Messgehilfe (m/w/d)</li>
+      </ul>
+
+      <!-- Stelle 1: Ausbildung -->
+      <section class="job">
+        <h2>Ausbildung zum Vermessungstechniker (m/w/d)</h2>
+        <dl class="job-facts">
+          <div><dt>Dauer</dt><dd>3 Jahre</dd></div>
+          <div><dt>Lernorte</dt><dd>Büro, Baustelle und Berufsschule</dd></div>
+          <div><dt>Fachrichtung</dt><dd>Vermessung</dd></div>
+        </dl>
+        <h3>Das lernen Sie bei uns</h3>
+        <ul class="ticks">
+          <li>Messen im Gelände mit Tachymeter, GNSS-Empfänger und Digitalnivellier</li>
+          <li>Gebäude auf Baustellen abstecken</li>
+          <li>Messdaten am Computer auswerten und berechnen</li>
+          <li>Lagepläne, Bestandspläne und Karten erstellen, auch im GIS</li>
+        </ul>
+        <h3>Das bringen Sie mit</h3>
+        <!-- Voraussetzungen vor dem Livegang mit Dirk Freund abstimmen -->
+        <ul class="ticks">
+          <li>Freude an Mathematik und Technik</li>
+          <li>Gutes räumliches Vorstellungsvermögen</li>
+          <li>Lust auf Arbeit draußen, auch bei Wind und Wetter</li>
+          <li>Sorgfalt und Zuverlässigkeit</li>
+          <li>Mittlerer Schulabschluss oder Abitur</li>
+        </ul>
+        <h3>Und danach?</h3>
+        <p>Vermessungstechniker arbeiten in Vermessungs- und Ingenieurbüros, im öffentlichen Dienst und in der Industrie. Später sind eine Weiterbildung zum Techniker oder ein Studium in Vermessung und Geoinformatik möglich.</p>
+      </section>
+
+      <!-- Stelle 2: Vermessungstechniker mit Ausbildung -->
+      <section class="job">
+        <h2>Vermessungstechniker (m/w/d) mit abgeschlossener Ausbildung</h2>
+        <p>Sie sind ausgebildeter Vermessungstechniker und suchen eine neue Stelle? Dann freuen wir uns auf Sie.</p>
+        <h3>Ihre Aufgaben</h3>
+        <ul class="ticks">
+          <li>Vermessungen im Gelände mit Tachymeter, GNSS-Empfänger und Digitalnivellier</li>
+          <li>Absteckungen auf Baustellen</li>
+          <li>Messdaten auswerten und berechnen</li>
+          <li>Lage- und Höhenpläne, Bestandspläne und GIS-Daten erstellen</li>
+        </ul>
+        <h3>Das bringen Sie mit</h3>
+        <!-- Voraussetzungen vor dem Livegang mit Dirk Freund abstimmen -->
+        <ul class="ticks">
+          <li>Abgeschlossene Ausbildung als Vermessungstechniker oder Geomatiker</li>
+          <li>Erfahrung mit Tachymeter und GNSS</li>
+          <li>Selbstständige und sorgfältige Arbeitsweise</li>
+          <li>Führerschein Klasse B</li>
+        </ul>
+      </section>
+
+      <!-- Stelle 3: Messgehilfe -->
+      <section class="job">
+        <h2>Messgehilfe (m/w/d)</h2>
+        <p>Sie unterstützen uns bei Messungen draußen auf Baustellen und im Gelände.</p>
+        <h3>Ihre Aufgaben</h3>
+        <ul class="ticks">
+          <li>Reflektor und Messlatte an den Messpunkten aufstellen</li>
+          <li>Punkte mit Holzpflöcken, Nägeln oder Farbe markieren</li>
+          <li>Messgeräte und Material tragen und transportieren</li>
+          <li>Beim Aufbau der Messung helfen</li>
+        </ul>
+        <h3>Das bringen Sie mit</h3>
+        <!-- Voraussetzungen vor dem Livegang mit Dirk Freund abstimmen -->
+        <ul class="ticks">
+          <li>Spaß an der Arbeit draußen, bei jedem Wetter</li>
+          <li>Körperliche Fitness</li>
+          <li>Zuverlässigkeit und Sorgfalt</li>
+          <li>Führerschein Klasse B von Vorteil</li>
+          <li>Keine Vorkenntnisse nötig, wir arbeiten Sie ein</li>
+        </ul>
+      </section>
+
+      <div class="apply-box">
+        <h2>So bewerben Sie sich</h2>
+        <p>Schicken Sie uns Ihre Bewerbung per E-Mail an <strong>info@freund-vermessung.de</strong>, am besten als eine PDF-Datei. Schreiben Sie in den Betreff, für welche Stelle Sie sich bewerben.</p>
+        <ul class="ticks">
+          <li>Anschreiben</li>
+          <li>Lebenslauf</li>
+          <li>Zeugnisse (für die Ausbildung die letzten zwei Schulzeugnisse, sonst Abschluss- und Arbeitszeugnisse)</li>
+        </ul>
+        <p>Per Post geht es auch: Freund Vermessung, Hans-Römhild-Straße 26A, 34128 Kassel.</p>
+        <p>Fragen? Rufen Sie uns an: <a href="tel:+495618150510">0561 81 50 510</a>. Ihr Ansprechpartner ist Dipl.-Ing. Dirk Freund.</p>
+        <div class="apply-buttons">
+          <a class="btn btn-red" href="mailto:info@freund-vermessung.de?subject=Bewerbung%20Ausbildung%20Vermessungstechniker">Bewerbung Ausbildung senden</a>
+          <a class="btn btn-red" href="mailto:info@freund-vermessung.de?subject=Bewerbung%20Vermessungstechniker">Bewerbung Vermessungstechniker senden</a>
+          <a class="btn btn-red" href="mailto:info@freund-vermessung.de?subject=Bewerbung%20Messgehilfe">Bewerbung Messgehilfe senden</a>
+        </div>
+      </div>
+    </article>
+
+    <article data-page="impressum" hidden>
+      <a class="back" href="#start">Zurück zur Startseite</a>
+      <h1>Impressum</h1>
+      <p class="muted">Angaben gemäß § 5 DDG</p>
+      <address>
+        Freund Vermessung<br>
+        Ingenieurbüro für Vermessungstechnik und Geoinformatik<br>
+        Inhaber: Dipl.-Ing. Dirk Freund<br>
+        Hans-Römhild-Straße 26A<br>
+        34128 Kassel
+      </address>
+      <h2>Kontakt</h2>
+      <p>Telefon: 0561 81 50 510<br>E-Mail: info@freund-vermessung.de</p>
+      <h2>Berufsbezeichnung und Kammer</h2>
+      <p>Gesetzliche Berufsbezeichnung: Beratender Ingenieur, verliehen in der Bundesrepublik Deutschland (Land Hessen).<br>Eingetragen in die Liste der Beratenden Ingenieure der Ingenieurkammer Hessen unter der Nr. B 1277.</p>
+      <p>Zuständige Kammer:<br>Ingenieurkammer Hessen, Körperschaft des öffentlichen Rechts<br>Abraham-Lincoln-Straße 44<br>65189 Wiesbaden<br><a href="https://www.ingkh.de">www.ingkh.de</a></p>
+      <h2>Berufsrechtliche Regelungen</h2>
+      <p>Hessisches Ingenieurgesetz (HIngG) und Grundsätze zur Berufsordnung (Berufsgrundsätze) der Ingenieurkammer Hessen, jeweils in der geltenden Fassung. Beide sind auf der Webseite der Ingenieurkammer Hessen unter <a href="https://www.ingkh.de">www.ingkh.de</a> abrufbar.</p>
+      <h2>Umsatzsteuer-Identifikationsnummer</h2>
+      <p><span class="ph">USt-IdNr. ergänzen, falls vorhanden</span></p>
+      <h2>Berufshaftpflichtversicherung</h2>
+      <p><span class="ph">Name und Anschrift des Versicherers, räumlicher Geltungsbereich</span></p>
+      <h2>Verantwortlich für den Inhalt</h2>
+      <p>Dipl.-Ing. Dirk Freund, Anschrift wie oben</p>
+      <p class="note">Entwurf. Die markierten Angaben werden vor der Veröffentlichung ergänzt und geprüft.</p>
+    </article>
+
+    <article data-page="datenschutz" hidden>
+      <a class="back" href="#start">Zurück zur Startseite</a>
+      <h1>Datenschutzerklärung</h1>
+      <h2>Verantwortlicher</h2>
+      <address>
+        Freund Vermessung, Inhaber Dipl.-Ing. Dirk Freund<br>
+        Hans-Römhild-Straße 26A, 34128 Kassel<br>
+        E-Mail: info@freund-vermessung.de
+      </address>
+      <p><span class="ph">Vollständige Datenschutzerklärung ergänzen: Hosting und Server-Logfiles, Kontakt per E-Mail und Telefon, Bewerbungen per E-Mail, Link zu Instagram, Rechte der Betroffenen nach DSGVO, Beschwerderecht bei der Aufsichtsbehörde</span></p>
+      <p class="note">Entwurf. Die Datenschutzerklärung wird vor der Veröffentlichung vollständig erstellt und geprüft.</p>
+    </article>
+  </div>
+</main>
+
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <img class="footer-logo" src="assets/img/logo-freund-vermessung-quadrat.png" alt="Freund Vermessung" width="72" height="72" loading="lazy" decoding="async">
-        <p class="muted">Ingenieurbüro für Vermessungstechnik und Geoinformatik</p>
-        <address style="margin-top:var(--s-4)">Dipl.-Ing. Dirk Freund<br>Hans-Römhild-Str. 26A<br>34128 Kassel</address>
-      </div>
-      <nav aria-label="Seiten">
-        <h2>Seiten</h2>
-        <ul>
-          <li><a href="buero.html">Büro</a></li>
-          <li><a href="leistungen.html">Leistungen</a></li>
-          <li><a href="referenzen.html">Referenzen</a></li>
-          <li><a href="service.html">Links &amp; Downloads</a></li>
-        </ul>
-      </nav>
-      <div>
-        <h2>Kontakt</h2>
-        <ul>
-          <li><a href="tel:+495618150510">Telefon +49 561 81 50 510</a></li>
-          <li><span class="muted">Telefax +49 561 81 50 511</span></li>
-          <li><a href="mailto:info@freund-vermessung.de">info@freund-vermessung.de</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Dipl.-Ing. Dirk Freund</span>
-      <a href="impressum.html">Impressum</a>
-    </div>
+  <div class="wrap footer-row">
+    <img src="img/logo-freund-vermessung.png" alt="Freund Vermessung" width="72" height="70">
+    <span>Hans-Römhild-Straße 26A, 34128 Kassel<br>Telefon 0561 81 50 510</span>
+    <!-- Instagram-Symbol: Originaldatei von Meta (Brand Resources), nicht verändern. Freiraum ringsum = halbe Symbolgröße -->
+    <a class="footer-ig" href="https://www.instagram.com/freund_vermessung/" target="_blank" rel="noopener"><img src="img/instagram-glyph.svg" alt="Freund Vermessung auf Instagram (öffnet in neuem Fenster)" width="32" height="32"></a>
+    <nav aria-label="Rechtliches">
+      <a href="#impressum">Impressum</a>
+      <a href="#datenschutz">Datenschutz</a>
+    </nav>
+    <span>© 2026 Freund Vermessung</span>
   </div>
 </footer>
+
+<!-- ============ ABLAUF: VERGRÖSSERTES BILD MIT ERKLÄRUNG ============ -->
+<!-- Wird per Skript mit Bild, Überschrift und Erklärung des angeklickten Schritts gefüllt. Texte stehen oben im Ablauf in <div class="step-detail">. -->
+<dialog class="zoom-dialog" id="zoom-dialog" aria-labelledby="zoom-title">
+  <div class="zoom-bar">
+    <p class="zoom-step" id="zoom-step"></p>
+    <button class="btn btn-line zoom-close" type="button" id="zoom-close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      Schließen
+    </button>
+  </div>
+  <div class="zoom-inner">
+    <figure class="zoom-pic"><img id="zoom-img" src="" alt=""></figure>
+    <div class="zoom-text">
+      <h2 id="zoom-title"></h2>
+      <div class="zoom-body" id="zoom-body"></div>
+      <p class="zoom-result" id="zoom-result"></p>
+      <div class="zoom-nav">
+        <button class="btn btn-line" type="button" id="zoom-prev">Vorheriger Schritt</button>
+        <button class="btn btn-line" type="button" id="zoom-next">Nächster Schritt</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  /* Bewegung reduzieren? Dann nur sanftes Ein- und Ausblenden, kein Gleiten */
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var EASE_OUT = 'cubic-bezier(.23,1,.32,1)';
+  var EASE_DRAWER = 'cubic-bezier(.32,.72,0,1)';
+  var canAnimate = typeof Element.prototype.animate === 'function';
+
+  /* ---------- Kopfzeile: Trennlinie erst zeigen, wenn Inhalt darunter liegt ---------- */
+  var header = document.querySelector('.site-header');
+  var ticking = false;
+  function updateHeader(){ header.classList.toggle('scrolled', window.scrollY > 4); ticking = false; }
+  window.addEventListener('scroll', function(){ if (!ticking) { ticking = true; requestAnimationFrame(updateHeader); } }, { passive: true });
+  updateHeader();
+
+  /* ---------- Menü auf dem Handy ---------- */
+  var nav = document.getElementById('site-nav');
+  var toggle = document.querySelector('.menu-toggle');
+  function closeNav(returnFocus){
+    nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); toggle.textContent = 'Menü';
+    if (returnFocus) toggle.focus();
+  }
+  toggle.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.textContent = open ? 'Schließen' : 'Menü';
+    if (open) nav.querySelector('a').focus({ preventScroll: true });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && nav.classList.contains('open')) closeNav(true);
+  });
+  /* Tippen neben das offene Menü schließt es */
+  document.addEventListener('pointerdown', function(e){
+    if (nav.classList.contains('open') && !header.contains(e.target)) closeNav(false);
+  });
+
+  /* ---------- Zum Inhalt springen: springt in den gerade sichtbaren Hauptbereich ---------- */
+  document.querySelector('.skip-link').addEventListener('click', function(e){
+    var m = document.querySelector('main:not([hidden])');
+    if (m) { e.preventDefault(); m.focus(); m.scrollIntoView(); }
+  });
+  nav.addEventListener('click', function(e){
+    if (e.target.closest('a')) closeNav(false);
+  });
+
+  /* ---------- Kleines Logo oben nur zeigen, wenn das große Logo nicht zu sehen ist ---------- */
+  var heroLogo = document.querySelector('.hero-logo');
+  if (heroLogo && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries){
+      document.documentElement.classList.toggle('hero-logo-visible', entries[0].isIntersecting);
+    }, { rootMargin: '-80px 0px 0px 0px' }).observe(heroLogo);
+  }
+
+  /* ---------- Unterseiten: Karriere, Impressum, Datenschutz ---------- */
+  var main = document.getElementById('main');
+  var sub = document.getElementById('unterseiten');
+  var pageIds = ['karriere','impressum','datenschutz'];
+  var baseTitle = document.title;
+  /* Fokus auf die neue Überschrift setzen, damit Screenreader den Seitenwechsel ansagen */
+  function focusQuiet(el){ if (!el) return; if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex','-1'); el.focus({preventScroll:true}); }
+  function route(){
+    var id = location.hash.slice(1);
+    if (pageIds.indexOf(id) !== -1) {
+      main.hidden = true; sub.hidden = false;
+      sub.querySelectorAll('article').forEach(function(a){ a.hidden = a.dataset.page !== id; });
+      var h = sub.querySelector('[data-page="' + id + '"] h1');
+      document.title = h.textContent + ' | ' + baseTitle;
+      window.scrollTo(0,0);
+      focusQuiet(h);
+    } else if (main.hidden) {
+      main.hidden = false; sub.hidden = true;
+      document.title = baseTitle;
+      var t = id && document.getElementById(id);
+      if (t) t.scrollIntoView(); else window.scrollTo(0,0);
+      focusQuiet(t ? (t.querySelector('h1,h2') || t) : main.querySelector('h1'));
+    }
+  }
+  window.addEventListener('hashchange', route);
+
+  /* ---------- Referenzen: filtern und "Mehr anzeigen" ---------- */
+  /* So viele Einträge sind (je Filter) immer zu sehen, der Rest kommt über den Knopf */
+  var REF_LIMIT = 6;
+  var chips = document.querySelectorAll('.chip');
+  var rows = document.querySelectorAll('.ref-list li');
+  var count = document.getElementById('ref-count');
+  var moreWrap = document.getElementById('ref-more-wrap');
+  var moreBtn = document.getElementById('ref-more');
+  var moreLabel = moreBtn.querySelector('.btn-label');
+  var refCat = 'alle', refExpanded = false;
+  /* mode: 'all' = alle sichtbaren Zeilen einblenden (Filterwechsel),
+           'new' = nur die neu dazugekommenen (Mehr anzeigen), sonst ohne Effekt */
+  function renderRefs(mode){
+    var n = 0, a = 0;
+    rows.forEach(function(r){
+      var match = refCat === 'alle' || r.dataset.cat === refCat;
+      var show = match && (refExpanded || n < REF_LIMIT);
+      var wasHidden = r.hidden;
+      if (match) n++;
+      r.hidden = !show;
+      if (!show) return;
+      /* Die Zeilen blenden kurz nacheinander ein (je 18 ms versetzt, höchstens 180 ms),
+         damit man sieht, was sich geändert hat. Ein neuer Klick bricht das sofort ab. */
+      if (canAnimate && (mode === 'all' || (mode === 'new' && wasHidden))) {
+        r.getAnimations().forEach(function(x){ x.cancel(); });
+        var from = reduceMotion.matches ? { opacity: 0 } : { opacity: 0, transform: 'translateY(6px)' };
+        var to = reduceMotion.matches ? { opacity: 1 } : { opacity: 1, transform: 'none' };
+        r.animate([from, to], { duration: 220, delay: Math.min(a * 18, 180), easing: EASE_OUT, fill: 'backwards' });
+        a++;
+      }
+    });
+    chips.forEach(function(c){ c.setAttribute('aria-pressed', String(c.dataset.filter === refCat)); });
+    count.textContent = refCat === 'alle' ? n + ' Projekte' : n + ' von ' + rows.length + ' Projekten';
+    var rest = n - REF_LIMIT;
+    moreWrap.hidden = rest <= 0;
+    moreBtn.setAttribute('aria-expanded', String(refExpanded));
+    moreLabel.textContent = refExpanded ? 'Weniger anzeigen' : 'Mehr anzeigen (' + rest + ' weitere)';
+  }
+  chips.forEach(function(c){ c.addEventListener('click', function(){
+    if (c.getAttribute('aria-pressed') === 'true') return;
+    refCat = c.dataset.filter;
+    renderRefs('all');
+  }); });
+  moreBtn.addEventListener('click', function(){
+    refExpanded = !refExpanded;
+    if (refExpanded) { renderRefs('new'); return; }
+    /* Beim Zuklappen bleibt der Knopf an derselben Stelle auf dem Bildschirm,
+       sonst stünde man plötzlich irgendwo weiter unten auf der Seite */
+    var before = moreBtn.getBoundingClientRect().top;
+    renderRefs();
+    var after = moreBtn.getBoundingClientRect().top;
+    window.scrollBy({ top: after - before, behavior: 'instant' });
+  });
+  renderRefs();
+
+  /* ---------- Kanalkataster: Balkenlängen aus data-km, Hervorheben, einmaliges Einwachsen ---------- */
+  var chart = document.querySelector('.chart');
+  if (chart) {
+    var chartRows = Array.prototype.slice.call(chart.querySelectorAll('li'));
+    var maxKm = Math.max.apply(null, chartRows.map(function(li){ return parseFloat(li.dataset.km) || 0; }));
+    chartRows.forEach(function(li, i){
+      var bar = li.querySelector('.bar');
+      bar.style.width = ((parseFloat(li.dataset.km) || 0) / maxKm * 100).toFixed(1) + '%';
+      bar.style.setProperty('--i', i);
+    });
+    chart.addEventListener('pointerover', function(e){
+      if (e.pointerType !== 'mouse') return;
+      var row = e.target.closest('li');
+      chart.classList.toggle('has-active', !!row);
+      chartRows.forEach(function(li){ li.classList.toggle('is-active', li === row); });
+    });
+    chart.addEventListener('pointerleave', function(){
+      chart.classList.remove('has-active');
+      chartRows.forEach(function(li){ li.classList.remove('is-active'); });
+    });
+    if ('IntersectionObserver' in window && !reduceMotion.matches) {
+      chart.classList.add('will-reveal');
+      var chartObs = new IntersectionObserver(function(entries){
+        if (entries[0].isIntersecting) { chart.classList.add('revealed'); chartObs.disconnect(); }
+      }, { rootMargin: '0px 0px -15% 0px' });
+      chartObs.observe(chart);
+    }
+  }
+
+  /* ---------- Anfrage als E-Mail vorbereiten ---------- */
+  var form = document.getElementById('anfrage');
+  var result = document.getElementById('mail-result');
+  var preview = document.getElementById('mail-preview');
+  var mailOpen = document.getElementById('mail-open');
+  var copyStatus = document.getElementById('copy-status');
+  var formError = document.getElementById('form-error');
+  var mailText = '';
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = form.elements;
+    var name = f.name.value.trim(), erreichbar = f.erreichbar.value.trim();
+    f.name.setAttribute('aria-invalid', String(!name));
+    f.erreichbar.setAttribute('aria-invalid', String(!erreichbar));
+    if (!name || !erreichbar) { formError.hidden = false; (name ? f.erreichbar : f.name).focus(); return; }
+    formError.hidden = true;
+    var lines = [
+      'Guten Tag,', '',
+      'ich bitte um ein Angebot für folgende Vermessung:', '',
+      'Leistung: ' + f.art.value,
+      'Adresse oder Flurstück: ' + (f.ort.value.trim() || 'noch offen'),
+      'Gewünschter Termin: ' + (f.termin.value.trim() || 'noch offen'), ''
+    ];
+    if (f.text.value.trim()) { lines.push(f.text.value.trim(), ''); }
+    lines.push('Erreichbar unter: ' + erreichbar, '', 'Viele Grüße', name);
+    mailText = lines.join('\n');
+    preview.textContent = mailText;
+    mailOpen.href = 'mailto:info@freund-vermessung.de?subject=' + encodeURIComponent('Anfrage: ' + f.art.value) + '&body=' + encodeURIComponent(mailText);
+    copyStatus.textContent = '';
+    form.hidden = true; result.hidden = false;
+    mailOpen.focus();
+  });
+  document.getElementById('mail-edit').addEventListener('click', function(){
+    result.hidden = true; form.hidden = false; form.elements.name.focus();
+  });
+  var copyBtn = document.getElementById('mail-copy');
+  var copyLabel = copyBtn.querySelector('.btn-label');
+  var copyTimer;
+  /* Knopftext wechselt kurz auf "Kopiert". Ein Hauch Unschärfe verbindet alten und neuen Text zu einer Bewegung. */
+  function setCopyLabel(text){
+    /* Breite festhalten, damit der Knopf beim kürzeren Text nicht schrumpft und die Zeile springt */
+    if (!copyBtn.style.minWidth) copyBtn.style.minWidth = copyBtn.getBoundingClientRect().width + 'px';
+    copyLabel.textContent = text;
+    if (canAnimate) copyLabel.animate([{ opacity: .2, filter: 'blur(2px)' }, { opacity: 1, filter: 'blur(0)' }], { duration: 180, easing: 'ease-out' });
+  }
+  copyBtn.addEventListener('click', function(){
+    var done = function(){
+      copyStatus.textContent = 'Text kopiert. Fügen Sie ihn in eine E-Mail an info@freund-vermessung.de ein.';
+      setCopyLabel('Kopiert ✓');
+      clearTimeout(copyTimer);
+      copyTimer = setTimeout(function(){ setCopyLabel('Text kopieren'); }, 1800);
+    };
+    var fail = function(){ copyStatus.textContent = 'Kopieren ist hier nicht möglich. Bitte markieren Sie den Text oben und kopieren Sie ihn selbst.'; };
+    try { navigator.clipboard.writeText(mailText).then(done, fail); } catch (err) { fail(); }
+  });
+
+  /* ---------- Ablauf: Bild anklicken = groß mit Erklärung ---------- */
+  var zoomDlg = document.getElementById('zoom-dialog');
+  var zoomSteps = Array.prototype.slice.call(document.querySelectorAll('.steps .step'));
+  if (zoomDlg && typeof zoomDlg.showModal === 'function') {
+    var zImg = document.getElementById('zoom-img');
+    var zStep = document.getElementById('zoom-step');
+    var zTitle = document.getElementById('zoom-title');
+    var zBody = document.getElementById('zoom-body');
+    var zResult = document.getElementById('zoom-result');
+    var zPrev = document.getElementById('zoom-prev');
+    var zNext = document.getElementById('zoom-next');
+    var zInner = zoomDlg.querySelector('.zoom-inner');
+    var zPic = zoomDlg.querySelector('.zoom-pic');
+    var zText = zoomDlg.querySelector('.zoom-text');
+    var zCurrent = 0;
+    /* Inhaltswechsel zwischen den Schritten.
+       dir = 1 (weiter) oder -1 (zurück): das neue Bild kommt von der Seite, in die man blättert,
+       so bleibt die Reihenfolge der Schritte räumlich nachvollziehbar.
+       dir = 0 (Tastatur): kein Effekt, Tastenaktionen sollen sofort wirken. */
+    var animateStepIn = function(dir){
+      if (!canAnimate || !dir) return;
+      var slide = reduceMotion.matches ? 0 : dir * 28;
+      zImg.animate([
+        { opacity: 0, transform: 'translateX(' + slide + 'px)', filter: 'blur(2px)' },
+        { opacity: 1, transform: 'translateX(0)', filter: 'blur(0)' }
+      ], { duration: 260, easing: EASE_OUT });
+      zText.animate([
+        { opacity: 0, filter: 'blur(2px)' },
+        { opacity: 1, filter: 'blur(0)' }
+      ], { duration: 200, easing: 'ease-out' });
+    };
+    var zoomShow = function(i, dir){
+      var hadFocus = document.activeElement;
+      zCurrent = i;
+      var s = zoomSteps[i], img = s.querySelector('.step-pic img'), d = s.querySelector('.step-detail');
+      zImg.src = img.getAttribute('src');
+      zImg.alt = img.alt;
+      zImg.setAttribute('width', img.getAttribute('width'));
+      zImg.setAttribute('height', img.getAttribute('height'));
+      zStep.textContent = 'Schritt ' + (i + 1) + ' von ' + zoomSteps.length;
+      zTitle.textContent = s.querySelector('h3').textContent;
+      zBody.innerHTML = d ? d.innerHTML : '';
+      zResult.innerHTML = s.querySelector('.result').innerHTML;
+      zPrev.disabled = i === 0;
+      zNext.disabled = i === zoomSteps.length - 1;
+      /* Wenn der gerade benutzte Knopf deaktiviert wird, Fokus auf den anderen Knopf */
+      if (hadFocus === zPrev && zPrev.disabled) zNext.focus();
+      if (hadFocus === zNext && zNext.disabled) zPrev.focus();
+      zInner.scrollTop = 0;
+      animateStepIn(dir || 0);
+    };
+    zoomSteps.forEach(function(s, i){
+      var b = s.querySelector('.step-zoom');
+      if (b) b.addEventListener('click', function(){ zoomShow(i, 0); zoomDlg.showModal(); });
+    });
+    zPrev.addEventListener('click', function(){ if (zCurrent > 0) zoomShow(zCurrent - 1, -1); });
+    zNext.addEventListener('click', function(){ if (zCurrent < zoomSteps.length - 1) zoomShow(zCurrent + 1, 1); });
+
+    /* ---------- Wischen im Bild (Touch): Bild folgt dem Finger 1:1 ----------
+       - erst ab 10 px Bewegung entscheiden wir, ob waagerecht (blättern) oder senkrecht (scrollen)
+       - am ersten und letzten Schritt gibt das Bild nur gebremst nach (Gummiband statt harter Wand)
+       - ein schneller Wisch reicht, man muss nicht weit ziehen: die Geschwindigkeit beim Loslassen
+         wird hochgerechnet, wo das Bild "hinfliegen" würde */
+    var swipe = null;
+    var rubberband = function(over, dim){ var c = 0.55; return (over * dim * c) / (dim + c * Math.abs(over)); };
+    var setX = function(x){ zImg.style.transform = x ? 'translateX(' + x + 'px)' : ''; };
+    zPic.addEventListener('pointerdown', function(e){
+      if (e.pointerType === 'mouse' || swipe) return; /* nur ein Finger zählt */
+      zImg.getAnimations().forEach(function(a){ a.cancel(); });
+      swipe = { id: e.pointerId, x0: e.clientX, y0: e.clientY, dx: 0, locked: false, hist: [{ x: e.clientX, t: e.timeStamp }] };
+    });
+    zPic.addEventListener('pointermove', function(e){
+      if (!swipe || e.pointerId !== swipe.id) return;
+      var dx = e.clientX - swipe.x0, dy = e.clientY - swipe.y0;
+      if (!swipe.locked) {
+        if (Math.abs(dy) > 10 && Math.abs(dy) > Math.abs(dx)) { swipe = null; return; } /* senkrecht: Seite scrollt */
+        if (Math.abs(dx) < 10) return;
+        swipe.locked = true;
+        try { zPic.setPointerCapture(e.pointerId); } catch (err) {}
+      }
+      var atEdge = (dx > 0 && zCurrent === 0) || (dx < 0 && zCurrent === zoomSteps.length - 1);
+      swipe.dx = atEdge ? rubberband(dx, zPic.clientWidth) : dx;
+      swipe.hist.push({ x: e.clientX, t: e.timeStamp });
+      if (swipe.hist.length > 6) swipe.hist.shift();
+      setX(swipe.dx);
+    });
+    var endSwipe = function(e){
+      if (!swipe || e.pointerId !== swipe.id) return;
+      var s = swipe; swipe = null;
+      if (!s.locked) return;
+      var h = s.hist, first = h[0], last = h[h.length - 1];
+      var v = (last.t - first.t) > 0 ? (last.x - first.x) / (last.t - first.t) : 0; /* px pro ms */
+      /* Hochrechnung wie beim Scrollen auf dem iPhone (Abbremsfaktor 0,998 pro ms) */
+      var projected = s.dx + v * 0.998 / (1 - 0.998);
+      var w = zPic.clientWidth;
+      var dir = s.dx < 0 ? 1 : -1;
+      var target = zCurrent + dir;
+      /* Zählt die Richtung beim Loslassen: wer zurückwischt, will abbrechen */
+      var sameDirection = (v === 0) || (v < 0) === (s.dx < 0);
+      var commit = e.type === 'pointerup' && target >= 0 && target < zoomSteps.length && sameDirection &&
+                   (Math.abs(s.dx) > w * 0.25 || Math.abs(projected) > w * 0.5);
+      if (commit) {
+        setX(0);
+        zoomShow(target, dir);
+      } else if (canAnimate) {
+        /* Zurückfedern ab der aktuellen Position, nicht ab Null */
+        var from = s.dx;
+        setX(0);
+        zImg.animate([{ transform: 'translateX(' + from + 'px)' }, { transform: 'translateX(0)' }], { duration: 380, easing: EASE_DRAWER });
+      } else {
+        setX(0);
+      }
+    };
+    zPic.addEventListener('pointerup', endSwipe);
+    zPic.addEventListener('pointercancel', endSwipe);
+    document.getElementById('zoom-close').addEventListener('click', function(){ zoomDlg.close(); });
+    /* Klick neben das Fenster schließt es, Escape schließt es automatisch */
+    zoomDlg.addEventListener('click', function(e){ if (e.target === zoomDlg) zoomDlg.close(); });
+    /* Pfeiltasten blättern durch die Schritte */
+    zoomDlg.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowLeft' && zCurrent > 0) { e.preventDefault(); zoomShow(zCurrent - 1); }
+      if (e.key === 'ArrowRight' && zCurrent < zoomSteps.length - 1) { e.preventDefault(); zoomShow(zCurrent + 1); }
+    });
+    /* Nach dem Schließen: Fokus zurück auf das Bild des zuletzt gezeigten Schritts */
+    zoomDlg.addEventListener('close', function(){
+      var b = zoomSteps[zCurrent].querySelector('.step-zoom');
+      if (b) b.focus();
+    });
+  }
+
+  route();
+})();
+</script>
 </body>
 </html>
